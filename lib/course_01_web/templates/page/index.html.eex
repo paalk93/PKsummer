@@ -1,0 +1,158 @@
+<h1>Course, Basic</h1>
+<p>
+    For each h3 element below make a scope int the router.
+    Make routes in the scope as you need
+    lists of items are somewhat random. organize into logical sections
+    check caniuse.com for compatibility in html css and js and suported Browsers
+    Note deprecated and obsolete elements
+</p>
+<h3>Git</h3>
+<ul>
+    <li>Why use git </li>
+    <li>Describe your Git routines</li>
+    <li>Explain following terms, give use case and put them in order of use or most used: <br/>
+pull reset config reset unstage stash push merge rebase clone remote branch blame init checkout commit fetch status add
+    </li>
+</ul>
+<h3>HTML</h3>
+<p>
+    for each item in dl make below this paragrap; make a description and give examples of use
+    make routes and view at your discression
+</p>
+<dl>
+    <dt>Tags</dt>
+    <dd>h</dd>
+    <dd>html</dd>
+    <dd>head</dd>
+    <dd>body</dd>
+    <dd>header</dd>
+    <dd>footer</dd>
+    <dd>div</dd>
+    <dd>span</dd>
+    <dd>track</dd>
+    <dd>aside</dd>
+    <dd>Main</dd>
+    <dd>nav</dd>
+    <dd>legend</dd>
+    <dd>a</dd>
+    <dd>article</dd>
+    <dd>Meta</dd>
+    <dd>template</dd>
+    <dd>button</dd>
+    <dd>caption</dd>
+    <dd>fieldset</dd>
+    <dd>ins</dd>
+    <dd>canvas</dd>
+    <dd>object</dd>
+    <dd>optgroup</dd>
+    <dd>figcaption</dd>
+    <dd>li</dd>
+    <dd>meta</dd>
+    <dd>output</dd>
+    <dd>q</dd>
+    <dd>wbr</dd>
+    <dd>title</dd>
+    <dd>video</dd>
+    <dd>audio</dd>
+    <dd>noscript</dd>
+    <dd>figure</dd>
+    <dd>map</dd>
+    <dd>paragrap</dd>
+    <dd>ul ol dl </dd>
+    <dd>Table</dd>
+    <dd>form</dd>
+    <dd>var</dd>
+    <dd>input add common examples</dd>
+    <dd>i</dd>
+    <dd>img</dd>
+    <dd>optgroup</dd>
+    <dd>progress</dd>
+    <dd>code</dd>
+    <dd>blockquote</dd>
+    <dd>pre</dd>
+    <dd>section</dd>
+    <dd>strong strike sub sup small abbr address summary mark em cite</dd>
+    <dd>svg</dd>
+    <dt>Attributes</dt>
+    <dd>Data</dd>
+    <dd>datalist</dd>
+    <dd>style</dd>
+    <dd>href</dd>
+    <dd>src</dd>
+    <dd>alt</dd>
+    <dd>data</dd>
+    <dd>samp</dd>
+    <dd>select</dd>
+    <dd>hr</dd>
+    <dd>iframe</dd>
+    <dd>Add,describe and give example of 20 more attributes and which tags they can be used with </dd>
+</dl>
+<h3>CSS</h3>
+<p>
+    for each item in dl make below this paragrap; make a description and give examples of use
+    make routes and view at your discression
+</p>
+<dl>
+    <dt>Basics</dt>
+    <dd>Describe Element, class and id selectors</dd>
+    <dd>Describe a css property</dd>
+    <dd>Describe every way a class id and element can be combined as a selector</dd>
+    <dt>Pseudo Classes</dt>
+    <dd>what is a pseudo class</dd>
+    <dd>:Active</dd>
+    <dd>:checked</dd>
+    <dd>:default</dd>
+    <dd>:defined</dd>
+    <dd>:disabled</dd>
+    <dd>:empty</dd>
+    <dd>:enabled</dd>
+    <dd>:first</dd>
+    <dd>:first-child</dd>
+    <dd>:first-of-type</dd>
+    <dd>focus</dd>
+    <dd>:focus-within</dd>
+    <dd>:hover</dd>
+    <dd>:indeterminate</dd>
+    <dd>:in-range</dd>
+    <dd>:invalid</dd>
+    <dd>lang()</dd>
+    <dd>:last-child</dd>
+    <dd>:last-of-type</dd>
+    <dd>:left</dd>
+    <dd>:link</dd>
+    <dd>:not()</dd>
+    <dd>:nth-child()</dd>
+    <dd>:nth-of-type()</dd>
+    <dd>:nth-last-child()</dd>
+    <dd>:only-child()</dd>
+    <dd>:only-of-type</dd>
+    <dd>:optional</dd>
+    <dd>:out-of-range</dd>
+    <dd>:read-only</dd>
+    <dd>:read-write</dd>
+    <dd>:required</dd>
+    <dd>:right</dd>
+    <dd>:root</dd>
+    <dd>:scope</dd>
+    <dd>:target</dd>
+    <dd>:valid</dd>
+    <dd>:visited</dd>
+    <dt>CSS Variables</dt>
+    <p>
+        explain and show example and use cases of variables 
+    </p>
+    <dt>css grid layout</dt>
+    <dd> What is css grid, how does it work use visual examples.</dd>
+    <dd></dd>
+
+    <dt>Flexbox</dt>
+    <dt>Animation</dt>
+</dl>
+<h3>JS</h3>
+<h3>Elixir</h3>
+<p>
+    mandatory watch
+    <a href="https://www.youtube.com/watch?v=9uvp4h7gXH">Micropatterns in elixir</a>
+</p>
+<h3>Phoenix</h3>
+
