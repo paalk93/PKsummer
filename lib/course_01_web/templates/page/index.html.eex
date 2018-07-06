@@ -5,7 +5,18 @@
     lists of items are somewhat random. organize into logical sections
     check caniuse.com for compatibility in html css and js and suported Browsers
     Note deprecated and obsolete elements
+    check MDN and devhints.io for info
+    COPY PASTE CODE IS NOT ALLOWED
+    Style the app
 </p>
+<h3>Planning and problem solving</h3>
+<dl>
+<dt>Planning</dt>
+<dd>descripe how you plan projects</dd>
+<dt>problem solving</dt>
+<dd>describe 1-3 problem solving techniques you use </dd>
+<dd>explain differences in solo and team work. Describe how you work in teams</dd>
+</dl>
 <h3>Git</h3>
 <ul>
     <li>Why use git </li>
@@ -94,9 +105,14 @@ pull reset config reset unstage stash push merge rebase clone remote branch blam
 </p>
 <dl>
     <dt>Basics</dt>
+    <dd>Explain how css works give examples</dd>
     <dd>Describe Element, class and id selectors</dd>
     <dd>Describe a css property</dd>
     <dd>Describe every way a class id and element can be combined as a selector</dd>
+    <dd>Describe the CSS box model show examples </dd>
+    <dt>Properties</dt>
+    <dd>List all your most used css properties explain and use examples</dd>
+    <dd>list all your least used properties </dd>
     <dt>Pseudo Classes</dt>
     <dd>what is a pseudo class</dd>
     <dd>:Active</dd>
@@ -109,13 +125,13 @@ pull reset config reset unstage stash push merge rebase clone remote branch blam
     <dd>:first</dd>
     <dd>:first-child</dd>
     <dd>:first-of-type</dd>
-    <dd>focus</dd>
+    <dd>:focus</dd>
     <dd>:focus-within</dd>
     <dd>:hover</dd>
     <dd>:indeterminate</dd>
     <dd>:in-range</dd>
     <dd>:invalid</dd>
-    <dd>lang()</dd>
+    <dd>:lang()</dd>
     <dd>:last-child</dd>
     <dd>:last-of-type</dd>
     <dd>:left</dd>
@@ -139,20 +155,126 @@ pull reset config reset unstage stash push merge rebase clone remote branch blam
     <dd>:visited</dd>
     <dt>CSS Variables</dt>
     <p>
-        explain and show example and use cases of variables 
+        explain and show example and use cases of css variables 
+        what are limitations show atleast 5 examples of variables use
     </p>
     <dt>css grid layout</dt>
     <dd> What is css grid, how does it work use visual examples.</dd>
-    <dd></dd>
-
+    <dd>Show the various ways to create a grid</dd>
     <dt>Flexbox</dt>
+    <dd>Show examples of use and explain how flexbox work</dd>
     <dt>Animation</dt>
+    <dd>give examples of @animation use and transitions </dd>
+    <dd>Make examples of animations</dd>
 </dl>
 <h3>JS</h3>
+<p>
+use App.js for examples
+</p>
+<dl>
+<dt>Variables and data </dt>
+<dd>explain and list all variable types show examples </dd>   
+<dt>Operators</dt>
+<dd>explain and list all operators show examples </dd>  
+<dt>Logic flow</dt>
+ <dd>Explain and show examples of if ,switch case</dd>   
+<dt>Arrays</dt>
+<dd>Explain arrays and give use case</dd>
+<dt>Functions</dt>
+<dd>Explain functions show examples of 5 functions</dd>
+<dt>Objects</dt>
+<dd>Explain objects show use cases</dd>
+<dt>loops</dt>
+<dd>List and show all examples of loops what uses cases do we have ?</dd>
+<dt>Scope</dt>
+<dd>What are scopes how do they work , give examples</dd>
+</dl>
 <h3>Elixir</h3>
+<p>Use lib to store example files</p>
+<dl>
+    <dt>IEX</dt>
+        <dd>Explain iex</dd>
+        <dd>what are some IEX use caes</dd>
+        <dd>how do you get IEX help </dd>
+        <dd>How do you trigger code from a project in IEX</dd>
+    <dt>Mix</dt>
+    <dd>What is mix</dd>
+    <dd>what uses cases are for mix</dd>
+    <dd>give some mix examples and use cases</dd>
+    <dt>Data types</dt>
+    <dd>List all data types show examples and give use case</dd>
+    <dd>strings  </dd>
+    <dt>Operators</dt>
+    <dd>List all operators show examples and give use case</dd>
+    <dt>collections</dt>
+    <dd>List</dd>
+    <dd>tuples</dd>
+    <dd>map</dd>
+    <dd>mapset</dd>
+    <dd>struct</dd>  
+    <dd>keyword list</dd>
+    <dt>Pattern matching</dt>
+    <dd>Explain pattern matching , give use cases and examples</dd>
+    <dd>where is pattern matching use and why is it a good thing</dd>
+    <dt>Modules and functions</dt>
+    <dd>Explain Modules and functions give example</dd>   
+    <dd>Explain and give use cases for modules and functions</dd>
+    <dt>Recursion</dt>
+    <dd>Explain recursion give examples and why do we use it</dd>
+    <dt>Comprehensions</dt>
+    <dd>Explain comprehensions</dd>
+    <dt>Enumerable</dt>
+    <dd>Give an overview of the enumerable module</dd>
+    <dd>explain Enum.map and 5 other freely chose functions in this module</dd>
+    <dt>EXUnit</dt>
+    <dd>Make a basic module and functions and test it</dd>
+    <dt>What else is there</dt>
+    <dd>Look through https://hexdocs.pm/elixir/Kernel.html. What else would you highlight and why ?</dd>   
+    
+</dl>
 <p>
     mandatory watch
     <a href="https://www.youtube.com/watch?v=9uvp4h7gXH">Micropatterns in elixir</a>
 </p>
 <h3>Phoenix</h3>
-
+<dl>
+<dt>General</dt>
+<dd>Explain how data flows through the system</dd>
+<dd>What major parts/Features do Phoenix consist of</dd>
+<dd>Explain Contexts in Phoenix</dd>
+<dd>Explain controllers in phoenix</dd>
+<dd>Explain and give example of views in phoenix</dd>
+<dd>Explain and give examples of templates in phoenix</dd>
+<dd>Explain and give examples of router in phoenix</dd>
+<dd>what are route scopes ? give examples</dd>
+<dt>Plug</dt>
+<dd>What is plug ? and what is it used for</dd>
+<dd>What is conn?</dd>
+<dd>Make a plug that displays the route name on the page you are on</dd>
+<dt>Ecto</dt>
+<dd>what is ecto explain and give examples</dd>
+<dd>What are ecto adapters? explain and show examples</dd>
+<dd>What are migrations explain and show examples</dd>
+<dd>what is ecto schema ? explain and show examples</dd>
+<dd>What mix tasks do we have and what do they do? </dd>
+<dd>What is repo? explain and show examples </dd>
+<dd>What is Ecto. query why and when do we use them? give examples and use cases</dd>
+<dd>what is ecto changeset ? why do we use it ? give examples etc</dd>
+<dd>what is ecto.multi ? give examples etc</dd>
+<dd>Ecto . associations what are they ? why and how do we use them ? </dd>
+<dd>Ecto Embedded what is it , give examples</dd>
+<dt>Tasks</dt>
+<dd>Display simple data on screen from database, ie names adress etc</dd>
+<dd>display relational data on screen , ie a blog post with comments </dd>
+<dd>Give example of embedded data</dd>
+</dl>
+<h3>Micro patterns</h3>
+<p>
+describe atleast 10 micropatterns you can use.
+</p>
+<h3>Polish</h3>
+<p>
+Polish the app with css 
+Fix typos
+read your answers atleast once
+</p>
