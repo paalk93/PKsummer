@@ -1,5 +1,6 @@
 <h1>Course, Basic</h1>
 <p>
+<pre>
     For each h3 element below make a scope int the router.
     Make routes in the scope as you need
     lists of items are somewhat random. organize into logical sections
@@ -8,6 +9,8 @@
     check MDN and devhints.io for info
     COPY PASTE CODE IS NOT ALLOWED
     Style the app
+    
+    </pre>
 </p>
 <h3>Planning and problem solving</h3>
 <dl>
@@ -181,13 +184,17 @@ use App.js for examples
 <dt>Arrays</dt>
 <dd>Explain arrays and give use case</dd>
 <dt>Functions</dt>
-<dd>Explain functions show examples of 5 functions</dd>
+<dd>Explain functions show examples of atleast 5 functions</dd>
 <dt>Objects</dt>
 <dd>Explain objects show use cases</dd>
 <dt>loops</dt>
 <dd>List and show all examples of loops what uses cases do we have ?</dd>
 <dt>Scope</dt>
 <dd>What are scopes how do they work , give examples</dd>
+<dt>misc</dt>
+<dd>What is JSON explain and give examples</dd>
+<dd>whats es6/ES2015+</dd>
+<dd>give examples of prominent es6/es2015/ features</dd>
 </dl>
 <h3>Elixir</h3>
 <p>Use lib to store example files</p>
@@ -230,7 +237,7 @@ use App.js for examples
     <dd>Make a basic module and functions and test it</dd>
     <dt>What else is there</dt>
     <dd>Look through https://hexdocs.pm/elixir/Kernel.html. What else would you highlight and why ?</dd>   
-    
+    <dd>What are apis and give an example of a phoenix API</dd>
 </dl>
 <p>
     mandatory watch
