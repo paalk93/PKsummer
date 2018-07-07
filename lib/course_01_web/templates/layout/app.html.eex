@@ -12,11 +12,21 @@
   </head>
 
   <body>
+    <div class="pk-main-grid-layout">
 
-      <main role="main">
+      <div class="pk-grid-area-navbar">
+        <p>NAVBAR</p>
+      </div>
+
+      <div class="pk-grid-area-sidebar">
+        <p>this is the sidebar</p>
+      </div>
+
+      <main role="main" class= "pk-grid-area-main">
         <%= render @view_module, @view_template, assigns %>
       </main>
 
+    </div>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
