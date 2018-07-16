@@ -2,10 +2,10 @@
   <div>
     <h1>Head tags</h1>
     <p>Most common tags used in the head of the document.</p>
-    <p><strong>&lt;head&gt;</strong>Defines the head of the document.</p>
-    <p><strong>&lt;link&gt;</strong>Commonly used when linking an external stylesheet.</p>
-    <p><strong>&lt;meta&gt;</strong>Provides metadata about your document.</p>
-    <p><strong>&lt;title&gt;</strong>Set a title for your document, as shown on the web browser tabs.</p>
+    <p><strong>&lt;head&gt; </strong>Defines the head of the document.</p>
+    <p><strong>&lt;link&gt; </strong>Commonly used when linking an external stylesheet.</p>
+    <p><strong>&lt;meta&gt; </strong>Provides metadata about your document.</p>
+    <p><strong>&lt;title&gt; </strong>Set a title for your document, as shown on the web browser tabs.</p>
   </div>
   <div>
     <h3>Simple example of head tags</h3>

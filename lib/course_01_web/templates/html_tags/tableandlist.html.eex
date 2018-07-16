@@ -2,20 +2,20 @@
   <div>
     <h1>Tags for table and lists</h1>
     <p>Commonly used list and table tags.</p>
-    <p><strong>&lt;ul&gt;</strong>Defines an unordered list.</p>
-    <p><strong>&lt;ol&gt;</strong>Defines an ordered list.</p>
-    <p><strong>&lt;li&gt;</strong>Defines the list item in a ul or ol list.</p>
-    <p><strong>&lt;dl&gt;</strong>Defines a description list.</p>
-    <p><strong>&lt;dt&gt;</strong>Defines a name for the dd items in a dt list.</p>
-    <p><strong>&lt;dd&gt;</strong>Defines a list item in a dl list.</p>
-    <p><strong>&lt;caption&gt;</strong>Defines a caption/name for the table.</p>
-    <p><strong>&lt;table&gt;</strong>Defines a table.</p>
-    <p><strong>&lt;tr&gt;</strong>Add a table row to your table.</p>
-    <p><strong>&lt;th&gt;</strong>Add a table head item.</p>
-    <p><strong>&lt;td&gt;</strong>Add a table body item.</p>
+    <p><strong>&lt;ul&gt; </strong>Defines an unordered list.</p>
+    <p><strong>&lt;ol&gt; </strong>Defines an ordered list.</p>
+    <p><strong>&lt;li&gt; </strong>Defines the list item in a ul or ol list.</p>
+    <p><strong>&lt;dl&gt; </strong>Defines a description list.</p>
+    <p><strong>&lt;dt&gt; </strong>Defines a name for the dd items in a dt list.</p>
+    <p><strong>&lt;dd&gt; </strong>Defines a list item in a dl list.</p>
+    <p><strong>&lt;caption&gt; </strong>Defines a caption/name for the table.</p>
+    <p><strong>&lt;table&gt; </strong>Defines a table.</p>
+    <p><strong>&lt;tr&gt; </strong>Add a table row to your table.</p>
+    <p><strong>&lt;th&gt; </strong>Add a table head item.</p>
+    <p><strong>&lt;td&gt; </strong>Add a table body item.</p>
   </div>
   <div>
-    <h3>Live example of lists and table</h3>
+    <h3>Visual example of lists and table</h3>
     <p>Ul lists are normally styled with a dot before each item.</p>
     <ul>
       <li>Ul item one</li>

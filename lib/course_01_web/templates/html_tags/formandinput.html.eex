@@ -2,18 +2,18 @@
   <div>
     <h1>Form and input tsgs</h1>
     <p>Tags most commonly used related to input and forms.</p>
-    <p><strong>&lt;form&gt;</strong>Creates a form for user input.</p>
-    <p><strong>&lt;fieldset&gt;</strong>Group related elements in a form.</p>
-    <p><strong>&lt;legend&gt;</strong>Creates a caption for the fieldset element.</p>
-    <p><strong>&lt;input&gt;</strong>Specifies an input field.</p>
-    <p><strong>&lt;select&gt;</strong>Creates a dropdownlist with options.</p>
-    <p><strong>&lt;optgroup&gt;</strong>Grouping the options in the select element.</p>
-    <p><strong>&lt;option&gt;</strong>Defines the options in the select element.</p>
-    <p><strong>&lt;output&gt;</strong>Output represent the result of a calculation. Usually with the help of javascript</p>
-    <p><strong>&lt;datalist&gt;</strong>Makes a set of predefined options for an input field.</p>
+    <p><strong>&lt;form&gt; </strong>Creates a form for user input.</p>
+    <p><strong>&lt;fieldset&gt; </strong>Group related elements in a form.</p>
+    <p><strong>&lt;legend&gt; </strong>Creates a caption for the fieldset element.</p>
+    <p><strong>&lt;input&gt; </strong>Specifies an input field.</p>
+    <p><strong>&lt;select&gt; </strong>Creates a dropdownlist with options.</p>
+    <p><strong>&lt;optgroup&gt; </strong>Grouping the options in the select element.</p>
+    <p><strong>&lt;option&gt; </strong>Defines the options in the select element.</p>
+    <p><strong>&lt;output&gt; </strong>Output represent the result of a calculation. Usually with the help of javascript</p>
+    <p><strong>&lt;datalist&gt; </strong>Makes a set of predefined options for an input field.</p>
   </div>
   <div>
-    <h3>Live example </h3>
+    <h3>Visual example </h3>
     <p>Form with fieldset,legend, datalist and inputs.</p>
     <form>
       <fieldset>
