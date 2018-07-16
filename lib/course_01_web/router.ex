@@ -22,18 +22,21 @@ defmodule Course01Web.Router do
   scope "/html", Course01Web do
     pipe_through :browser
 
-    get "/", HtmlController, :index
-    get "/tags", HtmlController, :tags
-    get "/tags/head", HtmlController, :tagshead
-    get "/tags/body", HtmlController, :tagsbody
-    get "/tags/tableandlist", HtmlController, :tableandlist
-    get "/tags/media", HtmlController, :media
-    get "/tags/formandinput", HtmlController, :formandinput
-    get "/tags/sections", HtmlController, :sections
-    get "/tags/typography", HtmlController, :typography
-    get "/tags/iconsandbuttons", HtmlController, :iconsandbuttons
-    get "/tags/textformatting", HtmlController, :textformatting
-    get "/tags/codeandscript", HtmlController, :codeandscript
+    get "/", HtmlTagsController, :index
+    get "/tags", HtmlTagsController, :tags
+    get "/tags/head", HtmlTagsController, :tagshead
+    get "/tags/body", HtmlTagsController, :tagsbody
+    get "/tags/tableandlist", HtmlTagsController, :tableandlist
+    get "/tags/media", HtmlTagsController, :media
+    get "/tags/formandinput", HtmlTagsController, :formandinput
+    get "/tags/sections", HtmlTagsController, :sections
+    get "/tags/typography", HtmlTagsController, :typography
+    get "/tags/iconsandbuttons", HtmlTagsController, :iconsandbuttons
+    get "/tags/textformatting", HtmlTagsController, :textformatting
+    get "/tags/codeandscript", HtmlTagsController, :codeandscript
+
+    get "/attributes", HtmlAttributesController, :index
+    get "/attributes/general", HtmlAttributesController, :general
   end
 
   # Other scopes may use custom stacks.
