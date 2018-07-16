@@ -19,6 +19,12 @@ defmodule Course01Web.Router do
     get "/", PageController, :index
   end
 
+  scope "/html", Course01Web do
+    pipe_through :browser
+
+    get "/", HtmlController, :index
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", Course01Web do
   #   pipe_through :api
