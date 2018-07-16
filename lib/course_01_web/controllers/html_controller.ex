@@ -33,4 +33,7 @@ defmodule Course01Web.HtmlController do
   def iconsandbuttons(conn, _params) do
     render conn, "iconsandbuttons.html"
   end
+  def textformatting(conn, _params) do
+    render conn, "textformatting.html"
+  end
 end

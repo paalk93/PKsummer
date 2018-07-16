@@ -32,6 +32,7 @@ defmodule Course01Web.Router do
     get "/tags/sections", HtmlController, :sections
     get "/tags/typography", HtmlController, :typography
     get "/tags/iconsandbuttons", HtmlController, :iconsandbuttons
+    get "/tags/textformatting", HtmlController, :textformatting
   end
 
   # Other scopes may use custom stacks.
