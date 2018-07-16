@@ -28,6 +28,9 @@ defmodule Course01Web.Router do
     get "/tags/body", HtmlController, :tagsbody
     get "/tags/tableandlist", HtmlController, :tableandlist
     get "/tags/media", HtmlController, :media
+    get "/tags/formandinput", HtmlController, :formandinput
+    get "/tags/sections", HtmlController, :sections
+    get "/tags/typography", HtmlController, :typography
   end
 
   # Other scopes may use custom stacks.
