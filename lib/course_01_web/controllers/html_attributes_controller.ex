@@ -14,4 +14,7 @@ defmodule Course01Web.HtmlAttributesController do
   def for_media(conn, _params) do
     render conn, "for_media.html"
   end
+  def for_table_and_list(conn, _params) do
+    render conn, "for_table_and_list.html"
+  end
 end
