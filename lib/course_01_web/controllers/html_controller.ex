@@ -15,4 +15,7 @@ defmodule Course01Web.HtmlController do
   def tagsbody(conn, _params)do
     render conn, "tagsbody.html"
   end
+  def tableandlist(conn, _params)do
+    render conn, "tableandlist.html"
+  end
 end
