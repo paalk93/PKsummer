@@ -2,18 +2,18 @@
   <div>
     <h1>Media tags</h1>
     <p>Tags used for different media input and outputs.</p>
-    <p><strong>&lt;video&gt;</strong>Specifies a video, like a video clip.</p>
-    <p><strong>&lt;audio&gt;</strong>Defines audio, such as music.</p>
-    <p><strong>&lt;map&gt;</strong>Defines a client side image map.</p>
-    <p><strong>&lt;img&gt;</strong>Defines an image in a HTML page.</p>
-    <p><strong>&lt;iframe&gt;</strong>Specifies an inline frame.</p>
-    <p><strong>&lt;canvas&gt;</strong>Defines an area for drawing graphics on the fly. Usually with the help of JS</p>
-    <p><strong>&lt;figure&gt;</strong>Used to mark up a image in a document.</p>
-    <p><strong>&lt;figcaption&gt;</strong>Adding text to the figure element.</p>
-    <p><strong>&lt;track&gt;</strong>Specifies text tracks for media elements like video and audio.</p>
+    <p><strong>&lt;video&gt; </strong>Specifies a video, like a video clip.</p>
+    <p><strong>&lt;audio&gt; </strong>Defines audio, such as music.</p>
+    <p><strong>&lt;map&gt; </strong>Defines a client side image map.</p>
+    <p><strong>&lt;img&gt; </strong>Defines an image in a HTML page.</p>
+    <p><strong>&lt;iframe&gt; </strong>Specifies an inline frame.</p>
+    <p><strong>&lt;canvas&gt; </strong>Defines an area for drawing graphics on the fly. Usually with the help of JS</p>
+    <p><strong>&lt;figure&gt; </strong>Used to mark up a image in a document.</p>
+    <p><strong>&lt;figcaption&gt; </strong>Adding text to the figure element.</p>
+    <p><strong>&lt;track&gt; </strong>Specifies text tracks for media elements like video and audio.</p>
   </div>
   <div>
-    <h3>Live example</h3>
+    <h3>Visual example</h3>
     <p>A figure with an image and text.</p>
     <figure>
       <img src="<%= static_path(@conn, "/images/summer.png") %>" height="320" width="400">

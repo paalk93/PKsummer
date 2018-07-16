@@ -1,0 +1,32 @@
+<section>
+  <div>
+    <h1>General attributes</h1>
+    <p>Attributes used all around.</p>
+    <p><strong>class - </strong>Use to add classes to the element.</p>
+    <p><strong>id - </strong>Use to add an id to the element.</p>
+    <p><strong>disabled - </strong>Speciefies that an element should be disabled.</p>
+    <p><strong>lang - </strong>Specifies the language of the elements's content.</p>
+    <p><strong>title - </strong>Specifies extra information about an element, like a tooltip when hovering over.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <p class="attribute-example-class">This paragraph have a class which changes the color to coral.</p>
+    <p id="attribute-example-id">This paragraph have a class which changes the color to red.</p>
+    <p>This button is disabled.</p>
+    <button type="button" name="button" disabled="true">Can't click me</button>
+    <p lang="en">This paragaphs's content is english.</p>
+    <p title="This is the title.">Hoverin this paragraph will display it's title.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        &lt;p class="attribute-example-class"&gt;Sets a class&lt;/p&gt;
+        &lt;p id="attribute-example-id"&gt;Sets an id&lt;/p&gt;
+        &lt;button type="button" name="button" disabled="true">&gt;Disabled button&lt;/button&gt;
+        &lt;p lang="en"&gt;This paragaphs's content is english.&lt;/p&gt;
+        &lt;p title="This is the title."&gt;Add a title.&lt;/p&gt;
+      </code>
+    </pre>
+  </div>
+</section>

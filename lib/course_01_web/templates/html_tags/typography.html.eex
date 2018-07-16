@@ -2,15 +2,15 @@
   <div>
     <h1>Typography tags</h1>
     <p>Used to define paragraphes and headlines</p>
-    <p><strong>&lt;p&gt;</strong>Defines a paragraph.</p>
-    <p><strong>&lt;h&gt;</strong>Creates a headline, by default larger than the paragraph, h1-h6.</p>
-    <p><strong>&lt;pre&gt;</strong>Defines a preformated text, It preserves spaces and line breaks.</p>
-    <p><strong>&lt;br&gt;</strong>Add a line break to your text.</p>
-    <p><strong>&lt;wbr&gt;</strong>Specifies where in a text it would be ok to add a line break unpon resizeing.</p>
-    <p><strong>&lt;hr&gt;</strong>Defines a thematic break in an HTML page.</p>
+    <p><strong>&lt;p&gt; </strong>Defines a paragraph.</p>
+    <p><strong>&lt;h&gt; </strong>Creates a headline, by default larger than the paragraph, h1-h6.</p>
+    <p><strong>&lt;pre&gt; </strong>Defines a preformated text, It preserves spaces and line breaks.</p>
+    <p><strong>&lt;br&gt; </strong>Add a line break to your text.</p>
+    <p><strong>&lt;wbr&gt; </strong>Specifies where in a text it would be ok to add a line break unpon resizeing.</p>
+    <p><strong>&lt;hr&gt; </strong>Defines a thematic break in an HTML page.</p>
   </div>
   <div>
-    <h3>Live example </h3>
+    <h3>Visual example </h3>
     <hr>
     <h2>This headline uses h2</h2>
     <hr>

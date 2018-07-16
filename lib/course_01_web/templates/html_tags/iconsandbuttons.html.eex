@@ -2,12 +2,12 @@
   <div>
     <h1>Icon and button tags</h1>
     <p>Tags used for icons, button and links.</p>
-    <p><strong>&lt;a&gt;</strong>Defines a hyperlink, used to link from one page to another.</p>
-    <p><strong>&lt;svg&gt;</strong>Defines a container for SVG graphics.</p>
-    <p><strong>&lt;button&gt;</strong>Defines a clickable button.</p>
+    <p><strong>&lt;a&gt; </strong>Defines a hyperlink, used to link from one page to another.</p>
+    <p><strong>&lt;svg&gt; </strong>Defines a container for SVG graphics.</p>
+    <p><strong>&lt;button&gt; </strong>Defines a clickable button.</p>
   </div>
   <div>
-    <h3>Live example </h3>
+    <h3>Visual example </h3>
     <p>A link can be used to link from one page to another in your html document<br>
       but here is a link to an external site like my codepen using the &lt;a&gt; tag</p>
     <a href="https://codepen.io/paalk93/#">Codepen link</a>

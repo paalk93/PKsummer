@@ -2,16 +2,16 @@
   <div>
     <h1>Section tags</h1>
     <p>Tags used for marking up sections and areas.</p>
-    <p><strong>&lt;section&gt;</strong>Defines a section in the document.</p>
-    <p><strong>&lt;span&gt;</strong>Used to group inline elements in a HTML document.</p>
-    <p><strong>&lt;div&gt;</strong>Defines a division in an HTML a document.</p>
-    <p><strong>&lt;aside&gt;</strong>Defines some content aside from the content it is placed it.</p>
-    <p><strong>&lt;article&gt;</strong>Specifies independant, self contained content.</p>
-    <p><strong>&lt;template&gt;</strong>Content inside is hidden from the client.</p>
-    <p><strong>&lt;blockquote&gt;</strong>Specifies a section that is quoted from another source.</p>
+    <p><strong>&lt;section&gt; </strong>Defines a section in the document.</p>
+    <p><strong>&lt;span&gt; </strong>Used to group inline elements in a HTML document.</p>
+    <p><strong>&lt;div&gt; </strong>Defines a division in an HTML a document.</p>
+    <p><strong>&lt;aside&gt; </strong>Defines some content aside from the content it is placed it.</p>
+    <p><strong>&lt;article&gt; </strong>Specifies independant, self contained content.</p>
+    <p><strong>&lt;template&gt; </strong>Content inside is hidden from the client.</p>
+    <p><strong>&lt;blockquote&gt; </strong>Specifies a section that is quoted from another source.</p>
   </div>
   <div>
-    <h3>Live example </h3>
+    <h3>Visual example </h3>
     <p>Section is used to group a part of the document together into one.</p>
     <p>Personally I mostly use the div tag with classes that use grid or flexbox to make the areas of my document.</p>
     <p>But in this documentation project i use a section for the entire part of my HTML and i use div to seppareate it into sub parts based on content.</p>
