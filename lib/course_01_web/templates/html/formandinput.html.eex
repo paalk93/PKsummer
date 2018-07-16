@@ -1,0 +1,95 @@
+<section>
+  <div>
+    <h1>Form and input tsgs</h1>
+    <p>Tags most commonly used related to input and forms.</p>
+    <p><strong>&lt;form&gt;</strong>Creates a form for user input.</p>
+    <p><strong>&lt;fieldset&gt;</strong>Group related elements in a form.</p>
+    <p><strong>&lt;legend&gt;</strong>Creates a caption for the fieldset element.</p>
+    <p><strong>&lt;input&gt;</strong>Specifies an input field.</p>
+    <p><strong>&lt;select&gt;</strong>Creates a dropdownlist with options.</p>
+    <p><strong>&lt;optgroup&gt;</strong>Grouping the options in the select element.</p>
+    <p><strong>&lt;option&gt;</strong>Defines the options in the select element.</p>
+    <p><strong>&lt;output&gt;</strong>Output represent the result of a calculation. Usually with the help of javascript</p>
+    <p><strong>&lt;datalist&gt;</strong>Makes a set of predefined options for an input field.</p>
+  </div>
+  <div>
+    <h3>Live example </h3>
+    <p>Form with fieldset,legend, datalist and inputs.</p>
+    <form>
+      <fieldset>
+      <legend>Personlia</legend>
+        First name: <input type="text" placeholder="Enter name"><br>
+        Last name: <input type="text" placeholder="Enter last name">
+      </fieldset>
+      <fieldset>
+      <legend>Adress</legend>
+        Adress: <input type="text" placeholder="Enter adress"><br>
+        City: <input type="text" placeholder="Enter city"><br>
+        Country: <input type="text" placeholder="Enter country" list="countries">
+        <datalist id="countries">
+          <option value="Norway"></option>
+          <option value="Sweden"></option>
+          <option value="England"></option>
+          <option value="Germany"></option>
+          <option value="France"></option>
+        </datalist><br>
+        <input type="submit">
+      </fieldset>
+    </form>
+    <p>Select with option groups and options</p>
+    <select name="Movies" id="">
+      <optgroup label="Sci-fi">
+        <option value="Star Wars">Star Wars</option>
+        <option value="Star Trek">Star Trek</option>
+        <option value="Stargate">Stargate</option>
+      </optgroup>
+      <optgroup label="Comedy">
+        <option value="Grown Ups">Grown Ups</option>
+        <option value="Grown Ups 2">Grown Ups 2</option>
+        <option value="The Hangover">The Hangover</option>
+      </optgroup>
+    </select>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+      <p>Form and input fields</p>
+      &lt;form&gt;
+        &lt;fieldset&gt;
+        &lt;legend&gt;Personlia&lt;/legend&gt;
+          First name: &lt;input type="text" placeholder="Enter name"&gt;&lt;br&gt;
+          Last name: &lt;input type="text" placeholder="Enter last name"&gt;
+        &lt;/fieldset&gt;
+        &lt;fieldset&gt;
+        &lt;legend&gt;Adress&lt;/legend&gt;
+          Adress: &lt;input type="text" placeholder="Enter adress"&gt;&lt;br&gt;
+          City: &lt;input type="text" placeholder="Enter city"&lt;&lt;br&gt;
+          Country: &lt;input type="text" placeholder="Enter country" list="countries"&gt;
+          &lt;datalist id="countries"&gt;
+            &lt;option value="Norway"&gt;&lt;/option&gt;
+            &lt;option value="Sweden"&gt;&lt;/option&gt;
+            &lt;option value="England"&gt;&lt;/option&gt;
+            &lt;option value="Germany"&gt;&lt;/option&gt;
+            &lt;option value="France"&gt;&lt;/option&gt;
+          &lt;/datalist&gt;&lt;br&gt;
+          &lt;input type="submit"&gt;
+        &lt;/fieldset&gt;
+      &lt;/form&gt;
+      <p>Select menu with option groups.</p>
+      &lt;select name="Movies" id=""&gt;
+        &lt;optgroup label="Sci-fi"&gt;
+          &lt;option value="Star Wars"&gt;Star Wars&lt;/option&gt;
+          &lt;option value="Star Trek"&gt;Star Trek&lt;/option&gt;
+          &lt;option value="Stargate"&gt;Stargate&lt;/option&gt;
+        &lt;/optgroup&gt;
+        &lt;optgroup label="Comedy"&gt;
+          &lt;option value="Grown Ups"&gt;Grown Ups&lt;/option&gt;
+          &lt;option value="Grown Ups 2"&gt;Grown Ups 2&lt;/option&gt;
+          &lt;option value="The Hangover"&gt;The Hangover&lt;/option&gt;
+        &lt;/optgroup&gt;
+      &lt;/select&gt;
+      </code>
+    </pre>
+  </div>
+</section>

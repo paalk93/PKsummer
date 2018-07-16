@@ -21,4 +21,7 @@ defmodule Course01Web.HtmlController do
   def media(conn, _params) do
     render conn, "media.html"
   end
+  def formandinput(conn, _params) do
+    render conn, "formandinput.html"
+  end
 end
