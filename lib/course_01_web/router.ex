@@ -37,6 +37,9 @@ defmodule Course01Web.Router do
 
     get "/attributes", HtmlAttributesController, :index
     get "/attributes/general", HtmlAttributesController, :general
+    get "/attributes/for_form_and_input", HtmlAttributesController, :for_form_and_input
+    get "/attributes/for_media", HtmlAttributesController, :for_media
+    get "/attributes/for_table_and_list", HtmlAttributesController, :for_table_and_list
   end
 
   # Other scopes may use custom stacks.

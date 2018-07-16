@@ -1,0 +1,58 @@
+<section>
+  <div>
+    <h1>Head tags</h1>
+    <p>Attributes most commonly used when dealing with form and input</p>
+    <p><strong>label - </strong>Puts a label on the select element, for example a shorter version.</p>
+    <p><strong>type - </strong>Specifies the type of the element, i.e button,text input, number input.</p>
+    <p><strong>name - </strong>Puts a name on your element.</p>
+    <p><strong>placeholder - </strong>Puts placeholder text, i.e in an input field.</p>
+    <p><strong>autofocus - </strong>Focus an input field when the page loads.</p>
+    <p><strong>value - </strong>Specifies the initial value of the element.</p>
+    <p><strong>list - </strong>Commonly used on input fields when dealing with a list of preset options, i.e datalist.</p>
+    <p><strong>min - </strong>Sets a minimum value of the element.</p>
+    <p><strong>max - </strong>Sets a maximum vakue of the element.</p>
+    <p><strong>minLength - </strong>Sets the minimum of characters required.</p>
+    <p><strong>maxLength - </strong>Sets the maxium of characters allowed.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <p>Select with a name attribute, which is not visual.</p>
+    <p>Options are shortened from Option 1, to opt1 using the label, and they all have a base value.</p>
+    <select name="options">
+      <option value="Option 1" label="opt1">Option 1</option>
+      <option value="Option 2" label="opt2">Option 2</option>
+      <option value="Option 3" label="opt3">Option 3</option>
+    </select>
+    <hr>
+    <p>This input field is a text type and it will be focused when the page loads using autofocus.</p>
+    <p>It contains a min character length and a max character length. A placeholder</p>
+    <p>It also have a list of preset options from a datalist.</p>
+    <form>
+      <input type="text" placeholder="Favorite fruit?" maxlength="12" minlength="4" list="fruits">
+      <input value="Submit" type="submit">
+      <datalist id="fruits">
+        <option value="Banana">Banana</option>
+        <option value="Pear">Pear</option>
+      </datalist>
+    </form>
+    <hr>
+    <p>A date input with a min and max option.</p>
+    <input type="date" min="2017-01-01" max="2018-12-31">
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        &lt;form&gt;
+          &lt;input type="text" placeholder="Favorite fruit?" maxlength="12" minlength="4" list="fruits"&gt;
+          &lt;input value="Submit" type="submit"&gt;
+          &lt;datalist id="fruits"&gt;
+            &lt;option value="Banana"&gt;Banana&lt;/option&gt;
+            &lt;option value="Pear"&gt;Pear&lt;/option&gt;
+          &lt;/datalist&gt;
+        &lt;/form&gt;
+      </code>
+    </pre>
+    <p></p>
+  </div>
+</section>

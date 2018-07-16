@@ -1,0 +1,69 @@
+<section>
+  <div>
+    <h1>Attributes for table and list</h1>
+    <p>Attributes most commonly used in table and lists</p>
+    <p><strong>colspan - </strong>Defines the number of colums a cell should span.</p>
+    <p><strong>rowspan - </strong>Defines teh number of rows a cell should span.</p>
+    <p><strong>start - </strong>Specifies the start value of the first list item in an ordered.</p>
+    <p><strong>border - </strong>Adds a border around the table cells.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <p>Table with rowspan, colspan and border attributes</p>
+    <table border="1">
+      <tr>
+        <th>Month</th>
+        <th>Savings</th>
+        <th rowspan="4">I love savings</th>
+      </tr>
+      <tr>
+        <td>January</td>
+        <td>1999kr</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>2399kr</td>
+      </tr>
+      <tr>
+        <td colspan="2">sum: 4398kr</td>
+      </tr>
+    </table>
+    <hr>
+    <p>Ordered list with the start attribute set to 10.</p>
+    <ol start="10">
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ol>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        &lt;table border="1"&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Savings&lt;/th&gt;
+            &lt;th rowspan="4"&gt;I love savings&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1999kr&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;February&lt;/td&gt;
+            &lt;td&gt;2399kr&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan="2"&gt;sum: 4398kr&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+
+        &lt;ol start="10"&gt;
+          &lt;li&gt;Item 1&lt;/li&gt;
+          &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;/ol&gt;
+      </code>
+    </pre>
+    <p></p>
+  </div>
+</section>
