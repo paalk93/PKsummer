@@ -23,6 +23,8 @@ defmodule Course01Web.Router do
     pipe_through :browser
 
     get "/", HtmlController, :index
+    get "/tags", HtmlController, :tags
+    get "/tags/head", HtmlController, :tagshead
   end
 
   # Other scopes may use custom stacks.
