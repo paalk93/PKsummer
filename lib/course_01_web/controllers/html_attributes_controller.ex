@@ -17,4 +17,7 @@ defmodule Course01Web.HtmlAttributesController do
   def for_table_and_list(conn, _params) do
     render conn, "for_table_and_list.html"
   end
+  def attribute_styling(conn, _params) do
+    render conn, "attribute_styles.html"
+  end
 end

@@ -1,0 +1,29 @@
+<section>
+  <div>
+    <h1>Styling attributes</h1>
+    <p>Different attributes used for styling.</p>
+    <p><strong>style - </strong>Allow us to user css properties directly in the html.</p>
+    <p><strong>height - </strong>Set a height to an element(in pixels).</p>
+    <p><strong>width - </strong>Set a width the an element(in pixels).</p>
+    <p><strong>size - </strong>Specifies the width in characters for an input element.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <p>Here is a img which we set the height and width of using the width/height attribute.</p>
+    <p>We also style it with a border using the style attribute, which allow us to use CSS properties.</p>
+    <img src="<%= static_path(@conn, "/images/summer.png") %>" height="120" width="200" style="border: 3px solid black">
+    <hr>
+    <p>Here is an input field which length is set to 15 characters using the size attribute.</p>
+    <input size="15">
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+          &lt;img src="&lt;%= static_path(@conn, "/images/summer.png") %&gt;" height="120" width="200" style="border: 3px solid black"&gt;
+
+          &lt;input size="15"&gt;
+      </code>
+    </pre>
+  </div>
+</section>
