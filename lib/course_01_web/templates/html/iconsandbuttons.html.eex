@@ -1,0 +1,34 @@
+<section>
+  <div>
+    <h1>Icon and button tags</h1>
+    <p>Tags used for icons, button and links.</p>
+    <p><strong>&lt;a&gt;</strong>Defines a hyperlink, used to link from one page to another.</p>
+    <p><strong>&lt;svg&gt;</strong>Defines a container for SVG graphics.</p>
+    <p><strong>&lt;button&gt;</strong>Defines a clickable button.</p>
+  </div>
+  <div>
+    <h3>Live example </h3>
+    <p>A link can be used to link from one page to another in your html document<br>
+      but here is a link to an external site like my codepen using the &lt;a&gt; tag</p>
+    <a href="https://codepen.io/paalk93/#">Codepen link</a>
+    <p>SVG icon.</p>
+    <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+    </svg>
+    <p>A clickable button, has no effect as for now.</p>
+    <button type="button" name="button">Click me</button>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        &lt;a href="https://codepen.io/paalk93/#"&gt;Codepen link&lt;/a&gt;
+        &lt;svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"&gt;
+          &lt;path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"/&gt;
+        &lt;/svg&gt;
+        &lt;button type="button" name="button"&gt;Click me&lt;/button&gt;
+      </code>
+    </pre>
+    <p></p>
+  </div>
+</section>

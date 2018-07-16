@@ -30,4 +30,13 @@ defmodule Course01Web.HtmlController do
   def typography(conn, _params) do
     render conn, "typography.html"
   end
+  def iconsandbuttons(conn, _params) do
+    render conn, "iconsandbuttons.html"
+  end
+  def textformatting(conn, _params) do
+    render conn, "textformatting.html"
+  end
+  def codeandscript(conn, _params) do
+    render conn, "codeandscript.html"
+  end
 end

@@ -1,0 +1,50 @@
+<section>
+  <div>
+    <h1>Text formatting tags</h1>
+    <p>Tags used to add reference text or style text.</p>
+    <p><strong>&lt;q&gt;</strong>Add quotation text style.</p>
+    <p><strong>&lt;ins&gt;</strong>Add inserted text style.</p>
+    <p><strong>&lt;strong&gt;</strong>Add a strong text style for important text.</p>
+    <p><strong>&lt;sub&gt;</strong>Add subscript text style.</p>
+    <p><strong>&lt;sup&gt;</strong>Add superscript text style.</p>
+    <p><strong>&lt;small&gt;</strong>Add small text style.</p>
+    <p><strong>&lt;abbr&gt;</strong>Defines an acronym like "Mr."</p>
+    <p><strong>&lt;adress&gt;</strong>Defines contact information.</p>
+    <p><strong>&lt;summary&gt;</strong>Defines a visible heading for the &lt;details&gt; element</p>
+    <p><strong>&lt;mark&gt;</strong>Add marked text style.</p>
+    <p><strong>&lt;em&gt;</strong>Add emphasized text style.</p>
+    <p><strong>&lt;ci&gt;</strong>Defines a title of a work, book, singer or movie.</p>
+    <p><strong>&lt;i&gt;</strong>Add italic text style.</p>
+    <p><strong>&lt;b&gt;</strong>Add bold text style.</p>
+    <p><strong>&lt;strike&gt;</strong>Add strikethrough text style.</p>
+    <p><strong>&lt;del&gt;</strong>Add deleted text style.</p>
+  </div>
+  <div>
+    <h3>Live example </h3>
+    <p>This is a <q>quote</q></p>
+    <p>This text is <ins>inserted</ins></p>
+    <p>This text is <strong>strong</strong></p>
+    <p>This text is <sub>subscript</sub></p>
+    <p>This text is <sup>superscript</sup></p>
+    <p>This test is <mark>marked</mark></p>
+    <p>This text is <em>emphasized</em></p>
+    <p>This text is <i>italic</i></p>
+    <p>This text is <b>bold</b></p>
+    <p>This text is <strike>strikethrough</strike></p>
+    <p>This text is <del>deleted</del></p>
+    <address>
+      This is an adress<br>
+      1110 awesome land<br>
+      USA
+    </address>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        &lt;p&gt;This test is &lt;mark&gt;marked&lt;/mark&gt;&lt;/p&gt;
+        &lt;p&gt;This text is &lt;del&gt;deleted&lt;/del&gt;&lt;/p&gt;
+      </code>
+    </pre>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+
+<section>
+  <div>
+    <h1>Code and script tags</h1>
+    <p></p>
+    <p><strong>&lt;code&gt;</strong>A phrase tag which defines a piece of comuter code</p>
+    <p><strong>&lt;data&gt;</strong>Links the given content with a machine-readable-translation</p>
+    <p><strong>&lt;progress&gt;</strong>Represent the progress of a task.</p>
+    <p><strong>&lt;var&gt;</strong>A phrase tag which defines a variable.</p>
+    <p><strong>&lt;object&gt;</strong>Defines an embedded object within an HTML document.</p>
+    <p><strong>&lt;noscript&gt;</strong>Defines alternative content for users that have disabled scripts in their browser,<br>or the browser does not support script.</p>
+    <p><strong>&lt;samp&gt;</strong>Phrase tag which defines a sample output from a computer program.</p>
+    <p><strong>&lt;script&gt;</strong>Used to define a client side script.</p>
+  </div>
+  <div>
+    <h3>Live example </h3>
+    <h4>Phrase tags is a way to format/style the text.<br>Since it is used to define text which is about data and code i decided to cover it here and not under text formatting.</h4>
+    <p>Here is some <code>computer code</code></p>
+    <p>Here is a <var>variable</var></p>
+    <p>Here is a sample from <samp>a computer program</samp></p>
+    <hr>
+    <p>The &lt;script&gt; tag is used to define client side script.<br>
+      Either by linking to a script document, or writing javascript directly in.<br>
+      The script tag with the script is usually placed at the bottom of the body tag.
+    </p>
+    <p>Progress tag displays a progress bar.</p>
+    <progress value="12" max="100">12%</progress>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        &lt;code&gt;
+          &lt;p&gt;Here is some &lt;code&gt;computer code&lt;/code&gt;&lt;/p&gt;
+          &lt;p&gt;Here is a &lt;var&gt;variable&lt;/var&gt;&lt;/p&gt;
+          &lt;p&gt;Here is a sample from &lt;samp&gt;a computer program&lt;/samp&gt;&lt;/p&gt;
+          &lt;script src="../javascript/main.js"&gt;
+          &lt;/script&gt;
+        &lt;/code&gt;
+      </code>
+    </pre>
+    <p>We can link our existing javascript document by using src.<br>
+      Or simply just type our functions etc in between the tags.
+    </p>
+  </div>
+</section>
