@@ -24,4 +24,7 @@ defmodule Course01Web.HtmlController do
   def formandinput(conn, _params) do
     render conn, "formandinput.html"
   end
+  def sections(conn, _params) do
+    render conn, "sections.html"
+  end
 end
