@@ -2,28 +2,28 @@
   <div>
     <h1>Head tags</h1>
     <p>Most common tags used in the head of the document.</p>
-    <p><strong>&lthead&gt</strong>Defines the head of the document.</p>
-    <p><strong>&ltlink&gt</strong>Commonly used when linking an external stylesheet.</p>
-    <p><strong>&ltmeta&gt</strong>Provides metadata about your document.</p>
-    <p><strong>&lttitle&gt</strong>Set a title for your document, as shown on the web browser tabs.</p>
+    <p><strong>&lt;head&gt;</strong>Defines the head of the document.</p>
+    <p><strong>&lt;link&gt;</strong>Commonly used when linking an external stylesheet.</p>
+    <p><strong>&lt;meta&gt;</strong>Provides metadata about your document.</p>
+    <p><strong>&lt;title&gt;</strong>Set a title for your document, as shown on the web browser tabs.</p>
   </div>
   <div>
     <h3>Simple example of head tags</h3>
     <pre>
       <code>
-        &lthead&gt
-          &ltmeta charset="utf-8"&gt
-          &ltmeta name="viewport" content="width=device-width"&gt
-          &lttitle&gtMy Example&lt/title&gt
-          &ltlink rel="stylesheet" href="mystylesheet.css"&gt
-        &lt/head&gt
+        &lt;head&gt;
+          &lt;meta charset="utf-8"&gt;
+          &lt;meta name="viewport" content="width=device-width"&gt;
+          &lt;title&gt;My Example&lt;/title&gt;
+          &lt;link rel="stylesheet" href="mystylesheet.css"&gt;
+        &lt;/head&gt;
       </code>
     </pre>
-    <p>The first &lthead&gt tag is to define the start of our head.</p>
+    <p>The first &lt;head&gt; tag is to define the start of our head.</p>
     <p>Inside we use meta to set the charset to utf-8, this will set the character encodeing for our document.</p>
     <p>Then we have a second meta tag where we set the viewport, this give our document instructions on how to controll dimensions and scaleing.</p>
     <p>Then we use the title tag to give our document a title.</p>
-    <p>We use &ltlink&gt to link our external stylesheet.</p>
+    <p>We use &lt;link&gt; to link our external stylesheet.</p>
     <p>And finally we close up our head tag</p>
   </div>
 </section>

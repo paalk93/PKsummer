@@ -12,4 +12,7 @@ defmodule Course01Web.HtmlController do
   def tagshead(conn, _params)do
     render conn, "tagshead.html"
   end
+  def tagsbody(conn, _params)do
+    render conn, "tagsbody.html"
+  end
 end
