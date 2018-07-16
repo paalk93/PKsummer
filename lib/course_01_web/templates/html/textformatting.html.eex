@@ -1,7 +1,7 @@
 <section>
   <div>
-    <h1>Head tags</h1>
-    <p></p>
+    <h1>Text formatting tags</h1>
+    <p>Tags used to add reference text or style text.</p>
     <p><strong>&lt;q&gt;</strong>Add quotation text style.</p>
     <p><strong>&lt;ins&gt;</strong>Add inserted text style.</p>
     <p><strong>&lt;strong&gt;</strong>Add a strong text style for important text.</p>
@@ -46,6 +46,5 @@
         &lt;p&gt;This text is &lt;del&gt;deleted&lt;/del&gt;&lt;/p&gt;
       </code>
     </pre>
-    <p></p>
   </div>
 </section>

@@ -36,4 +36,7 @@ defmodule Course01Web.HtmlController do
   def textformatting(conn, _params) do
     render conn, "textformatting.html"
   end
+  def codeandscript(conn, _params) do
+    render conn, "codeandscript.html"
+  end
 end
