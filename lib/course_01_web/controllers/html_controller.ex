@@ -18,4 +18,7 @@ defmodule Course01Web.HtmlController do
   def tableandlist(conn, _params)do
     render conn, "tableandlist.html"
   end
+  def media(conn, _params) do
+    render conn, "media.html"
+  end
 end
