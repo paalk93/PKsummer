@@ -1,0 +1,60 @@
+<section>
+  <div>
+    <h1>Git terms</h1>
+    <p>Terms / command often used when working with git.</p>
+    <h3>Configuration - configure user information for all local repositories.</h3>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <hr>
+    <h3>Create - Start a new repository or obtain one from an existing URL.</h3>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <hr>
+    <h3>Local changes - Review edits and craft a commit transaction.</h3>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <hr>
+    <h3>Branches - Create, change and delete working branches.</h3>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <hr>
+    <h3>Update and publish - Set remote, fetch, pull and push changes.</h3>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <hr>
+    <h3>Merge and rebase - Merge or go back to earlier changes.</h3>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <hr>
+    <h3>Undo - Undo and reset unwanted changes.</h3>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <hr>
+    <h3>Save Fragments - Save and stash changes for later use.</h3>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <p><strong> - </strong></p>
+    <hr>
+    <h3>Git blame</h3>
+    <p><strong> - </strong></p>
+  </div>
+</section>
