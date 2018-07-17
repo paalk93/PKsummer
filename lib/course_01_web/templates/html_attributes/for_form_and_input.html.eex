@@ -3,16 +3,29 @@
     <h1>Attributes for form and input</h1>
     <p>Attributes most commonly used when dealing with form and input</p>
     <p><strong>label - </strong>Puts a label on the select element, for example a shorter version.</p>
+    <p>Can be used with: &lt;track&gt;, &lt;option&gt;, &lt;optgroup&gt;</p>
     <p><strong>type - </strong>Specifies the type of the element, i.e button,text input, number input.</p>
+    <p>Can be used with: &lt;button&gt;, &lt;embed&gt;, &lt;input&gt;, &lt;link&gt;, &lt;menu&gt;, &lt;object&gt;, &lt;script&gt;,<br>
+       &lt;source&gt;, &lt;style&gt;</p>
     <p><strong>name - </strong>Puts a name on your element.</p>
+    <p>Can be used with: &lt;button&gt;, &lt;fieldset&gt;, &lt;form&gt;, &lt;iframe&gt;, &lt;input&gt;, &lt;map&gt;, &lt;meta&gt;,<br>
+       &lt;object&gt;, &lt;output&gt;, &lt;param&gt;, &lt;select&gt;, &lt;textarea&gt;</p>
     <p><strong>placeholder - </strong>Puts placeholder text, i.e in an input field.</p>
+    <p>Can be used with: &lt;input&gt;, &lt;textarea&gt;</p>
     <p><strong>autofocus - </strong>Focus an input field when the page loads.</p>
+    <p>Can be used with: &lt;button&gt;, &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</p>
     <p><strong>value - </strong>Specifies the initial value of the element.</p>
+    <p>Can be used with: &lt;button&gt;, &lt;input&gt;, &lt;li&gt;, &lt;option&gt;, &lt;meter&gt;, &lt;progress&gt;, &lt;param&gt;</p>
     <p><strong>list - </strong>Commonly used on input fields when dealing with a list of preset options, i.e datalist.</p>
+    <p>Can be used with: &lt;input&gt;</p>
     <p><strong>min - </strong>Sets a minimum value of the element.</p>
+    <p>Can be used with: &lt;input&gt;, &lt;meter&gt;</p>
     <p><strong>max - </strong>Sets a maximum vakue of the element.</p>
+    <p>Can be used with: &lt;input&gt;, &lt;meter&gt; &lt;progress&gt;</p>
     <p><strong>minLength - </strong>Sets the minimum of characters required.</p>
+    <p>Can be used with: &lt;input&gt;, &lt;meter&gt;</p>
     <p><strong>maxLength - </strong>Sets the maxium of characters allowed.</p>
+    <p>Can be used with: &lt;input&gt;, &lt;meter&gt;</p>
   </div>
   <div>
     <h3>Visual example </h3>

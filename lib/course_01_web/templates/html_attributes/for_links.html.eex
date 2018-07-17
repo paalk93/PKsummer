@@ -3,8 +3,11 @@
     <h1>Attributes for links</h1>
     <p>Attributes most commonly used with links.</p>
     <p><strong>href - </strong>Specifies the URL to the page the link goes to.</p>
+    <p>Can be used with: &lt;a&gt;, &lt;area&gt;, &lt;base&gt;, &lt;link&gt;</p>
     <p><strong>target - </strong>Specifies where to open the linked document.</p>
+    <p>Can be used with: &lt;a&gt;, &lt;area&gt;, &lt;base&gt;, &lt;form&gt;</p>
     <p><strong>rel - </strong>Specifies the relation between the current and linked document.</p>
+    <p>Can be used with: &lt;a&gt;, &lt;area&gt;, &lt;link&gt;</p>
   </div>
   <div>
     <h3>Visual example </h3>

@@ -3,9 +3,13 @@
     <h1>Attributes for table and list</h1>
     <p>Attributes most commonly used in table and lists</p>
     <p><strong>colspan - </strong>Defines the number of colums a cell should span.</p>
+    <p>Can be used with: &lt;td&gt;, &lt;th&gt;</p>
     <p><strong>rowspan - </strong>Defines teh number of rows a cell should span.</p>
+    <p>Can be used with: &lt;td&gt;, &lt;th&gt;</p>
     <p><strong>start - </strong>Specifies the start value of the first list item in an ordered.</p>
+    <p>Can be used with: &lt;ol&gt;</p>
     <p><strong>border - </strong>Adds a border around the table cells.</p>
+    <p>Can be used with: &lt;table&gt;</p>
   </div>
   <div>
     <h3>Visual example </h3>

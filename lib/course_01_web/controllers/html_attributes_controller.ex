@@ -22,7 +22,7 @@ defmodule Course01Web.HtmlAttributesController do
   end
 
   def styling_attributes(conn, _params) do
-    render conn, "attribute_styles.html"
+    render conn, "styling_attributes.html"
   end
 
   def for_links(conn, _params) do

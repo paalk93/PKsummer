@@ -3,10 +3,15 @@
     <h1>General attributes</h1>
     <p>Attributes used all around.</p>
     <p><strong>class - </strong>Use to add classes to the element.</p>
+    <p>Can be used with: Global(all elements)</p>
     <p><strong>id - </strong>Use to add an id to the element.</p>
+    <p>Can be used with: Global(all elements)</p>
     <p><strong>disabled - </strong>Speciefies that an element should be disabled.</p>
+    <p>Can be used with: &lt;button&gt;, &lt;fieldset&gt;, &lt;input&gt;, &lt;optgroup&gt;, &lt;option&gt;, &lt;select&gt;, &lt;textarea&gt;</p>
     <p><strong>lang - </strong>Specifies the language of the elements's content.</p>
+    <p>Can be used with: Global(all elements)</p>
     <p><strong>title - </strong>Specifies extra information about an element, like a tooltip when hovering over.</p>
+    <p>Can be used with: Global(all elements)</p>
   </div>
   <div>
     <h3>Visual example </h3>
