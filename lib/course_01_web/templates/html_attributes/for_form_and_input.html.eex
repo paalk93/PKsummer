@@ -1,6 +1,6 @@
 <section>
   <div>
-    <h1>Head tags</h1>
+    <h1>Attributes for form and input</h1>
     <p>Attributes most commonly used when dealing with form and input</p>
     <p><strong>label - </strong>Puts a label on the select element, for example a shorter version.</p>
     <p><strong>type - </strong>Specifies the type of the element, i.e button,text input, number input.</p>
@@ -53,6 +53,5 @@
         &lt;/form&gt;
       </code>
     </pre>
-    <p></p>
   </div>
 </section>

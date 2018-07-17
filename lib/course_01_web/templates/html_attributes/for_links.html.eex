@@ -1,0 +1,30 @@
+<section>
+  <div>
+    <h1>Attributes for links</h1>
+    <p>Attributes most commonly used with links.</p>
+    <p><strong>href - </strong>Specifies the URL to the page the link goes to.</p>
+    <p><strong>target - </strong>Specifies where to open the linked document.</p>
+    <p><strong>rel - </strong>Specifies the relation between the current and linked document.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <p>When using target we have multiple options:<br>
+      _blank, will open the link in a new tab.<br>
+      _self, is default and will open it in the same frame as it was clicked.<br>
+      _top, opens the linked document in the full body of the window.
+    </p>
+    <p>A link to my codepen which will open in a new tab because we use target = "_blank"</p>
+    <a href="https://codepen.io/paalk93/#" target="_blank">Link to codepen</a>
+    <hr>
+    <p>When linking a stylesheet we can use rel, to tell the document it is a stylesheet.</p>
+      &lt;link rel="stylesheet" href="css/mystylesheet.css"&gt;
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        &lt;a href="https://codepen.io/paalk93/#" target="_blank"&gt;Link to codepen&lt;/a&gt;
+      </code>
+    </pre>
+  </div>
+</section>
