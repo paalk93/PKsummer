@@ -50,6 +50,7 @@ defmodule Course01Web.Router do
 
     get "/", GitExampleController, :index
     get "/git_commands", GitExampleController, :git_commands
+    get "/git_routines", GitExampleController, :git_routines
   end
 
   # Other scopes may use custom stacks.
