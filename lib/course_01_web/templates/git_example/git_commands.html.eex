@@ -1,0 +1,61 @@
+<section>
+  <div>
+    <h1>Git terms</h1>
+    <p>Terms / command often used when working with git.</p>
+    <h3>Configuration - configure user information for all local repositories.</h3>
+    <p><strong>git config --global user.name [name] - </strong>Sets the name you want attached to your commits.</p>
+    <p><strong>git config --global user.email [email adress] - </strong>Sets the email you want attatched to your commits.</p>
+    <hr>
+    <h3>Create - Start a new repository or obtain one from an existing URL.</h3>
+    <p><strong>git init - </strong>Initialize an exsisting directory as a git repository.</p>
+    <p><strong>git clone [url] - </strong>Clone a repository from a url.</p>
+    <hr>
+    <h3>Local changes - Review edits and craft a commit transaction.</h3>
+    <p><strong>git status - </strong>Show modified files in directory, staged for your next commit.</p>
+    <p><strong>git diff - </strong>Show file differences not yet staged.</p>
+    <p><strong>git add. - </strong>Add all current changes to the next commit(stage).</p>
+    <p><strong>git add [file] - Add changes in file as it looks to your next commit(stage).</strong></p>
+    <p><strong>git commit -a -m [description] - </strong>Commit all staged and unstaged files with your description message.</p>
+    <p><strong>got commit -m [description]- </strong>Commit staged files and add description.</p>
+    <hr>
+    <h3>Branches - Create, change and delete working branches.</h3>
+    <p><strong>git branch - </strong>List all branches.</p>
+    <p><strong>git branch [name] - </strong>Create a new branch with the given name.</p>
+    <p><strong>git checkout -b [name] - </strong>Create and checkout to the branch created.</p>
+    <p><strong>git checkout [name] - </strong>Change branch.</p>
+    <p><strong>git branch -d [name] - </strong>Delete local branch.</p>
+    <p><strong>git branch -dr [name] - </strong>Delete remote branch.</p>
+    <hr>
+    <h3>Update and publish - Set remote, fetch, pull and push changes.</h3>
+    <p><strong>git remote -v - </strong>List all currently configured remotes.</p>
+    <p><strong>git remote show [name] - </strong>Show information about a remote.</p>
+    <p><strong>git remote add [name] [url] - </strong>Add a git url as an alias.</p>
+    <p><strong>git remote rm [name] - </strong>Delete a remote.</p>
+    <p><strong>git fetch [alias] - </strong>Fetch all the changes from a git remote.</p>
+    <p><strong>git pull - </strong>Fetch and merge all the changes from a git remote.</p>
+    <p><strong>git pull upstream master - </strong>Fetch and merge all the changes from forked remote repo.</p>
+    <p><strong>git push --set-upstream origin master - </strong>Sets the master(also allow to simply use git push for pushes).</p>
+    <p><strong>git push origin [branch] - </strong>Push the local branch to the remote.</p>
+    <p><strong>git push [alias] [branch] - </strong>Push the local changes to a remote repository.</p>
+    <hr>
+    <h3>Merge and rebase - Merge or go back to earlier changes.</h3>
+    <p><strong>git merge [branch] - </strong>Merge the specified branch into the current one.</p>
+    <p><strong>git rebase [base] - </strong>Apply commits of current branch ahead of a specified branch.</p>
+    <p><strong>git rebase --abort- </strong>Abort a rebase.</p>
+    <p><strong>git rebase --continue - </strong>Continue a rebase after resolving conflicts.</p>
+    <hr>
+    <h3>Undo - Undo and reset unwanted changes.</h3>
+    <p><strong>git reset HEAD [file] - </strong>Unstage files and keep local changes.</p>
+    <p><strong>git reset [commit] - </strong>Unstage a file and preserve all changes as unchanged changes.</p>
+    <p><strong>git reset --hard [commit] - </strong>Unstage a file and discard all changes since then.</p>
+    <hr>
+    <h3>Save Fragments - Save and stash changes for later use.</h3>
+    <p><strong>git stash - </strong>Save modified and staged changes.</p>
+    <p><strong>git stash list - </strong>List all stashed changes.</p>
+    <p><strong>git stash pop - </strong>Write working from top of a stash stack.</p>
+    <p><strong>git stash drop - </strong>Discard changes from top of stash stack.</p>
+    <hr>
+    <h3>Git blame</h3>
+    <p><strong>git-blame - </strong>Show what revision and authoor last modified each line of a file.</p>
+  </div>
+</section>
