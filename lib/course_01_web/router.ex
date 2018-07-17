@@ -24,16 +24,16 @@ defmodule Course01Web.Router do
 
     get "/", HtmlTagsController, :index
     get "/tags", HtmlTagsController, :tags
-    get "/tags/head", HtmlTagsController, :tagshead
-    get "/tags/body", HtmlTagsController, :tagsbody
-    get "/tags/tableandlist", HtmlTagsController, :tableandlist
+    get "/tags/head", HtmlTagsController, :head_tags
+    get "/tags/body", HtmlTagsController, :body_tags
+    get "/tags/table_and_list", HtmlTagsController, :table_and_list
     get "/tags/media", HtmlTagsController, :media
-    get "/tags/formandinput", HtmlTagsController, :formandinput
+    get "/tags/form_and_input", HtmlTagsController, :form_and_input
     get "/tags/sections", HtmlTagsController, :sections
     get "/tags/typography", HtmlTagsController, :typography
-    get "/tags/iconsandbuttons", HtmlTagsController, :iconsandbuttons
+    get "/tags/icons_and_buttons", HtmlTagsController, :icons_and_buttons
     get "/tags/textformatting", HtmlTagsController, :textformatting
-    get "/tags/codeandscript", HtmlTagsController, :codeandscript
+    get "/tags/code_and_script", HtmlTagsController, :code_and_script
 
     get "/attributes", HtmlAttributesController, :index
     get "/attributes/general", HtmlAttributesController, :general
