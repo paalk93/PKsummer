@@ -9,24 +9,24 @@ defmodule Course01Web.HtmlTagsController do
     render conn, "tags.html"
   end
 
-  def tagshead(conn, _params)do
-    render conn, "tagshead.html"
+  def head_tags(conn, _params)do
+    render conn, "head_tags.html"
   end
 
-  def tagsbody(conn, _params)do
-    render conn, "tagsbody.html"
+  def body_tags(conn, _params)do
+    render conn, "body_tags.html"
   end
 
-  def tableandlist(conn, _params)do
-    render conn, "tableandlist.html"
+  def table_and_list(conn, _params)do
+    render conn, "table_and_list.html"
   end
 
   def media(conn, _params) do
     render conn, "media.html"
   end
 
-  def formandinput(conn, _params) do
-    render conn, "formandinput.html"
+  def form_and_input(conn, _params) do
+    render conn, "form_and_input.html"
   end
 
   def sections(conn, _params) do
@@ -37,15 +37,15 @@ defmodule Course01Web.HtmlTagsController do
     render conn, "typography.html"
   end
 
-  def iconsandbuttons(conn, _params) do
-    render conn, "iconsandbuttons.html"
+  def icons_and_buttons(conn, _params) do
+    render conn, "icons_and_buttons.html"
   end
 
   def textformatting(conn, _params) do
     render conn, "textformatting.html"
   end
-  
-  def codeandscript(conn, _params) do
-    render conn, "codeandscript.html"
+
+  def code_and_script(conn, _params) do
+    render conn, "code_and_script.html"
   end
 end
