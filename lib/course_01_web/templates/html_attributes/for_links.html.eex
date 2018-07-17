@@ -1,7 +1,7 @@
 <section>
   <div>
-    <h1>Head tags</h1>
-    <p></p>
+    <h1>Attributes for links</h1>
+    <p>Attributes most commonly used with links.</p>
     <p><strong>href - </strong>Specifies the URL to the page the link goes to.</p>
     <p><strong>target - </strong>Specifies where to open the linked document.</p>
     <p><strong>rel - </strong>Specifies the relation between the current and linked document.</p>

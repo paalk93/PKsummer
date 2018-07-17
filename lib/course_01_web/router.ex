@@ -42,6 +42,7 @@ defmodule Course01Web.Router do
     get "/attributes/for_table_and_list", HtmlAttributesController, :for_table_and_list
     get "/attributes/styling_attributes", HtmlAttributesController, :styling_attributes
     get "/attributes/for_links", HtmlAttributesController, :for_links
+    get "/attributes/data_and_javascript", HtmlAttributesController, :data_and_javascript
   end
 
   # Other scopes may use custom stacks.

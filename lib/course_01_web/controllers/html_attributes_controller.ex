@@ -28,4 +28,8 @@ defmodule Course01Web.HtmlAttributesController do
   def for_links(conn, _params) do
     render conn, "for_links.html"
   end
+
+  def data_and_javascript(conn, _params) do
+    render conn, "data_and_javascript.html"
+  end
 end
