@@ -1,9 +1,17 @@
 <section>
   <div>
     <h1>Problem solving</h1>
-    <p></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
+    <h3>Problem solving methods</h3>
+    <p>Use pen and paper, draw an example of what you are trying to do.</p>
+    <p>Look at it from a different perspective, do not think in code.</p>
+    <p>If you have a failing function, go over it part for part.</p>
+    <p>Think loud and logically.</p>
+    <hr>
+    <h3>Difference between solo and teamwork.</h3>
+    <p>The planning process can be different. Perhaps you alone does not make all the calls.</p>
+    <p>It is always a good habit to fetch and pull changes when you start working every day.<br>
+      but in a team project it is nessecary, someone might have done changes, so you will need to fetch and pull<br>
+      more frequently.
+    </p>
   </div>
 </section>
