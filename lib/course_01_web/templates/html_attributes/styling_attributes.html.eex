@@ -3,9 +3,13 @@
     <h1>Styling attributes</h1>
     <p>Different attributes used for styling.</p>
     <p><strong>style - </strong>Allow us to user css properties directly in the html.</p>
+    <p>Can be used with: Global(all elements), </p>
     <p><strong>height - </strong>Set a height to an element(in pixels).</p>
+    <p>Can be used with: &lt;canvas&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;input&gt;, &lt;object&gt;, &lt;video&gt;</p>
     <p><strong>width - </strong>Set a width the an element(in pixels).</p>
+    <p>Can be used with: &lt;canvas&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;input&gt;, &lt;object&gt;, &lt;video&gt;</p>
     <p><strong>size - </strong>Specifies the width in characters for an input element.</p>
+    <p>Can be used with: &lt;input&gt;, &lt;select&gt;</p>
   </div>
   <div>
     <h3>Visual example </h3>

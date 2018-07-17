@@ -3,8 +3,12 @@
     <h1>Attributes for media</h1>
     <p>Commonly used for media elements, i.e images.</p>
     <p><strong>src - </strong>Src attribute is required and specifiec the url for a image.</p>
+    <p>Can be used with: &lt;audio&gt;, &lt;embed&lt; &lt;iframe&gt;, &lt;img&gt;, &lt;input&gt;, &lt;script&gt;, &lt;source&gt;,<br>
+       &lt;track&gt;, &lt;video&gt;</p>
     <p><strong>alt - </strong>Specifies an alternative text of the element cannot be displayed.</p>
+    <p>Can be used with: &lt;area&gt;, &lt;img&gt;, &lt;input&gt;</p>
     <p><strong>ismap - </strong>Boolean attribute, specifies that the image is part of a serverside image map.</p>
+    <p>Can be used with: &lt;img&gt;</p>
   </div>
   <div>
     <h3>Visual example </h3>
@@ -18,7 +22,7 @@
     <h3>Code example</h3>
     <pre>
       <code>
-        &ltimg src="&lt;%= static_path(@conn, "/images/summer.png") %&gt;" height="220" width="300" alt="Summer image"&gt;
+        &lt;img src="&lt;%= static_path(@conn, "/images/summer.png") %&gt;" height="220" width="300" alt="Summer image"&gt;
       </code>
     </pre>
   </div>
