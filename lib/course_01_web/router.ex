@@ -45,6 +45,13 @@ defmodule Course01Web.Router do
     get "/attributes/data_and_javascript", HtmlAttributesController, :data_and_javascript
   end
 
+  scope "/git", Course01Web do
+    pipe_through :browser
+
+    get "/", GitExampleController, :index
+    get "/git_commands", GitExampleController, :git_commands
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", Course01Web do
   #   pipe_through :api

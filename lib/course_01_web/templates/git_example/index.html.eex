@@ -1,0 +1,14 @@
+<section>
+  <div>
+    <h1>What is git?</h1>
+    <p>Git is a version control system.</p>
+    <p>It allows you to keep track and view changes in your project.</p>
+
+  </div>
+  <div>
+    <h3>Why use git?</h3>
+    <p>Git is handy because it give you the option to backtrack to previous versions and reverse changes if needed.</p>
+    <p>It also makes it alot easier for many people to work on the same project from different remote locations.</p>
+    <p>Everyone who is part of the project can commit, push, pull and merge changes, even add comments on the changes they have made.</p>
+  </div>
+</section>
