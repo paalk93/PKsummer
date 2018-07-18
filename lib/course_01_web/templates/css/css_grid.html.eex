@@ -1,9 +1,12 @@
 <section>
   <div>
     <h1>CSS grid</h1>
+    <p><strong>display:grid - </strong>Defines a grid.</p>
+    <p><strong>grid-template-rows/columns - </strong>Defines the amount of rows and colums for the grid.</p>
+    <p><strong>grid-row/column - </strong>Used to place items inside the grid.</p>
     <p>When we create a grid we create an area where we can place items within.</p>
-    <p>Makeing the grid gives us various "grid locations", to help us place objects where we want them.</p>
-    <p>When working with grid we can say it comes in two parts, first creating the grid, and giving our objects a position in it.</p>
+    <p>Makeing the grid gives us various "grid locations", to help us place items where we want them.</p>
+    <p>When working with grid we can say it comes in two parts, first creating the grid, and giving our items a position in it.</p>
     <p>We use grid-template-rows/columns using % or fr.</p>
     <p>This tells the grid how many parts we want to divide it into, rows beeing the number of rows(vertical)<br>
       and columns beeing the number of columns(horizontal).
@@ -12,6 +15,7 @@
     <p>Then we make sepparate classes for each "component" to place within the grid.</p>
     <p>We simply use grid-row/column followed by 1 / 2 for example to tell the grid which area this component is going to cover.</p>
     <p>We will go over it in more detail in the code example.</p>
+    <p>Grid is best used on larger parts, like the main layout of a page.</p>
   </div>
   <div>
     <h3>Visual example </h3>

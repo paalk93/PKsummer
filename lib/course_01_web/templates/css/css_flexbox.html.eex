@@ -1,0 +1,69 @@
+<section>
+  <div>
+    <h1>CSS flexbox</h1>
+    <p>Simply put, flexbox is used to transform a container into a flexbox container.<br>
+      Makeing it more "flexible" and repsonive.
+    </p>
+    <p>A flex container expands items to fill available free space, or shrinks them to prevent overflow.</p>
+    <p>Flexbox is best used on smaller components to best divide items to the available space.</p>
+    <p><strong>display:flex - </strong>Defines a flexbox container</p>
+    <p><strong>flex-direction:row(default) - </strong>Sets the direction items inside will flex to row.</p>
+    <p><strong>flex-direction:column - </strong>Sets teh direction items inside will flex to column.</p>
+    <p><strong>justify-content - </strong>Align the items inside the container.</p>
+    <p><strong>flex-wrap: wrap - </strong>Tells the items to wrap, i.e when the items cant fit on one like they will wrap to a new line.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <p>Flex items in row direction.</p>
+    <div class="cssflex-example-row">
+      <div class="cssflex-item-example1">Item</div>
+      <div class="cssflex-item-example1">Item</div>
+      <div class="cssflex-item-example1">Item</div>
+      <div class="cssflex-item-example1">Item</div>
+      <div class="cssflex-item-example1">Item</div>
+    </div>
+    <hr>
+    <p>Flex items in column direction.</p>
+    <div class="cssflex-example-column">
+      <div class="cssflex-item-example1">Item</div>
+      <div class="cssflex-item-example1">Item</div>
+      <div class="cssflex-item-example1">Item</div>
+      <div class="cssflex-item-example1">Item</div>
+      <div class="cssflex-item-example1">Item</div>
+    </div>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        /* CSS */
+
+        .cssflex-example-row{
+          display:flex;
+          flex-direction:row;
+          background-color:grey;
+          height:20em;
+          width:20em;
+          flex-wrap:wrap;
+        }
+
+        .cssflex-item-example1{
+          height:4em;
+          width:4em;
+          background-color:white;
+          margin:0.5em
+        }
+
+        /* HTML */
+
+        &lt;div class="cssflex-example-row"&gt;
+          &lt;div class="cssflex-item-example1"&gt;Item&lt;/div&gt;
+          &lt;div class="cssflex-item-example1"&gt;Item&lt;/div&gt;
+          &lt;div class="cssflex-item-example1"&gt;Item&lt;/div&gt;
+          &lt;div class="cssflex-item-example1"&gt;Item&lt;/div&gt;
+          &lt;div class="cssflex-item-example1"&gt;Item&lt;/div&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+</section>

@@ -83,3 +83,29 @@
   grid-column: 3 / 4;
 }
 /* Grid examples end */
+
+/* Flexbox examples start */
+.cssflex-example-row{
+  display:flex;
+  flex-direction:row;
+  background-color:grey;
+  height:20em;
+  width:20em;
+  flex-wrap:wrap;
+}
+.cssflex-example-column{
+  display:flex;
+  flex-direction:column;
+  background-color:grey;
+  height:20em;
+  width:20em;
+  flex-wrap:wrap;
+}
+
+.cssflex-item-example1{
+  height:4em;
+  width:4em;
+  background-color:white;
+  margin:0.5em
+}
+/* Flexbox examples end */
