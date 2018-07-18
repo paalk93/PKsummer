@@ -1,0 +1,131 @@
+<section>
+  <div>
+    <h1>CSS animations</h1>
+    <p><strong>@keyframes - </strong>Is a rule which specifies the animation code.</p>
+    <p><strong>transition - </strong>Allow you to change css property value from one to another smoothly.</p>
+    <p><strong>animation - </strong>References the animation name from the @keyframes.</p>
+    <p><strong>animation-duration - </strong>Sets a duration for the animation.</p>
+  </div>
+  <div>
+    <h3>Visual example with transition</h3>
+    <div>
+      <p>Hover under me.</p>
+      <div class="css-animation-example-hidden-lines">
+        <p>hidden line 1</p>
+        <p>hidden line 2</p>
+        <p>hidden line 3</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>Visual example with @keyframes</h3>
+    <div class="css-animation-example-window">
+      <p>animated background</p>
+    </div>
+    <hr>
+    <div>
+      <p>Hover the list items.</p>
+      <ul>
+        <li class="css-animation-list-item-example"><span>Item 1</span></li>
+        <li class="css-animation-list-item-example"><span>List item 2</span></li>
+        <li class="css-animation-list-item-example"><span>List item 3</span></li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <p>Code for hidden lines.</p>
+    <pre>
+      <code>
+        /* Html */
+        &lt;div&gt;
+          &lt;p&gt;Hover under me.&lt;/p&gt;
+          &lt;div class="css-animation-example-hidden-lines"&gt;
+            &lt;p&gt;hidden line 1&lt;/p&gt;
+            &lt;p&gt;hidden line 2&lt;/p&gt;
+            &lt;p&gt;hidden line 3&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        /* Css */
+        .css-animation-example-hidden-lines{
+          opacity:0;
+          transition:1s
+        }
+
+        .css-animation-example-hidden-lines:hover{
+          opacity:1;
+          transition:2s
+        }
+      </code>
+    </pre>
+    <hr>
+    <p>Code for moveing background.</p>
+    <pre>
+      <code>
+        /* html */
+        &lt;div class="css-animation-example-window"&gt;
+
+        &lt;/div&gt;
+
+        /* Css */
+        .css-animation-example-window{
+          background: linear-gradient(to right, #ffffff , #00ccff, #fd5e53);
+          background-size:400% 400%;
+          animation: css-backgroundchange-example 20s ease infinite;
+          width:20em;
+          height:20em;
+          border:1em solid grey;
+        }
+
+        @keyframes css-backgroundchange-example{
+          0%{background-position: 0% 50%}
+          50%{background-position:50% 50%}
+          75%{background-position:100% 50%}
+          100%{background-position: 0% 50%}
+        }
+      </code>
+    </pre>
+    <p>This animation might look weird on edge.</p>
+    <hr>
+    <p>Code for slideing underlines.</p>
+    <pre>
+      <code>
+        /* Html */
+          &lt;ul&gt;
+            &lt;li class="css-animation-list-item-example"&gt;&lt;span&gt;Item 1&lt;/span&gt;&lt;/li&gt;
+            &lt;li class="css-animation-list-item-example"&gt;&lt;span&gt;List item 1&lt;/span&gt;&lt;/li&gt;
+            &lt;li class="css-animation-list-item-example"&gt;&lt;span&gt;List item 1&lt;/span&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+
+        /* Css */
+        .css-animation-list-item-example {
+        padding:0.5em;
+        list-style: none;
+        }
+        .css-animation-list-item-example span:hover{
+         cursor:pointer;
+        }
+        .css-animation-list-item-example span {
+        position: relative;
+        }
+
+        .css-animation-list-item-example span::after {
+        content: '';
+        position: absolute;
+        background-color: black;
+        height: 0.3em;
+        transform: scaleX(0);
+        transition:all 0.3s linear;
+        bottom:-0.2em;
+        left: 0;
+        right: 0;
+        }
+
+        .css-animation-list-item-example span:hover::after {
+        transform: scaleX(1);
+        }
+      </code>
+    </pre>
+  </div>
+</section>

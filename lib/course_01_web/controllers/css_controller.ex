@@ -44,4 +44,8 @@ defmodule Course01Web.CssController do
   def pseudo_misc(conn, _params) do
     render conn, "pseudo_misc.html"
   end
+
+  def css_animations(conn, _params) do
+    render conn, "css_animations.html"
+  end
 end

@@ -1,0 +1,58 @@
+/* Hidden lines start */
+.css-animation-example-hidden-lines{
+  opacity:0;
+  transition:1s
+}
+
+.css-animation-example-hidden-lines:hover{
+  opacity:1;
+  transition:2s
+}
+/* Hidden lines end */
+
+/* Animated background start */
+.css-animation-example-window{
+  background: linear-gradient(to right, #ffffff , #00ccff, #fd5e53);
+  background-size:400% 400%;
+  animation: css-backgroundchange-example 20s ease infinite;
+  width:20em;
+  height:20em;
+  border:1em solid grey;
+}
+
+@keyframes css-backgroundchange-example{
+  0%{background-position: 0% 50%}
+  50%{background-position:50% 50%}
+  75%{background-position:100% 50%}
+  100%{background-position: 0% 50%}
+}
+/* Animated background end */
+
+/* Slideing underline list start */
+.css-animation-list-item-example {
+padding:0.5em;
+list-style: none;
+}
+.css-animation-list-item-example span:hover{
+ cursor:pointer;
+}
+.css-animation-list-item-example span {
+position: relative;
+}
+
+.css-animation-list-item-example span::after {
+content: '';
+position: absolute;
+background-color: black;
+height: 0.3em;
+transform: scaleX(0);
+transition:all 0.3s linear;
+bottom:-0.2em;
+left: 0;
+right: 0;
+}
+
+.css-animation-list-item-example span:hover::after {
+transform: scaleX(1);
+}
+/* Slideing underline list end */

@@ -75,6 +75,8 @@ defmodule Course01Web.Router do
     get "/pseudo_classes/child_and_type", CssController, :pseudo_child_and_type
     get "/pseudo_classes/forms_and_input", CssController, :pseudo_forms_and_input
     get "/pseudo_classes/misc", CssController, :pseudo_misc
+
+    get "/animations", CssController, :css_animations
   end
 
   # Other scopes may use custom stacks.
