@@ -14,4 +14,7 @@ defmodule Course01Web.CssController do
   def variables(conn, _params) do
     render conn, "css_variables.html"
   end
+  def cssgrid(conn, _params) do
+    render conn, "css_grid.html"
+  end
 end

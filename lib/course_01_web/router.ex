@@ -67,6 +67,7 @@ defmodule Course01Web.Router do
     get "/selectors", CssController, :selectors
     get "/properties", CssController, :properties
     get "/variables", CssController, :variables
+    get "/grid", CssController, :cssgrid
   end
 
   # Other scopes may use custom stacks.
