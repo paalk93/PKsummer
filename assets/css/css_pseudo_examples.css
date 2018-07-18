@@ -1,0 +1,14 @@
+/* Examples for links start */
+.css_pseudo_example_links a:hover{
+  background-color:black;
+}
+.css_pseudo_example_links a:link{
+  color:blue;
+}
+.css_pseudo_example_links a:active{
+  color:white;
+}
+.css_pseudo_example_links a:visited{
+  color:green;
+}
+/* Examples for links end */

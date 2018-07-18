@@ -20,4 +20,11 @@ defmodule Course01Web.CssController do
   def css_flexbox(conn, _params) do
     render conn, "css_flexbox.html"
   end
+
+  def pseudo_classes(conn, _params) do
+    render conn, "pseudo_classes.html"
+  end
+  def pseudo_links(conn, _params) do
+    render conn, "pseudo_links.html"
+  end
 end
