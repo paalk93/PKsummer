@@ -60,6 +60,15 @@ defmodule Course01Web.Router do
     get "/problem_solving", PlanningProblemController, :problem_solving
   end
 
+  scope "/css", Course01Web do
+    pipe_through :browser
+
+    get "/", CssController, :index
+    get "/selectors", CssController, :selectors
+    get "/properties", CssController, :properties
+    get "/variables", CssController, :variables
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", Course01Web do
   #   pipe_through :api

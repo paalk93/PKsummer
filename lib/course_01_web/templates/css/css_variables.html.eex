@@ -1,0 +1,34 @@
+<section>
+  <div>
+    <h1>CSS variables</h1>
+    <p>CSS variables are variables we create using properties, so we can later re-use them.</p>
+    <p>For example if you used variables adding color, it would be very easy to swap color theme in one go.</p>
+    <p>We create it by adding it to the :root, and define our variable like this --my-color-var.</p>
+    <p>After that we add what we want it to do, in this case we want it to use a color, --my-color-var:blue;</p>
+    <p><strong></strong></p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        /* Variables */
+        :root {
+          --bg-color-primary:coral;
+          --color-primary:white;
+          --bg-color-secondary:white;
+          --color-secondary:black;
+          --margin-1em:1em;
+          --primary-border:1px orange solid;
+        }
+        /* Asign to class */
+
+        .class{
+          color: var(--color-primary);
+        }
+        body{
+          background-color: var(--bg-color-primary);
+        }
+      </code>
+    </pre>
+  </div>
+</section>

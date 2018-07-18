@@ -1,0 +1,24 @@
+<section>
+  <div>
+    <h1>CSS basics</h1>
+    <h3>What is CSS?</h3>
+    <p>CSS stands for Cascading Style Sheet.</p>
+    <p>It is the makeup of our project. Using properties to set colors, positioning and more either by crating a class or putting it directly on the element.</p>
+    <p>We can say that the html is the main content and information whcih is rendered.<br>
+      And javascript is the functions we add.<br>
+      Then css will be the makeup we put on to make it all look pretty.
+    </p>
+    <hr>
+    <h3>CSS box model</h3>
+    <p>We can look at the css box model as a square.</p>
+    <p>Right in the center of this square we have the content.</p>
+    <p>Outside the content we have padding, which creates air between the content and the border.</p>
+    <p>Outside the padding is our border which is the outer line.</p>
+    <p>And outside our border we have margin, which creates air outside the border, air between elements.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <img src="<%= static_path(@conn, "/images/CSSboxmodel.png") %>" height="220" width="300" alt="CSS box model">
+    <p>The box model looks like this. If we use a browser like chrome and use the f12 menu, select an element it will actually show us the box model.</p>
+  </div>
+</section>
