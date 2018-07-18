@@ -35,7 +35,7 @@ defmodule Course01Web.Router do
     get "/tags/textformatting", HtmlTagsController, :textformatting
     get "/tags/code_and_script", HtmlTagsController, :code_and_script
 
-    get "/attributes", HtmlAttributesController, :index
+    get "/attributes", HtmlAttributesController, :attributes
     get "/attributes/general", HtmlAttributesController, :general
     get "/attributes/for_form_and_input", HtmlAttributesController, :for_form_and_input
     get "/attributes/for_media", HtmlAttributesController, :for_media

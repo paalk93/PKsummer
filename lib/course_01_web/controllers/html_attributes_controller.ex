@@ -1,8 +1,8 @@
 defmodule Course01Web.HtmlAttributesController do
   use Course01Web, :controller
 
-  def index(conn, _params) do
-    render conn, "index.html"
+  def attributes(conn, _params) do
+    render conn, "attributes.html"
   end
 
   def general(conn, _params) do
