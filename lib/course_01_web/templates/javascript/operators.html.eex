@@ -1,18 +1,30 @@
 <section>
   <div>
     <h1>Operators</h1>
-    <p></p>
-    <p><strong></strong></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
-  </div>
-  <div>
-    <h3>Code example</h3>
-    <pre>
-      <code>
-
-      </code>
-    </pre>
+    <p>Arithmetic operators</p>
+    <p><strong>+ --- </strong>Addition, 1 + 1 = 2.</p>
+    <p><strong>- --- </strong>Subtraction, 2 - 1 = 1.</p>
+    <p><strong>* --- </strong>Multiplication, 2 * 2 = 4.</p>
+    <p><strong>/ --- </strong>Division, 4 / 2 = 2.</p>
+    <p><strong>% --- </strong>Modulus(find the remainder), 11 % 5 = 1.</p>
+    <p><strong>++ --- </strong>Increment(add one), var x = 5, x++; = 5.</p>
+    <p><strong>-- --- </strong>Decrement(subtract one), var x = 5, x--; = 4.</p>
+    <hr>
+    <p>Asignment operators</p>
+    <p><strong>= --- </strong>Sets equal to.</p>
+    <p><strong>+= --- </strong>a += b, same as a = a + b.</p>
+    <p><strong>-= --- </strong>a -= b, same as a = a - b.</p>
+    <p><strong>*= --- </strong>a *= b, same as a = a * b.</p>
+    <p><strong>/= --- </strong>a /= b, same as a = a / b.</p>
+    <p><strong>%= --- </strong>a %= b, same as a = a % b.</p>
+    <hr>
+    <p>Comprehension operators</p>
+    <p><strong>!= --- </strong>Is not equal to, 1 != 2 = true.</p>
+    <p><strong>== --- </strong>Check if equal, 1  == 1 = true.</p>
+    <p><strong>=== --- </strong>Check if identical, 1 === 1 = true.</p>
+    <p><strong>&lt; --- </strong>Check if left hand side is less than right hand side, 2 &lt; 5 = true.</p>
+    <p><strong>&gt; --- </strong>Check if left hand side is greater than right hand side, 5 &gt; 2 = true.</p>
+    <p><strong>|| --- </strong>Or, If this or that. 1 || 2 == 2 = true. One of them is equal.</p>
+    <p><strong>&& --- </strong>And, If this and that. 1 && 2 == 2 = false. One of them is equal the other is not.</p>
   </div>
 </section>

@@ -1,18 +1,13 @@
 <section>
   <div>
     <h1>Javascript</h1>
-    <p></p>
-    <p><strong></strong></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
-  </div>
-  <div>
-    <h3>Code example</h3>
-    <pre>
-      <code>
-
-      </code>
-    </pre>
+    <p>JavaScript is the programming language of HTML and the web.</p>
+    <p>We talked about how HTML is the visual content and CSS is the styling.</p>
+    <p>And javaScript is the functionallity. We run scripts and create functions which we can call upon.<br>
+      We can perform various tasks with JavaScript like mathematic calculations and more!.
+    </p>
+    <p>A simple way to learn JavaScript is by opening the f12 menu in your web browser and you can<br>
+      trying out things. Like asigning variables and doing mathematics.
+    </p>
   </div>
 </section>
