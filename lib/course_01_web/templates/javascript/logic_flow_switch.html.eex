@@ -1,18 +1,72 @@
 <section>
   <div>
     <h1>Logic flow switch</h1>
+    <p>Switch is like an if else statement. But the way we set it up is different.</p>
+    <p>We still check if a condition is true or not before moveing on and executing any code.</p>
+    <p>Like we briefly mentioned on the logic flow page a switch always need a break; and a default;<br>
+      We use break to divide our conditions and break out of the switch block and stop executing more code if the condition passed true.<br>
+       And we have default option which we execute if none of the conditions were true.
+    </p>
     <p></p>
-    <p><strong></strong></p>
+    <p>Switch case is a fine tool when we have many statements.<br>
+      Ofcourse we can make if else if statements over and over but when dealing with many,<br>
+      a switch with many cases is the simpler option.
+    </p>
   </div>
   <div>
     <h3>Visual example </h3>
+    <input type="number" id="switch-example-input" placeholder="number between 1-5">
+    <button onclick="jsSwitchExample()">Button</button>
+    <p id="switch-example-p"></p>
+    <hr>
+    <p>We type in a number between 1-5 and click submit. And we will print the number we typed.</p>
+    <p>If we type a number outside the range 1-5 we will use our default case which will tell us to type a number between 1-5.</p>
   </div>
   <div>
     <h3>Code example</h3>
     <pre>
       <code>
+        /* Html */
+        &lt;input type="number" id="switch-example-input" placeholder="number between 1-5"&gt;
+        &lt;button onclick="jsSwitchExample()"&gt;Button&lt;/button&gt;
+        &lt;p id="switch-example-p"&gt;&lt;/p&gt;
 
+        /* Javascript */
+        function jsSwitchExample(){
+          var valueExample = document.getElementById("switch-example-input").value
+          var switchExampleP = document.getElementById("switch-example-p")
+        switch(valueExample){
+          case "1":
+            switchExampleP.innerHTML ="You typed 1."
+          break;
+          case "2":
+            switchExampleP.innerHTML ="You typed 2."
+          break;
+          case "3":
+            switchExampleP.innerHTML ="You typed 3."
+          break;
+          case "4":
+            switchExampleP.innerHTML ="You typed 4."
+          break;
+          case "5":
+            switchExampleP.innerHTML ="You typed 5."
+          break;
+          default:
+            switchExampleP.innerHTML ="Please write a number between 1-5"
+               }
+        }
       </code>
     </pre>
+    <p>In this example we have a variable which get the value of the input field,<br>
+      And a variable which select our paragraph.
+    </p>
+    <p>Within our function we have a switch with 5 cases and a default.</p>
+    <p>We use the value variable in our switch's parameter to use in our cases.</p>
+    <p>When we define case 1, it is like saying if the value that was inputted is 1, execute this block of code.</p>
+    <p>In our example we simply change the innerHTML of our paragraph to whichever value was inputted.</p>
+    <p>So as long as we enter a number between 1-5 our paragrapg will change to "You typed (number)"</p>
+    <p>If we do not enter anything at all, or enter a number outside the range 1-5 all our cases will return false,<br>
+      and we will execute our default block of code.
+    </p>
   </div>
 </section>

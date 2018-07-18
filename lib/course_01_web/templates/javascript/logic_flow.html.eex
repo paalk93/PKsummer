@@ -10,7 +10,7 @@
     <p><strong>else if - </strong>If the first condition was not true we check if this is true before jumping to else.</p>
     <p><strong>else - </strong>If none of the conditions above were true, we execute this.</p>
     <p><strong>switch - </strong>Like a if/else statement only it is built up different, can take alot of conditions.<br>
-      A switch case always have a break; after each code block and always a default; option in case none of the above were true.
+      A switch case always have a break; after each case block and always a default at the end of the switch;
     </p>
     <p>We will look more on control flow on the switch page and the if/else page.</p>
   </div>

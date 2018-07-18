@@ -13,6 +13,9 @@
     <p>simple if else statement.</p>
     <div class="js-if-else-example" style="background:grey;" id="if-else-example-div"></div>
     <button onclick="jsExampleIfElse()">Change the color</button>
+    <hr>
+    <p>Upon clicking the button we change the color of our div.</p>
+    <p>Using an if, else statement we toggle between two colors.</p>
   </div>
   <div>
     <h3>Code example simple if/else</h3>
@@ -49,6 +52,9 @@
     <h3>Visual example simple if/else if/else</h3>
     <p id="if-else-example-p">Hello World</p>
     <button onclick="jsExampleIfElseIf()">Change the html</button>
+    <hr>
+    <p>Uppon clicking the button we change the innerHTML our paragraph.</p>
+    <p>We toggle between 3 different variants using if, else if, else statements.</p>
   </div>
   <div>
     <h3>Code example simple if/else if/else</h3>

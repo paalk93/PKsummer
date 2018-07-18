@@ -24,3 +24,29 @@ function jsExampleIfElseIf() {
   }
 }
 // If Else If Else End
+
+// Switch case start
+function jsSwitchExample(){
+  var valueExample = document.getElementById("switch-example-input").value
+  var switchExampleP = document.getElementById("switch-example-p")
+switch(valueExample){
+  case "1":
+    switchExampleP.innerHTML ="You typed 1."
+  break;
+  case "2":
+    switchExampleP.innerHTML ="You typed 2."
+  break;
+  case "3":
+    switchExampleP.innerHTML ="You typed 3."
+  break;
+  case "4":
+    switchExampleP.innerHTML ="You typed 4."
+  break;
+  case "5":
+    switchExampleP.innerHTML ="You typed 5."
+  break;
+  default:
+    switchExampleP.innerHTML ="Please write a number between 1-5"
+       }
+}
+// Switch case end
