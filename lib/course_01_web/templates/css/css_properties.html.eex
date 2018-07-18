@@ -1,0 +1,33 @@
+<section>
+  <div>
+    <h1>CSS properties</h1>
+    <p>CSS properties is a property used with the css selectors to put style or utillity on elements.</p>
+    <h3>My most used properties.</h3>
+    <p><strong>background-color - </strong>Sets the background color of an element.</p>
+    <p><strong>color - </strong>Sets the color color of an element.</p>
+    <p><strong>margin - </strong>Creates air around the elements.</p>
+    <p><strong>justify-content - </strong>Align content within a flexbox.</p>
+    <p><strong>flex-direction - </strong>Sets the directional flow inside a flexbox.</p>
+    <p><strong>grid-template-rows/columns - </strong>Sets the amount of rows/columns for a grid.</p>
+    <p><strong>grid-row/column - </strong>Used to create positions inside the grid.</p>
+    <p><strong>list-style - </strong>Style a list item.</p>
+    <p><strong>text-decoration - </strong>Style text items.</p>
+    <p><strong>display - </strong>Different way to display and define an element.</p>
+    <p><strong>border - </strong>Creates a border around an element.</p>
+    <p><strong>height - </strong>Sets the height of an element.</p>
+    <p><strong>width - </strong>Sets the width of an element.</p>
+    <p><strong>text-align - </strong>Align text items.</p>
+    <hr>
+    <h3>My least used properties.</h3>
+    <p><strong>animation - </strong>Used with animations.</p>
+    <p><strong>object-fit - </strong>Set rules on how an object shout fit inside its container.</p>
+    <p><strong>opacity - </strong>Creates opacity on an element.</p>
+    <p><strong>transition - </strong>Sets a time for the animation.</p>
+    <p><strong>position - </strong>Set rules on an items position.</p>
+    <p><strong>flex-wrap - </strong>Used with flex to make the content wrap.</p>
+    <p><strong>align-content - </strong>Align content inside a flexbox vertically.</p>
+    <p><strong>padding - </strong>Sets padding on an element.</p>
+    <p><strong>text-decoration - </strong>Transform the text i.e uppercase.</p>
+    <p><strong>font-style/weight/height</strong>Sets a certail style or font to text.</p>
+  </div>
+</section>

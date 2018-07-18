@@ -8,5 +8,10 @@ defmodule Course01Web.CssController do
   def selectors(conn, _params) do
     render conn, "css_selectors.html"
   end
-
+  def properties(conn, _params) do
+    render conn, "css_properties.html"
+  end
+  def variables(conn, _params) do
+    render conn, "css_variables.html"
+  end
 end
