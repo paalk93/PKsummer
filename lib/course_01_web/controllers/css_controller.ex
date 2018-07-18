@@ -20,7 +20,7 @@ defmodule Course01Web.CssController do
   def css_grid(conn, _params) do
     render conn, "css_grid.html"
   end
-  
+
   def css_flexbox(conn, _params) do
     render conn, "css_flexbox.html"
   end
@@ -37,5 +37,11 @@ defmodule Course01Web.CssController do
     render conn, "pseudo_child_and_type.html"
   end
 
+  def pseudo_forms_and_input(conn, _params) do
+    render conn, "pseudo_forms_and_input.html"
+  end
 
+  def pseudo_misc(conn, _params) do
+    render conn, "pseudo_misc.html"
+  end
 end
