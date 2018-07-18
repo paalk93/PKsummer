@@ -9,7 +9,7 @@
   </div>
   <div>
     <h3>Visual example </h3>
-    <div class="css_pseudo_example_links">
+    <div class="css-pseudo-example-links">
       <a href="https://codepen.io/paalk93/#" target="_blank">Link to codepen.</a>
     </div>
     <p>When we hover the background color will change.</p>

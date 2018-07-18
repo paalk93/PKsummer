@@ -1,14 +1,23 @@
 /* Examples for links start */
-.css_pseudo_example_links a:hover{
+.css-pseudo-example-links a:hover{
   background-color:black;
 }
-.css_pseudo_example_links a:link{
+.css-pseudo-example-links a:link{
   color:blue;
 }
-.css_pseudo_example_links a:active{
+.css-pseudo-example-links a:active{
   color:white;
 }
-.css_pseudo_example_links a:visited{
+.css-pseudo-example-links a:visited{
   color:green;
 }
 /* Examples for links end */
+
+/* Examples for child and type start */
+.css-example-pseudo-type p:first-of-type{
+  color:red;
+}
+.css-example-pseudo-child p:first-child{
+  color:red;
+}
+/* Examples for child and type end */

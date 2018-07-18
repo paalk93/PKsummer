@@ -72,6 +72,7 @@ defmodule Course01Web.Router do
 
     get "/pseudo_classes", CssController, :pseudo_classes
     get "/pseudo_classes/links", CssController, :pseudo_links
+    get "/pseudo_classes/child_and_type", CssController, :pseudo_child_and_type
   end
 
   # Other scopes may use custom stacks.
