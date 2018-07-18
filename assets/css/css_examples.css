@@ -3,3 +3,109 @@
   color:red;
 }
 /* Examples for selectors end */
+
+/* Grid examples start */
+.cssgrid-example{
+  display:grid;
+  height:20em;
+  width:20em;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  border:1px solid black;
+}
+.cssgrid-example{
+  display:grid;
+  height:20em;
+  width:20em;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom:3px solid orange;
+  border-top:3px solid orange;
+  border-left:3px solid orange;
+  border-right:3px solid orange;
+}
+
+.example-box1{
+  background-color:grey;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  border-bottom:3px solid orange;
+  border-right:3px solid orange;
+}
+.example-box2{
+  background-color:lightgrey;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  border-bottom:3px solid orange;
+  border-right:3px solid orange;
+}
+.example-box3{
+  background-color:grey;
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  border-bottom:3px solid orange;
+}
+.example-box4{
+  background-color:lightgrey;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  border-bottom:3px solid orange;
+  border-right:3px solid orange;
+}
+.example-box5{
+  background-color:grey;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  border-bottom:3px solid orange;
+  border-right:3px solid orange;
+}
+.example-box6{
+  background-color:lightgrey;
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  border-bottom:3px solid orange;
+}
+.example-box7{
+  background-color:grey;
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  border-right:3px solid orange;
+}
+.example-box8{
+  background-color:lightgrey;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  border-right:3px solid orange;
+}
+.example-box9{
+  background-color:grey;
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
+}
+/* Grid examples end */
+
+/* Flexbox examples start */
+.cssflex-example-row{
+  display:flex;
+  flex-direction:row;
+  background-color:grey;
+  height:20em;
+  width:20em;
+  flex-wrap:wrap;
+}
+.cssflex-example-column{
+  display:flex;
+  flex-direction:column;
+  background-color:grey;
+  height:20em;
+  width:20em;
+  flex-wrap:wrap;
+}
+
+.cssflex-item-example1{
+  height:4em;
+  width:4em;
+  background-color:white;
+  margin:0.5em
+}
+/* Flexbox examples end */

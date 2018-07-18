@@ -14,4 +14,10 @@ defmodule Course01Web.CssController do
   def variables(conn, _params) do
     render conn, "css_variables.html"
   end
+  def css_grid(conn, _params) do
+    render conn, "css_grid.html"
+  end
+  def css_flexbox(conn, _params) do
+    render conn, "css_flexbox.html"
+  end
 end
