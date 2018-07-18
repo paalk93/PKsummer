@@ -46,3 +46,13 @@
   border:2px solid yellow;
 }
 /* Examples for form and input end */
+
+/* Examples for misc start */
+.css-examples-misc :not(h3){
+  font-style:italic;
+}
+
+.css-examples-misc :target{
+  text-decoration:underline;
+}
+/* Examples for misc end */

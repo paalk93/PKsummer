@@ -1,0 +1,62 @@
+<section>
+  <div>
+    <h1>Misc Pseudo classes</h1>
+    <p>miscellaneous pseudo classes, a little bit of everything.</p>
+    <p><strong>:target - </strong>Set properties to a target element using href="#".</p>
+    <p><strong>:root - </strong>Matches the root element of a tree representing the document. In HTML :root represet the &lt;html&gt; element.</p>
+    <p><strong>:scope - </strong>Represents elements that are a reference point for selectors to match against.</p>
+    <p><strong>:right - </strong>Represent all right-hand pages of a printed document.</p>
+    <p><strong>:left - </strong>Represent all left-hand pages of a printed document.</p>
+    <p><strong>:not() - </strong>Represents elements that do not match a list of selectors.</p>
+    <p><strong>:lang - </strong>Matches elements on the language they are determined to be using the lang attribute.</p>
+    <p><strong>:empty - </strong>Represent any element that has no children.</p>
+    <p><strong>:defined - </strong>Represent any element that has been defined.</p>
+    <p><strong>:focus-within - </strong>Represents an element that has received focus or contains an element that has received focus.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <div class="css-examples-misc">
+      <p>One</p>
+      <p>Two</p>
+      <h3 id="example-h3">Three</h3>
+      <p>Four</p>
+      <a href="#example-h3">Target h3</a>
+    </div>
+    <p>Inside our div we target all elements except the &lt;h3&gt; element using :not(h3).<br>
+      And add a property to them, in this case setting the font-style to italic.
+    </p>
+    <p>Using the :target pseudo class, when clicking our link it will create and underline on element it jumps to.<br>
+      And in this case that is our &lt;h3&gt; element.
+    </p>
+    <p>In CSS variables we saw an example on how we used :root pseudo class to store variables.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        /* Html */
+        &lt;div class="css-examples-misc"&gt;
+          &lt;p>One&lt;/p&gt;
+          &lt;p>Two&lt;/p&gt;
+          &lt;h3 id="example-h3">Three&lt;/h3&gt;
+          &lt;p>Four&lt;/p&gt;
+          &lt;a href="#example-h3">Target h3&lt;/a&gt;
+        &lt;/div&gt;
+
+        /* Css */
+        :root{
+          --bg-color-primary:coral;
+        }
+
+        .css-examples-misc :not(h3){
+          font-style:italic;
+        }
+
+        .css-examples-misc :target{
+          text-decoration:underline;
+        }
+
+      </code>
+    </pre>
+  </div>
+</section>
