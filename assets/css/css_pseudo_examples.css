@@ -21,3 +21,28 @@
   color:red;
 }
 /* Examples for child and type end */
+
+/* Examples for form and input start */
+.css-example-pseudo-input input:in-range {
+    background-color:#ddffdd;
+}
+.css-example-pseudo-input input:out-of-range{
+  background-color:#ffdddd;
+}
+.css-example-pseudo-input input:read-only{
+  background-color: darkgrey;
+  color:black;
+}
+.css-example-pseudo-input input:required{
+  border: 2px solid red;
+}
+.css-example-pseudo-input input:valid{
+  border:2px solid green;
+}
+.css-example-pseudo-input input:invalid{
+  border:2px solid red;
+}
+.css-example-pseudo-input input:focus{
+  border:2px solid yellow;
+}
+/* Examples for form and input end */
