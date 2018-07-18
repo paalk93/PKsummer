@@ -1,0 +1,26 @@
+<section>
+  <div>
+    <h1>Planning projects</h1>
+    <p>Plan the project build up, what is it, how should it be done, what do i need. Make a list in a document or use <ins>pen and paper</ins>.</p>
+    <p>When we have a slight idea of what we want we could draw up simple layouts, using paper or draw.io.</p>
+    <p>As we draw the layout we might get some ideas of what we want placed where.</p>
+    <p>We can then start writing down information and bigger parts of the project we know we want. And write about how we are going to solve it.</p>
+    <p>If we have items we want to sort into different components it is nice to plan and do the sorting before starting the actual work.</p>
+    <p>When we know most of the information, functions, layouts and so on it can be a good idea to make a checklist.</p>
+    <p>When makeing the to do list we start from the top, doing the most basic and the core of the project then onwards to the functions and content.</p>
+    <p>Simply follow the list step by step, and ofcourse there is room for changes in case we see that something we planned did not work.</p>
+    <hr>
+    <p>When i planned this project i knew it was going to be about documentation.</p>
+    <p>So i drew up the simple layout for the page, and made a template i would reuse on every page for the html documentation.</p>
+    <p>I knew from the task was a ton of tags and attributes i had to cover in the HTML part.</p>
+    <p>So i decided to sort them into groups of tags and attributes which are sort of related(same area of use).</p>
+    <p>And i did this with all the tasks that had a lot of small parts, like tags, attributes, css properties, etc.</p>
+    <p>With every task on the list i made a folder with notepads where i divided the project into categories and answered every question, created functions and wrote documentation.</p>
+    <p>So when i actually started codeing i allready knew most of the content i wanted in my project. Which made it easier to sort and plan the pages.</p>
+    <p>I simply created the scopes, controller, view, template folders as i went trough the list, used the preset template i had made and just filled in the information from my notes.</p>
+    <p>When all the information from my notes are put into the project i will go over it a couple of times makeing sure it all looks alright.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+  </div>
+</section>

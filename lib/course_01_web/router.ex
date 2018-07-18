@@ -53,6 +53,13 @@ defmodule Course01Web.Router do
     get "/git_routines", GitExampleController, :git_routines
   end
 
+  scope "/planning_and_problemsolving", Course01Web do
+    pipe_through :browser
+
+    get "/planning", PlanningProblemController, :planning
+    get "/problem_solving", PlanningProblemController, :problem_solving
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", Course01Web do
   #   pipe_through :api
