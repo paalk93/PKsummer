@@ -69,6 +69,12 @@ defmodule Course01Web.Router do
     get "/variables", CssController, :variables
     get "/grid", CssController, :css_grid
     get "/flexbox", CssController, :css_flexbox
+
+    get "/pseudo_classes", CssController, :pseudo_classes
+    get "/pseudo_classes/links", CssController, :pseudo_links
+    get "/pseudo_classes/child_and_type", CssController, :pseudo_child_and_type
+    get "/pseudo_classes/forms_and_input", CssController, :pseudo_forms_and_input
+    get "/pseudo_classes/misc", CssController, :pseudo_misc
   end
 
   # Other scopes may use custom stacks.

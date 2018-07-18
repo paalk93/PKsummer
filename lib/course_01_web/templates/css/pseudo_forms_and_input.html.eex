@@ -1,0 +1,71 @@
+<section>
+  <div>
+    <h1>Pseudo form and input classes</h1>
+    <p>Pseudo classes most commonly used with forms and inputs.</p>
+    <p><strong>:checked - </strong>Used with radio or select, add properties to a checked option.</p>
+    <p><strong>:default - </strong>Represent any form element that is the default among a group of related elements.</p>
+    <p><strong>:valid - </strong>Add properties to a input/form element field which content is validated.</p>
+    <p><strong>:invalid - </strong>Add properties to a input/form element field which content is invalid.</p>
+    <p><strong>:disabled - </strong>Add properties to an element which is set as disabled.</p>
+    <p><strong>:enabled - </strong>Set properties to an enabled element.</p>
+    <p><strong>:required - </strong>Set properties to an element which is requeired to fill in.</p>
+    <p><strong>:optional - </strong>Set properties to an element which is optional to fill in.</p>
+    <p><strong>:in-range - </strong>Set properties to an element which values are within range limits by min and max attributes.</p>
+    <p><strong>:out-of-range - </strong>Set properties to an element which is out of range limits by min and max attributes.</p>
+    <p><strong>:focus - </strong>Set properties to an element which is beeing focused.</p>
+    <p><strong>:indeterminate - </strong>Set properties to an element which state is indeterminate.</p>
+    <p><strong>:read-only - </strong>Set properties to an element which is read-only.</p>
+    <p>Form and input pseudo classes are used best with form and input attributes to set their states.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <form class="css-example-pseudo-input">
+      <input type="text" placeholder ="This is read only" readonly="true"><br>
+      <label for="input-example">Enter a number between 1-10</label><br>
+      <input type="number" min="1" max="10" required="true" id="input-example">
+    </form>
+    <p>First field is read only, so we cannot type there.</p>
+    <p>Focusing the fields will set the border color to yellow.</p>
+    <p>Second field is required so it will have a red border.</p>
+    <p>Adding a number between 1-10 which is the in-range will set the background color to green.</p>
+    <p>Any number but will set the background color to green.</p>
+    <p>If the in-range validates the border color will be set to green, if it invalid it will be set to red.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        /* Html */
+        &lt;form class="css-example-pseudo-input"&gt;
+          &lt;input type="text" placeholder ="This is read only" readonly="true"&gt;&lt;br&gt;
+          &lt;label for="input-example"&gt;Enter a number between 1-10&lt;/label&gt;&lt;br&gt;
+          &lt;input type="number" min="1" max="10" required="true" id="input-example"&gt;
+        &lt;/form&gt;
+
+        /* Css */
+        .css-example-pseudo-input input:in-range {
+            background-color:#ddffdd;
+        }
+        .css-example-pseudo-input input:out-of-range{
+          background-color:#ffdddd;
+        }
+        .css-example-pseudo-input input:read-only{
+          background-color: darkgrey;
+          color:black;
+        }
+        .css-example-pseudo-input input:required{
+          border: 2px solid red;
+        }
+        .css-example-pseudo-input input:valid{
+          border:2px solid green;
+        }
+        .css-example-pseudo-input input:invalid{
+          border:2px solid red;
+        }
+        .css-example-pseudo-input input:focus{
+          border:2px solid yellow;
+        }
+      </code>
+    </pre>
+  </div>
+</section>

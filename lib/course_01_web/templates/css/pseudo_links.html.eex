@@ -1,0 +1,44 @@
+<section>
+  <div>
+    <h1>Pseudo link classes</h1>
+    <p>Pseudo classes most commonly used with links.</p>
+    <p><strong>:active - </strong>Set properties on an active links.</p>
+    <p><strong>:visited - </strong>Set properties on visited links.</p>
+    <p><strong>:link - </strong>Set properties on a link.</p>
+    <p><strong>:hover - </strong>Set properties when hovering an element.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <div class="css-pseudo-example-links">
+      <a href="https://codepen.io/paalk93/#" target="_blank">Link to codepen.</a>
+    </div>
+    <p>When we hover the background color will change.</p>
+    <p>When we click and hold the link is active and we can see the color change.</p>
+    <p>After visiting it the color will be set to a different color.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        /* Html */
+        &lt;div class="css_pseudo_example_links"&gt;
+          &lt;a href="https://codepen.io/paalk93/#" target="_blank"&gt;Link to codepen.&lt;/a&gt;
+        &lt;/div&gt;
+
+        /* Css */
+        .css_pseudo_example_links a:hover{
+          background-color:black;
+        }
+        .css_pseudo_example_links a:link{
+          color:blue;
+        }
+        .css_pseudo_example_links a:active{
+          color:white;
+        }
+        .css_pseudo_example_links a:visited{
+          color:green;
+        }
+      </code>
+    </pre>
+  </div>
+</section>
