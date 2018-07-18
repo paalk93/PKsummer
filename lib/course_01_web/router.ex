@@ -79,6 +79,25 @@ defmodule Course01Web.Router do
     get "/animations", CssController, :css_animations
   end
 
+  scope "/javascript", Course01Web do
+    pipe_through :browser
+
+    get "/", JavascriptController, :index
+    get "/variables_and_data",JavascriptController, :variables_and_data
+    get "/operators", JavascriptController, :operators
+    get "/logic_flow", JavascriptController, :logic_flow
+    get "/logic_flow/if_else", JavascriptController, :logic_flow_if_else
+    get "/logic_flow/switch", JavascriptController, :logic_flow_switch
+    get "/arrays", JavascriptController, :arrays
+    get "/functions", JavascriptController, :functions
+    get "/objects", JavascriptController, :objects
+    get "/loops", JavascriptController, :loops
+    get "/loops/for_and_in", JavascriptController, :loops_for_and_in
+    get "/scope", JavascriptController, :scope
+    get "/misc", JavascriptController, :misc
+
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", Course01Web do
   #   pipe_through :api
