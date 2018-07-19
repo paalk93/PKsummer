@@ -39,7 +39,6 @@
         arrayExampleList.innerHTML += "&lt;li&gt;" + arrayExampleCountries[i] + "&lt;/li&gt;"
           }
         }
-
       </code>
     </pre>
     <p>Here we do a simple loop to go our the values in the array using length.</p>
