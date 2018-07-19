@@ -1,17 +1,46 @@
 <section>
   <div>
     <h1>Loop with for and in</h1>
-    <p></p>
-    <p><strong></strong></p>
+    <p>In this example we are going to use a for loop with a for in loop.</p>
+    <p>Usually used when we have an list of objects.</p>
+    <p>First we want to loop over the list to find each object.</p>
+    <p>Then we want to loop over the objects to find the values.</p>
   </div>
   <div>
     <h3>Visual example </h3>
+    <button onclick="forWithInLoopExample()">Print each value</button>
+    <ul id="forWithInExampleList">
+
+    </ul>
+    <p>So here we print out each value of each propety for every object in the array.</p>
   </div>
   <div>
     <h3>Code example</h3>
     <pre>
       <code>
+        /* Html */
+          &lt;button onclick="forWithInLoopExample()"&gt;Print each value&lt;/button&gt;
+          &lt;ul id="forWithInExampleList"&gt;
 
+          &lt;/ul&gt;
+
+        /* Javascript
+        function forWithInLoopExample(){
+          var loopExampleArrayWithObject = [
+            {name:"Per", lastname:"Askeladden 1"},
+            {name:"Pål", lastname:"Askeladden 2"},
+            {name:"Espen", lastname:"Askeladden 3"}
+          ]
+          var forWithInExampleList = document.getElementById("forWithInExampleList");
+          forWithInExampleList.innerHTML ="";
+          for (var i = 0; i &lt; loopExampleArrayWithObject.length; i++){
+            var forInLoopExampleObject = loopExampleArrayWithObject[i];
+            for (var x in forInLoopExampleObject){
+              var loopExampleObjectValue = forInLoopExampleObject[x]
+              forWithInExampleList.innerHTML += "&lt;li&gt;" + loopExampleObjectValue + "&lt;/li&gt;";
+            }
+          }
+        }
       </code>
     </pre>
   </div>

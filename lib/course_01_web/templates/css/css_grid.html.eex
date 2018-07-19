@@ -39,6 +39,7 @@
     <p>Box 6 beeing grid-row: 2 / 3, and grid-column: 3 / 4.</p>
     <p>Verticaly starting on line 2 ending at line 3.</p>
     <p>Horizontaly starting on line 3 and ending at line 4. And so on.</p>
+  </div>  
   <div>
     <h3>Code example and explanation.</h3>
     <pre>

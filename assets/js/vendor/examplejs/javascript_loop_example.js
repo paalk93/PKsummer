@@ -43,3 +43,22 @@ do{
 while(doWhileExampleNumber <= 0);
 }
 // Simple do while loop end
+
+// Loop using for and in start
+function forWithInLoopExample(){
+  var loopExampleArrayWithObject = [
+    {name:"Per", lastname:"Askeladden 1"},
+    {name:"Pål", lastname:"Askeladden 2"},
+    {name:"Espen", lastname:"Askeladden 3"}
+  ]
+  var forWithInExampleList = document.getElementById("forWithInExampleList");
+  forWithInExampleList.innerHTML ="";
+  for (var i = 0; i < loopExampleArrayWithObject.length; i++){
+    var forInLoopExampleObject = loopExampleArrayWithObject[i];
+    for (var x in forInLoopExampleObject){
+      var loopExampleObjectValue = forInLoopExampleObject[x]
+      forWithInExampleList.innerHTML += "<li>" + loopExampleObjectValue + "</li>";
+    }
+  }
+}
+// Loop using for and in end
