@@ -52,6 +52,13 @@
         result: "Pål"
         persons[2].name
         result: "Espen"
+
+        
+      /* We can also create object using the new method */
+        var person = new Object()
+        person.name = "PK"
+        person.age = 25
+        person.gender = "Male"
       </code>
     </pre>
   </div>
