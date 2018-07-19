@@ -5,7 +5,7 @@
     <p>We use function to call up tasks from our script.</p>
     <p>We could make a loop without a function, but the loop would run whenever the page loads.</p>
     <p>If we for example only want the loop to run when we click a button we can create the loop inside a function.</p>
-    <p>I often use the onclick attribute to add a call to my functions i.e <&lt;button onclick="myFunction()"&gt;Button name&lt;button&gt;</p>
+    <p>I often use the onclick attribute to add a call to my functions i.e &lt;button onclick="myFunction()"&gt;Button name&lt;button&gt;</p>
     <p>Or if we have an id on our button we can use an event listener in javascript.<br>
       myButton.addEventListener("click", myFunction)
     </p>

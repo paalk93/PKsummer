@@ -1,17 +1,64 @@
 <section>
   <div>
     <h1>Objects</h1>
-    <p></p>
-    <p><strong></strong></p>
+    <p>Objects have many properties and values.</p>
+    <p>To define an object in JavaScript we use curly brackets { }.</p>
+    <p>Here we have a simple object set to a variable, var person = {name: "PK", age: 25, gender: "Male"}.</p>
+    <p>If we call our variable it will return the entire object object Object.</p>
+    <p>But if we call person.name, it will only return the string value, "PK".</p>
+    <p>We can also have an array of objects [ { } ].</p>
   </div>
   <div>
     <h3>Visual example </h3>
+    <ul  id="objectExampleList">
+    </ul>
+    <button onclick="examplePrintObject()">Print object</button>
+    <p>When we click the button we print out each of the values in our object.</p>
   </div>
   <div>
     <h3>Code example</h3>
     <pre>
       <code>
+      /* Here we define an variable with an object /*
+        var person = {name:"PK", age:25"}
 
+      /* Then we can try to call it */
+        person
+        result: [object Object]: {age: 25, name: "PK"}
+
+      /* Now let's try to get just the name */
+        person.name
+        result: "PK"
+
+      /* Here we define an array with objects */
+        var persons = [
+        {name:"Per", lastname:"Askeladden"},
+        {name:"Pål", lastname:"Askeladden"},
+        {name:"Espen", lastname:"Askeladden"}
+        ]
+
+      /* Now we can try to call it */
+        persons
+        result: [object Array]: [Object, Object, Object]
+
+      /* Let us get the first object */
+        persons[0]
+        result: [object Object]: {lastname: "Askeladden", name: "Per"}
+
+      /* Now we can try to get the name property of every object */
+        persons[0].name
+        result: "Per"
+        persons[1].name
+        result: "Pål"
+        persons[2].name
+        result: "Espen"
+
+        
+      /* We can also create object using the new method */
+        var person = new Object()
+        person.name = "PK"
+        person.age = 25
+        person.gender = "Male"
       </code>
     </pre>
   </div>
