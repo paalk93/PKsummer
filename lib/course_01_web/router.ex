@@ -95,7 +95,21 @@ defmodule Course01Web.Router do
     get "/loops/for_and_in", JavascriptController, :loops_for_and_in
     get "/scope", JavascriptController, :scope
     get "/misc", JavascriptController, :misc
+  end
 
+  scope "/elixir", Course01Web do
+    get "/", ElixirController, :index
+    get "/iex", ElixirController, :iex_example
+    get "/mix", ElixirController, :mix_example
+    get "/data_types", ElixirController, :data_types
+    get "/collections", ElixirController, :collections
+    get "/operators", ElixirController, :operators
+    get "/pattern_matching", ElixirController, :pattern_matching
+    get "/modules_and_functions", ElixirController, :modules_and_functions
+    get "/comprehensions", ElixirController, :comprehensions
+    get "/enumerables", ElixirController, :enumerables
+    get "/ex_unit", ElixirController, :ex_unit
+    get "/recursion", ElixirController, :recursion
   end
 
   # Other scopes may use custom stacks.
