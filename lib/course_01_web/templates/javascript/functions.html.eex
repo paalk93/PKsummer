@@ -1,17 +1,64 @@
 <section>
   <div>
     <h1>Functions</h1>
-    <p></p>
-    <p><strong></strong></p>
+    <p>Functions in javascript performs a task.</p>
+    <p>We use function to call up tasks from our script.</p>
+    <p>We could make a loop without a function, but the loop would run whenever the page loads.</p>
+    <p>If we for example only want the loop to run when we click a button we can create the loop inside a function.</p>
+    <p>I often use the onclick attribute to add a call to my functions i.e <&lt;button onclick="myFunction()"&gt;Button name&lt;button&gt;</p>
+    <p>Or if we have an id on our button we can use an event listener in javascript.<br>
+      myButton.addEventListener("click", myFunction)
+    </p>
+    <p>myButton beeing the the id of the button, "click", is the event we want to listen for and myFunction beeing the function we want to run.</p>
+    <p>We can also wrap a function around (()) in order to make it run when the page loads.</p>
   </div>
   <div>
-    <h3>Visual example </h3>
+    <p>I decided not to use any visual examples for functions because we use functions in almost every part of our documentation.</p>
+    <p>In the "link logic flow if/else" section we used functions with if else statements.</p>
+    <p>In the "link logic flow switch" section we used a function with a switch statement.</p>
+    <p>In the "link arrays" section we used a function to loop over our array.</p>
   </div>
   <div>
     <h3>Code example</h3>
     <pre>
       <code>
+        /* This function wrapped in (()) will run upon page load */
+        (function someWords(){
+          alert("Hello World");
+        }())
 
+        /* Simple function to change the html */
+        function htmlChange(){
+          var myParagraph = document.getElementById("myParagraph");
+          myParagraph.innerHTML = "Hello World";
+        }
+
+        /* Here is the same function using variable and if/else statement /*
+        function htmlChange(){
+          var myParagraph = document.getElementById("myParagraph");
+          if(myParagraph.innerHTML == "Hello world"){
+            myParagraph.innerHTML = "World Hello";
+          }
+          else{
+            myParagraph.innerHTML = "Hello World";
+          }
+        }
+
+        /* Function with parameters */
+        function numberFunction(a, b){
+          alert(a + b):
+        }
+
+        &lt;button onclick="numberFunction(5,5)"&gt;Click me&lt;button&gt;
+      -- We have to use numbers in the parameter here so we can do the mathematical calculation --
+
+      /* Function as a variable */
+      var myVarFunction = function(a,b){
+        return a + b;
+      }
+    -- Now we can call our function with parameter values --
+      myVarFunction(8,2)
+      result: 10
       </code>
     </pre>
   </div>
