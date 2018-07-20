@@ -21,8 +21,8 @@ defmodule Course01Web.ElixirController do
     render conn, "data_types.html"
   end
 
-  def ex_unit(conn,_params) do
-    render conn, "ex_unit.html"
+  def ex_unit_and_api(conn,_params) do
+    render conn, "ex_unit_and_api.html"
   end
 
   def mix_example(conn,_params) do

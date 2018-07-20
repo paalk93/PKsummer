@@ -1,17 +1,41 @@
 <section>
   <div>
     <h1>Modules and functions</h1>
-    <p></p>
-    <p><strong></strong></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
+    <p>Basic info about modules and functions in elixir.</p>
+    <p>Modules are used to organize and group functions. We can use alias (ModuleName) to import other modules.</p>
+    <p>Functions execute a task, or a block of code. We have defined functions and anonymous functions.</p>
   </div>
   <div>
     <h3>Code example</h3>
     <pre>
       <code>
+        /* Basic syntax for a module. */
+        /* Defined by using the defmodule keyword. */
 
+          defmodule OurModule do
+
+          end
+
+        /* Basic function syntas. */
+        /* Defined by using the def keyword. */
+
+          def myfunction(parameters) do
+
+          end
+
+        /* Anonymous functions from user example. */
+        /* defined by using fn, and we still use do: but not always end. */
+
+          list = [1, 2, 3]
+          for a &lt;- list, do: a + 1
+          result: [2, 3, 4]
+
+        /* Here we use Enum.each with an anonymous function */
+
+          Enum.each(list, fn(x) -&gt; x + 1 end)
+          result: 2, 3, 4, :ok
+
+        /* Here we define an anonymous function which loops over the list and adds 1 to each item. */
       </code>
     </pre>
   </div>

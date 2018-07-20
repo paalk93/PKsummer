@@ -108,7 +108,7 @@ defmodule Course01Web.Router do
     get "/modules_and_functions", ElixirController, :modules_and_functions
     get "/comprehensions", ElixirController, :comprehensions
     get "/enumerables", ElixirController, :enumerables
-    get "/ex_unit", ElixirController, :ex_unit
+    get "/ex_unit_and_api", ElixirController, :ex_unit_and_api
     get "/recursion", ElixirController, :recursion
   end
 
