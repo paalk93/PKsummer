@@ -1,17 +1,46 @@
 <section>
   <div>
     <h1>Pattern matching</h1>
-    <p></p>
-    <p><strong></strong></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
+    <p>Pattern matching is a powerful part of Elixir.</p>
+    <p>It allow us to match simple values, data structures and even functions.</p>
+    <p>The match operator is not only used to match against simple values,<br>
+      but it is also useful for destructuring more complex data types.
+    </p>
   </div>
   <div>
     <h3>Code example</h3>
+    <p>We can pattern match on tuples.</p>
     <pre>
       <code>
+        /* We use the match operator */
 
+        x = 1
+        2 = x
+      /* (MatchError) no match of right hand side value: 1 */
+
+
+
+        {a, b, c} = {:hello, "World", 25}
+
+      /* If we go into iex and call a we will get :hello */
+      /* And b would be "World", and c would be 25 */
+      /* It matches the values on the left side with the values on the right side */
+
+
+      /* If we try to do */
+
+        {a, b ,c} = {:hello, "World"}
+
+      /* It will result in an error telling us no match of right hand side. */
+      /* Because the tuples are different sizes. */
+
+
+      /* Head and tail */
+
+        [head | tail] = [1, 2, 3]
+
+      /* Head will always be the first item of the list, and tail the rest */
+      /* So if we call head we get 1, if we call tail we get [2, 3] */
       </code>
     </pre>
   </div>
