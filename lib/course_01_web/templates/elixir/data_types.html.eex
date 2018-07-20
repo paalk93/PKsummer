@@ -1,18 +1,13 @@
 <section>
   <div>
     <h1>Data types</h1>
-    <p></p>
-    <p><strong></strong></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
-  </div>
-  <div>
-    <h3>Code example</h3>
-    <pre>
-      <code>
-
-      </code>
-    </pre>
+    <p>Elixir's basic data types.</p>
+    <p><strong>list - </strong>defined: [1, 2, 3].</p>
+    <p><strong>tuple - </strong>defined: {1, 2, 3}.</p>
+    <p><strong>integer - </strong>defined: 1, a number</p>
+    <p><strong>float- </strong>defined: 1.0, a number with decimal.</p>
+    <p><strong>boolean - </strong>Boolean</p>
+    <p><strong>atom - </strong>defined: :atom, an atom is a constant and whose name is its value.</p>
+    <p><strong>string - </strong>defined: "string".</p>
   </div>
 </section>
