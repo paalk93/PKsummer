@@ -1,17 +1,31 @@
 <section>
   <div>
     <h1>Comprehensions</h1>
-    <p></p>
-    <p><strong></strong></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
+    <p>In Elixir comprehension is a way to loop over enumerables.</p>
+    <p>Comprehension can be used on any data structure which can be looped over.</p>
   </div>
   <div>
     <h3>Code example</h3>
+    <p>A few simple loop examples in iex.</p>
     <pre>
       <code>
+      /* loop over and do a function to each */
+        mylist = [1, 2, 3, 4]
+        for a &lt;- list, do: a*a
+        result: [1, 4, 9, 16]
 
+        ages = [john: 25, jane: 20]
+        for {_, age} &lt;- ages, do: IO.puts age
+        result: 25 20
+
+      /* uses pattern matching to find john's age */
+        for {:john, age} &lt;- ages, do: IO.puts age
+        result: 25
+
+      /* loop over and filter integers */
+        mynumbers = [2.2, 2, 4, 4.4, 5, 5.5]
+        for number &lt;- numbers, is_integer(number), do: number
+        result: [2, 4, 5]
       </code>
     </pre>
   </div>
