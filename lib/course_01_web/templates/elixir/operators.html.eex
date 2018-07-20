@@ -15,10 +15,10 @@
     <p><strong>!= --- </strong>Checks if the left value is not equal to the right value, 2 != 2 = false.</p>
     <p><strong>=== --- </strong>Checks if the left value is identical to the right value, 2 === 2 = true.</p>
     <p><strong>!== --- </strong>Checks if it is not identical, 2 !== 2 = false.</p>
-    <p><strong>&gt; --- </strong>Checks if the left value is greater than the right, 5 > 2 = true.</p>
-    <p><strong>&lt; --- </strong>Checks if the left value is less than the right, 5 < 2 = false.</p>
-    <p><strong>&gt;= --- </strong>Checks if the left value is greater or equal to the right 5 >= 2 = true.</p>
-    <p><strong>&lt;= --- </strong>Checks if the left value is less or equal than the right, 5 <= 5 = true.</p>
+    <p><strong>&gt; --- </strong>Checks if the left value is greater than the right, 5 &gt; 2 = true.</p>
+    <p><strong>&lt; --- </strong>Checks if the left value is less than the right, 5 &lt; 2 = false.</p>
+    <p><strong>&gt;= --- </strong>Checks if the left value is greater or equal to the right 5 &gt;= 2 = true.</p>
+    <p><strong>&lt;= --- </strong>Checks if the left value is less or equal than the right, 5 &lt;= 5 = true.</p>
     <hr>
     <h3>Logical opreators</h3>
     <p><strong>and --- </strong>Checks if both values provided are truthy.</p>
