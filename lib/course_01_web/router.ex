@@ -124,7 +124,7 @@ defmodule Course01Web.Router do
     get "/major_parts/view", PhoenixController, :example_view
     get "/major_parts/template", PhoenixController, :example_template
     get "/major_parts/router", PhoenixController, :example_router
-    get "/plug", PhoenixController, :example_plug
+    get "/plug_and_conn", PhoenixController, :example_plug_and_conn
     get "/ecto", PhoenixController, :example_ecto
     get "/ecto/adapters", PhoenixController, :example_adapters
     get "/ecto/migrations", PhoenixController, :example_migrations

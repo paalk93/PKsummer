@@ -1,0 +1,12 @@
+<section>
+  <div>
+    <h1>Plug and conn</h1>
+    <p>We interact with plugs at every step of the connection cycle.</p>
+    <p>Core Phoenix components like endpoints, routers and controllers are all plugs internally.</p>
+    <p>The basic idea of a plug is to unify the concept of a connection that we can operate on.</p>
+    <p>At the simplest level plug specification comes in two types, function and module plugs.</p>
+    <p>The information plugs send and recieve is called connection, also known as conn.</p>
+    <p>When the controller recieves a request from the router to pass some data to the view, they all work as plugs.</p>
+    <p>And the data/information they passes on is the connection.</p>
+  </div>
+</section>

@@ -29,8 +29,8 @@ defmodule Course01Web.PhoenixController do
     render conn, "major_parts_router.html"
   end
 
-  def example_plug(conn, _params) do
-    render conn, "plug.html"
+  def example_plug_and_conn(conn, _params) do
+    render conn, "plug_and_conn.html"
   end
 
   def example_ecto(conn, _params) do
