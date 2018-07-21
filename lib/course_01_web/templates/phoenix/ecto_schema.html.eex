@@ -1,18 +1,32 @@
 <section>
   <div>
     <h1>Ecto Scema</h1>
-    <p></p>
-    <p><strong></strong></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
+    <p>An ecto shcema is used to map any data source into an Elixir struct.</p>
+    <p>One of such use cases is to map data coming from a repository, usually a table, into Elixir structs.</p>
+    <p>By default a schema will automatically generate a primary key column named id and type :integer.</p>
+    <p>The field macro defines a field in the shcame with given name and type.</p>
+    <p>When creating a schema in our module we have to import the schema module by using "use Ecto.Schema".</p>
   </div>
   <div>
     <h3>Code example</h3>
+    <p>Basic example on how a schema look like.</p>
     <pre>
       <code>
+        defmodule HelloWorld.User do
+          use Ecto.Schema
 
+          schema "users" do
+          field :fname, :string
+          field :lname, :string
+          field :phone, :string
+          field :email, :string
+        end
+      end
       </code>
     </pre>
+    <p>Here we define all the fields we want each user to have in the users table.</p>
+    <p>When we then create a user we need to include all this information, a name, last name, phone number and email.</p>
+    <p>With the help of changesets we can also pick which ones have to be validated and which ones can be optional.</p>
+    <p>If we were to add associations we simple add under our fields has_many or belongs_to.</p>
   </div>
 </section>

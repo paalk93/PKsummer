@@ -1,18 +1,17 @@
 <section>
   <div>
     <h1>Ecto Mix tasks</h1>
-    <p></p>
-    <p><strong></strong></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
-  </div>
-  <div>
-    <h3>Code example</h3>
-    <pre>
-      <code>
-
-      </code>
-    </pre>
+    <p>Commonly used mix ecto tasks.</p>
+    <p>We used the mix tasks in our terminal.</p>
+    <p><strong>mix ecto - </strong>List ecto tasks and their information.</p>
+    <p><strong>mix ecto.create - </strong>Create the storage for the given repository.</p>
+    <p><strong>mix ecto.drop - </strong>Drops the storage for the given repository.</p>
+    <p><strong>mix ecto.migrate - </strong>Runs the pending migrations for the given repository.</p>
+    <p><strong>mix ecto.reset - </strong>Drop, create and migrates the storage for the given repository.</p>
+    <p><strong>mix ecto.dump - </strong>Dumps the current enviorment's databse structure for the given repository into a structure file.</p>
+    <p><strong>mix ecto.gen.migration - </strong>Create a migration file.</p>
+    <p><strong>mix ecto.gen.repo - </strong>Generates a new repository, placed in the lib directory.</p>
+    <p><strong>mix ecto.rollback - </strong>Revert applied migrations in the given repository.</p>
+    <p><strong>mix ecto.migrations - </strong>Display up/down migration status for the given repository.</p>
   </div>
 </section>
