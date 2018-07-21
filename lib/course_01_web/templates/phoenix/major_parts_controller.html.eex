@@ -1,17 +1,24 @@
 <section>
   <div>
     <h1>Controller</h1>
-    <p></p>
-    <p><strong></strong></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
+    <p>Controllers act as intermediary modules</p>
+    <p>Their functions are called actions and are invoked from the router.</p>
+    <p>They passes requests onwards to the view.</p>
+    <p>They also build on the plug package and are themselves plugs.</p>
+    <p>Controllers provide functions to do almost anything.</p>
   </div>
   <div>
     <h3>Code example</h3>
+    <p>Example of how a controller with a function is defined.</p>
     <pre>
       <code>
+        defmodule HelloWorldWeb.PageController do
+          use HelloWorldWeb, :controller
 
+          def index(conn, _params) do
+            render conn, "index.html"
+          end
+        end
       </code>
     </pre>
   </div>
