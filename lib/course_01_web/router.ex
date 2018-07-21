@@ -98,6 +98,8 @@ defmodule Course01Web.Router do
   end
 
   scope "/elixir", Course01Web do
+    pipe_through :browser
+
     get "/", ElixirController, :index
     get "/iex", ElixirController, :iex_example
     get "/mix", ElixirController, :mix_example
@@ -110,6 +112,30 @@ defmodule Course01Web.Router do
     get "/enumerables", ElixirController, :enumerables
     get "/ex_unit_and_api", ElixirController, :ex_unit_and_api
     get "/recursion", ElixirController, :recursion
+  end
+
+  scope "/phoenix", Course01Web do
+    pipe_through :browser
+
+    get "/", PhoenixController, :index
+    get "/data_flow", PhoenixController, :data_flow
+    get "/major_parts", PhoenixController, :major_parts
+    get "/major_parts/controller", PhoenixController, :example_controller
+    get "/major_parts/view", PhoenixController, :example_view
+    get "/major_parts/template", PhoenixController, :example_template
+    get "/major_parts/router", PhoenixController, :example_router
+    get "/plug", PhoenixController, :example_plug
+    get "/ecto", PhoenixController, :example_ecto
+    get "/ecto/adapters", PhoenixController, :example_adapters
+    get "/ecto/migrations", PhoenixController, :example_migrations
+    get "/ecto/schema", PhoenixController, :example_schema
+    get "/ecto/mix_tasks", PhoenixController, :ecto_mix_tasks
+    get "/ecto/repo", PhoenixController, :example_repo
+    get "/ecto/query", PhoenixController, :example_query
+    get "/ecto/changeset", PhoenixController, :example_changeset
+    get "/ecto/multi", PhoenixController, :example_multi
+    get "/ecto/associations", PhoenixController, :example_associations
+    get "/ecto/embeded", PhoenixController, :example_embeded
   end
 
   # Other scopes may use custom stacks.
