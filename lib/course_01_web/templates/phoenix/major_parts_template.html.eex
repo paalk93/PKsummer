@@ -1,18 +1,14 @@
 <section>
   <div>
     <h1>Template</h1>
-    <p></p>
-    <p><strong></strong></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
-  </div>
-  <div>
-    <h3>Code example</h3>
-    <pre>
-      <code>
-
-      </code>
-    </pre>
+    <p>Templates are beeing rendered by the view.</p>
+    <p>Templates contain the content of the page we want to display.</p>
+    <p>They provide the basic structure for a response, and allow dynamic data to be substituted in.</p>
+    <p>Templates are also precompiled and fast.</p>
+    <p>We can have many templates.</p>
+    <p>Templates are placed inside a folder inside the templates folder and are defined "name.html.eex".</p>
+    <hr>
+    <p>No example as for now.</p>
+    <p>Templates are basically where we put our html code we want to display, what you are reading now is placed inside a template.</p>
   </div>
 </section>
