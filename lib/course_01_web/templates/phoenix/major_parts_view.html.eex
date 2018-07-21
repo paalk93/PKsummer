@@ -1,17 +1,20 @@
 <section>
   <div>
     <h1>View</h1>
-    <p></p>
-    <p><strong></strong></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
+    <p>The phoenix view's foremost job is to render the template, includeing the layout.</p>
+    <p>Recieve requests from the controller and renders the designated template.</p>
+    <p>View provides functions which takes raw data and make it easier for templates to consume.</p>
+    <p>We can have many views.</p>
+    <p>View files are played inside the views folder and defined by "name_view.ex"</p>
   </div>
   <div>
     <h3>Code example</h3>
+    <p>Basic example of how a view module is defined</p>
     <pre>
       <code>
-
+        defmodule HelloWorldWeb.LayoutView do
+          use HelloWorldWeb, :view
+        end
       </code>
     </pre>
   </div>
