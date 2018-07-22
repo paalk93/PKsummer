@@ -1,8 +1,10 @@
 <section>
   <div>
     <h1>Ecto Embeded</h1>
-    <p></p>
-    <p><strong></strong></p>
+    <p>Embeded records behave like a typical association, except setting and deleteing embeds<br>
+      can only be done via changesets.
+    </p>
+    <p>Same with associations we have embeds_one and embeds_many</p>
   </div>
   <div>
     <h3>Visual example </h3>
@@ -11,7 +13,65 @@
     <h3>Code example</h3>
     <pre>
       <code>
+        defmodule Parent do
+          use Ecto.Schema
 
+          schema "parents" do
+            field :name, :string
+
+            embeds_many :children, Child do
+              field :name, :string
+              field :age, :integer
+            end
+          end
+        end
+
+        def changeset(schema, params) do
+          schema
+          |&gt; cast(params, [:name])
+          |&gt; cast_embed(:child, with: &child_changeset/2)
+        end
+
+        defp child_changeset(schema, params) do
+          schema
+          |&gt; cast(params, [:name, :age])
+        end
+      </code>
+    </pre>
+    <hr>
+    <p>We can also have two different schemas.</p>
+    <hr>
+    <pre>
+      <code>
+        defmodule Parent do
+          use Ecto.Schema
+
+          schema "parents" do
+            field :name, :string
+            embeds_many :Children, Child
+          end
+
+          def changeset(parent, params) do
+            parent
+            |&gt; cast(params, [:name])
+            |&gt; cast_embed(:child, with: &child_changeset/2)
+          end
+        end
+
+        defmodule Child do
+          use Ecto.Schema
+
+          embeded_schema "children" do
+            field :name, :string
+            field :age, :integer
+          end
+
+          def changgeset(child, params) do
+            child
+            |&gt; cast(params, [:name])
+            |&gt; cast_embed(:child, with: &child_changeset/2)
+          end
+        end
       </code>
     </pre>
   </div>
