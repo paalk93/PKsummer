@@ -29,7 +29,7 @@
         def changeset(schema, params) do
           schema
           |&gt; cast(params, [:name])
-          |&gt; cast_embed(:child, with: &child_changeset/2)
+          |&gt; cast_embed(:child, with: &amp;child_changeset/2)
         end
 
         defp child_changeset(schema, params) do
@@ -54,7 +54,7 @@
           def changeset(parent, params) do
             parent
             |&gt; cast(params, [:name])
-            |&gt; cast_embed(:child, with: &child_changeset/2)
+            |&gt; cast_embed(:child, with: &amp;child_changeset/2)
           end
         end
 
@@ -69,7 +69,7 @@
           def changgeset(child, params) do
             child
             |&gt; cast(params, [:name])
-            |&gt; cast_embed(:child, with: &child_changeset/2)
+            |&gt; cast_embed(:child, with: &amp;child_changeset/2)
           end
         end
       </code>
