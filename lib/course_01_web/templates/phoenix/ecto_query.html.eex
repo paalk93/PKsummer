@@ -1,18 +1,27 @@
 <section>
   <div>
     <h1>Ecto Query</h1>
-    <p></p>
-    <p><strong></strong></p>
-  </div>
-  <div>
-    <h3>Visual example </h3>
+    <p>Queries are used to retrieve and mainipulate data from a repository.</p>
+    <p>We have two types of queries, marco based and keyword based.</p>
+    <p>With the use of query we are able to query and fetch data directly from our tables in the database.</p>
+    <p>When working with queries we have to use "import Ecto.Query", to import the query module.</p>
   </div>
   <div>
     <h3>Code example</h3>
+    <p>Example of a simple query.</p>
     <pre>
       <code>
+        import Ecto.Query
 
+        query = from u in "users",
+            where: u.age &gt; 18,
+            select: u.name
+
+        Repo.all(query)
       </code>
     </pre>
+    <p>We use query to search our users table in the database for users that are older than 18.</p>
+    <p>Then we select said users by user name and pull them from our repo. Using Repo.all(query).</p>
+    <p>So using this query we could check if an user is above 18 years old, i.e if the user tried to view adult content.</p>
   </div>
 </section>
