@@ -14,7 +14,7 @@
         import Ecto.Query
 
         query = from u in "users",
-            where: u.age > 18,
+            where: u.age &gt; 18,
             select: u.name
 
         Repo.all(query)
@@ -22,5 +22,6 @@
     </pre>
     <p>We use query to search our users table in the database for users that are older than 18.</p>
     <p>Then we select said users by user name and pull them from our repo. Using Repo.all(query).</p>
+    <p>So using this query we could check if an user is above 18 years old, i.e if the user tried to view adult content.</p>
   </div>
 </section>
