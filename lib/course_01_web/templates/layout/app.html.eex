@@ -19,7 +19,134 @@
       </div>
 
       <div class="pk-grid-area-sidebar">
-        <p>this is the sidebar</p>
+        <div class="PLANNING AND PROBLEMSOLVING">
+          <h3>PLANNING AND PROBLEMSOLVING</h3>
+            <ul>
+              <li>Planning</li>
+              <li>Problemsolving</li>
+            </ul>
+        </div>
+        <div class="GIT">
+          <h3>GIT</h3>
+            <ul>
+              <li>Commands</li>
+              <li>Routines</li>
+            </ul>
+        </div>
+        <div class="HTML">
+          <h3>HTML</h3>
+            <ul>
+              <li>Tags</li>
+              <ul>
+                <li>Head</li>
+                <li>Body</li>
+                <li>Table and list</li>
+                <li>Media</li>
+                <li>Form and input</li>
+                <li>Sections</li>
+                <li>Typography</li>
+                <li>Textformatting</li>
+                <li>Code and script</li>
+                <li>Icons</li>
+              </ul>
+              <li>Attributes</li>
+              <ul>
+                <li>General</li>
+                <li>For form and input</li>
+                <li>For media</li>
+                <li>For table and list</li>
+                <li>For styling</li>
+                <li>For links</li>
+                <li>Data and javascript</li>
+              </ul>
+            </ul>
+        </div>
+        <div class="CSS">
+          <h3>CSS</h3>
+            <ul>
+            <li>Selectors</li>
+            <li>Properties</li>
+            <li>Variables</li>
+            <li>Grid</li>
+            <li>Flexbox</li>
+            <li>Pseudo classes</li>
+              <ul>
+                <li>Links</li>
+                <li>Child and type</li>
+                <li>Form and input</li>
+                <li>Misc</li>
+              </ul>
+            <li>Animations</li>
+          </ul>
+        </div>
+        <div class="JAVASCRIPT">
+          <h3>JAVASCRIPT</h3>
+            <ul>
+              <li>Variables and data</li>
+              <li>Operators</li>
+              <li>Logic flow</li>
+                <ul>
+                  <li>If else</li>
+                  <li>Switch</li>
+                </ul>
+              <li>Arrays</li>
+              <li>Functions</li>
+              <li>Objects</li>
+              <li>Loops</li>
+                <ul>
+                  <li>For with in</li>
+                </ul>
+              <li>Scope</li>
+              <li>Misc</li>
+            </ul>
+        </div>
+        <div class="ELIXIR">
+          <h3>ELIXIR</h3>
+            <ul>
+              <li>Iex</li>
+              <li>Mix</li>
+              <li>Data types</li>
+              <li>Operators</li>
+              <li>Collections</li>
+              <li>Pattern matching</li>
+              <li>Modules and functions</li>
+              <li>Comprehensions</li>
+              <li>Enumerables</li>
+              <li>EXUnit and API</li>
+              <li>Recursion</li>
+            </ul>
+        </div>
+        <div class="PHOENIX">
+          <h3>PHOENIX</h3>
+            <ul>
+              <li>Data flow</li>
+              <li>Major parts</li>
+                <ul>
+                  <li>Controller</li>
+                  <li>View</li>
+                  <li>Template</li>
+                  <li>Router</li>
+                </ul>
+              <li>Plugs and conn</li>
+              <li>Ecto</li>
+                <ul>
+                  <li>Adapters</li>
+                  <li>Migrations</li>
+                  <li>Schema</li>
+                  <li>Mix tasks</li>
+                  <li>Repo</li>
+                  <li>Query</li>
+                  <li>Changeset</li>
+                  <li>Multi</li>
+                  <li>Associations</li>
+                  <li>Embeded</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="ASSOCIATION EXAMPLE">
+          <h3>ASSOCIATION EXAMPLE</h3>
+        </div>
+
       </div>
 
       <main role="main" class= "pk-grid-area-main">
