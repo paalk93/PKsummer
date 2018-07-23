@@ -20,34 +20,34 @@
 
       <div class="pk-grid-area-sidebar">
         <div class="PLANNING AND PROBLEMSOLVING">
-          <h3>PLANNING AND PROBLEMSOLVING</h3>
+          <h3>Planning and problemsolving</h3>
             <ul>
-              <li>Planning</li>
-              <li>Problemsolving</li>
+              <li><%= link "Planning", to: planning_problem_path(@conn, :planning) %></li>
+              <li><%= link "Problem solving", to: planning_problem_path(@conn, :problem_solving) %></li>
             </ul>
         </div>
         <div class="GIT">
-          <h3>GIT</h3>
+          <h3><%= link "Git", to: git_example_path(@conn, :index) %></h3>
             <ul>
-              <li>Commands</li>
-              <li>Routines</li>
+              <li><%= link "Git commands", to: git_example_path(@conn, :git_commands) %></li>
+              <li><%= link "Git routines", to: git_example_path(@conn, :git_routines) %></li>
             </ul>
         </div>
         <div class="HTML">
-          <h3>HTML</h3>
+          <h3><%= link "HTML", to: html_tags_path(@conn, :index) %></h3>
             <ul>
-              <li>Tags</li>
+              <li><%= link "Tags", to: html_tags_path(@conn, :tags) %></li>
               <ul>
-                <li>Head</li>
-                <li>Body</li>
-                <li>Table and list</li>
-                <li>Media</li>
-                <li>Form and input</li>
-                <li>Sections</li>
-                <li>Typography</li>
-                <li>Textformatting</li>
-                <li>Code and script</li>
-                <li>Icons</li>
+                <li><%= link "Head", to: html_tags_path(@conn, :head_tags) %></li>
+                <li><%= link "Body", to: html_tags_path(@conn, :body_tags) %></li>
+                <li><%= link "Table and list", to: html_tags_path(@conn, :table_and_list) %></li>
+                <li><%= link "Media", to: html_tags_path(@conn, :media) %></li>
+                <li><%= link "Form and input", to: html_tags_path(@conn, :form_and_input) %></li>
+                <li><%= link "Sections", to: html_tags_path(@conn, :sections) %></li>
+                <li><%= link "Typography", to: html_tags_path(@conn, :typography) %></li>
+                <li><%= link "Textformatting", to: html_tags_path(@conn, :textformatting) %></li>
+                <li><%= link "Code and script", to: html_tags_path(@conn, :code_and_script) %></li>
+                <li><%= link "Icons and buttons", to: html_tags_path(@conn, :icons_and_buttons) %></li>
               </ul>
               <li>Attributes</li>
               <ul>

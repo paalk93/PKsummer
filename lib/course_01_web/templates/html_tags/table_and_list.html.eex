@@ -1,6 +1,6 @@
 <section>
   <div>
-    <h1>Tags for table and lists</h1>
+    <h1>Table and list tags</h1>
     <p>Commonly used list and table tags.</p>
     <p><strong>&lt;ul&gt; </strong>Defines an unordered list.</p>
     <p><strong>&lt;ol&gt; </strong>Defines an ordered list.</p>

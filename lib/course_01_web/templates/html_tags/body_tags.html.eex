@@ -1,6 +1,6 @@
 <section>
   <div>
-    <h1>Head tags</h1>
+    <h1>Body tags</h1>
     <p>Body tags for defining distinct areas.</p>
     <p><strong>&lt;body&gt; </strong>Defines the body for your document, where all html goes.</p>
     <p><strong>&lt;header&gt; </strong>Defines a header area in your document.</p>
