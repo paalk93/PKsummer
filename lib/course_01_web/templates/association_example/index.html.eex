@@ -1,0 +1,215 @@
+<section>
+  <div>
+    <h1>Association example</h1>
+    <p>On this page we will display associated and embeded data from our repo.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Last name</th>
+          <th>City</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+        <tbody>
+        <%= for user <- @users do %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.fname %></td>
+          <td><%= user.lname %></td>
+          <td><%= user.adress.city %></td>
+          <td><%= user.adress.country %></td>
+          <td><%= link "Show", to: association_example_path(@conn, :show, user) %></td>
+          <td><%= link "Edit", to: association_example_path(@conn, :edit, user) %></td>
+          <td><%= link "Delete", to: association_example_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"] %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <span><%= link "New User", to: association_example_path(@conn, :new) %></span>
+  </div>
+  <hr>
+  <div>
+    <h3>Code example repo functions, association.ex</h3>
+    <p>In the actual code i uses similar functions for adresses.</p>
+    <p>But since they are associated with users the most important functions are these.</p>
+    <pre>
+      <code>
+        defmodule Course01.Association do
+          alias Course01.Repo
+
+          alias Course01.Association.User
+          alias Course01.Association.Adress
+
+          def list_users do
+            Repo.all(User)
+            |> Course01.Repo.preload(:adress)
+          end
+
+          def create_user(attrs \\ %{}) do
+          %User{}
+          | > Course01.Repo.preload(:adress)
+            |> User.changeset(attrs)
+            |> Repo.insert()
+          end
+
+          def get_user!(id), do: Repo.get!(User,id) |> Course01.Repo.preload(:adress)
+
+          def change_user(%User{} = user) do
+            User.changeset(user, %{})
+            end
+
+          def delete_user(%User{} = user) do
+            Repo.delete(user)
+          end
+
+          def update_user(%User{} = user, attrs) do
+            user
+            |> User.changeset(attrs)
+            |> Repo.update()
+          end
+
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example schema and changeset for users, user.ex</h3>
+    <pre>
+      <code>
+        defmodule Course01.Association.User do
+          use Ecto.Schema
+          import Ecto.Changeset
+
+          schema "users" do
+            field :fname, :string
+            field :lname, :string
+            has_one :adress, Course01.Association.Adress
+            timestamps()
+          end
+
+          def changeset(user, attrs \\ %{}) do
+            user
+            |> cast(attrs, [:fname, :lname])
+            |> cast_assoc(:adress)
+            |> validate_required([:fname, :lname])
+          end
+
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example schema and changeset for adresses, adress.ex</h3>
+    <pre>
+      <code>
+        defmodule Course01.Association.Adress do
+          use Ecto.Schema
+          import Ecto.Changeset
+
+          schema "adresses" do
+            field :city, :string
+            field :country, :string
+            belongs_to :user, Course01.Association.User
+
+            timestamps()
+          end
+
+          def changeset(adress, attrs \\ %{}) do
+            adress
+            |> cast(attrs, [:city, :country, :user_id])
+            |> validate_required([:city, :country])
+          end
+
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example controller, association_example_controller.ex</h3>
+    <p>In the controller we have all our functions which we use in our templates.</p>
+    <p>Controller functions often call functions from our association.ex file.</p>
+    <p>Like when we render and call the controller function index, it will list the users and adresses.</p>
+    <pre>
+      <code>
+        defmodule Course01Web.AssociationExampleController do
+          use Course01Web, :controller
+
+          import Ecto.Query, warn: false
+          alias Course01.Repo
+
+          alias Course01.Association
+          alias Course01.Association.User
+          alias Course01.Association.Adress
+
+          def index(conn, _params) do
+            users = Association.list_users()
+            adresses = Association.list_adresses()
+            render(conn, "index.html", users: users, adresses: adresses)
+          end
+
+          def show(conn, %{"id" => id}) do
+            user = Association.get_user!(id)
+            adress = Association.get_adress!(id)
+            render(conn, "show.html", user: user, adress: adress)
+          end
+
+          def new(conn, _params) do
+            changeset = User.changeset(%User{adress: %Adress{}})
+            render conn, "new.html", changeset: changeset
+          end
+
+          def create(conn, %{"user" => user_params}) do
+            changeset = User.changeset(%User{}, user_params)
+            case Repo.insert(changeset) do
+              {:ok, user} ->
+
+                conn
+                |> redirect(to: association_example_path(conn, :index))
+              {:error, changeset} ->
+            render(conn, "new.html", changeset: changeset)
+            end
+          end
+
+          def edit(conn, %{"id" => id}) do
+            user = Association.get_user!(id)
+            changeset = Association.change_user(user)
+            render(conn, "edit.html", user: user, changeset: changeset)
+          end
+
+          def update(conn, %{"id" => id, "user" => user_params}) do
+            user = Association.get_user!(id)
+
+            case Association.update_user(user, user_params) do
+              {:ok, user} ->
+                conn
+                |> put_flash(:info, "User updated successfully.")
+                |> redirect(to: association_example_path(conn, :show, user))
+              {:error, %Ecto.Changeset{} = changeset} ->
+              render(conn, "edit.html", user: user, changeset: changeset)
+            end
+          end
+
+          def delete(conn, %{"id" => id}) do
+            user = Association.get_user!(id)
+            {:ok, _user} = Association.delete_user(user)
+            conn
+            |> put_flash(:info, "User deleted successfully.")
+            |> redirect(to: association_example_path(conn, :index))
+          end
+
+        end
+      </code>
+    </pre>
+    <p>With phoenix templates we can use &lt;%= and %&gt; to run functions. Sort of like an onlcick in javascript.</p>
+    <p>Like this &lt;%= link "New User", to: association_example_path(@conn, :new) %&gt;</p>
+    <p>Which uses a link function, and uses our controller path with a connection and run our controller function.</p>
+    <p>Our new function renders the new html which render the form html &lt;%= render "form.html", Map.put(assigns, :action, association_example_path(@conn, :create)) %&gt;<br>
+      Which then again runs the create function with the parameters for our associated data.
+    </p>
+  </div>
+</section>
