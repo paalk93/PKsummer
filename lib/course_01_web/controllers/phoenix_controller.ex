@@ -73,7 +73,7 @@ defmodule Course01Web.PhoenixController do
     render conn, "ecto_associations.html"
   end
 
-  def example_embeded(conn, _params) do
+  def example_embedded(conn, _params) do
     render conn, "ecto_embeded.html"
   end
 end

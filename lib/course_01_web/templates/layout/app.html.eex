@@ -20,131 +20,131 @@
 
       <div class="pk-grid-area-sidebar">
         <div class="PLANNING AND PROBLEMSOLVING">
-          <h3>PLANNING AND PROBLEMSOLVING</h3>
+          <h3>Planning and problemsolving</h3>
             <ul>
-              <li>Planning</li>
-              <li>Problemsolving</li>
+              <li><%= link "Planning", to: planning_problem_path(@conn, :planning) %></li>
+              <li><%= link "Problem solving", to: planning_problem_path(@conn, :problem_solving) %></li>
             </ul>
         </div>
         <div class="GIT">
-          <h3>GIT</h3>
+          <h3><%= link "Git", to: git_example_path(@conn, :index) %></h3>
             <ul>
-              <li>Commands</li>
-              <li>Routines</li>
+              <li><%= link "Git commands", to: git_example_path(@conn, :git_commands) %></li>
+              <li><%= link "Git routines", to: git_example_path(@conn, :git_routines) %></li>
             </ul>
         </div>
         <div class="HTML">
-          <h3>HTML</h3>
+          <h3><%= link "HTML", to: html_tags_path(@conn, :index) %></h3>
             <ul>
-              <li>Tags</li>
+              <li><%= link "Tags", to: html_tags_path(@conn, :tags) %></li>
               <ul>
-                <li>Head</li>
-                <li>Body</li>
-                <li>Table and list</li>
-                <li>Media</li>
-                <li>Form and input</li>
-                <li>Sections</li>
-                <li>Typography</li>
-                <li>Textformatting</li>
-                <li>Code and script</li>
-                <li>Icons</li>
+                <li><%= link "Head", to: html_tags_path(@conn, :head_tags) %></li>
+                <li><%= link "Body", to: html_tags_path(@conn, :body_tags) %></li>
+                <li><%= link "Table and list", to: html_tags_path(@conn, :table_and_list) %></li>
+                <li><%= link "Media", to: html_tags_path(@conn, :media) %></li>
+                <li><%= link "Form and input", to: html_tags_path(@conn, :form_and_input) %></li>
+                <li><%= link "Sections", to: html_tags_path(@conn, :sections) %></li>
+                <li><%= link "Typography", to: html_tags_path(@conn, :typography) %></li>
+                <li><%= link "Textformatting", to: html_tags_path(@conn, :textformatting) %></li>
+                <li><%= link "Code and script", to: html_tags_path(@conn, :code_and_script) %></li>
+                <li><%= link "Icons and buttons", to: html_tags_path(@conn, :icons_and_buttons) %></li>
               </ul>
-              <li>Attributes</li>
+              <li><%= link "Attributes", to: html_attributes_path(@conn, :attributes) %></li>
               <ul>
-                <li>General</li>
-                <li>For form and input</li>
-                <li>For media</li>
-                <li>For table and list</li>
-                <li>For styling</li>
-                <li>For links</li>
-                <li>Data and javascript</li>
+                <li><%= link "General", to: html_attributes_path(@conn, :general) %></li>
+                <li><%= link "For form and input", to: html_attributes_path(@conn, :for_form_and_input) %></li>
+                <li><%= link "For media", to: html_attributes_path(@conn, :for_media) %></li>
+                <li><%= link "For table and list", to: html_attributes_path(@conn, :for_table_and_list) %></li>
+                <li><%= link "Styling attributes", to: html_attributes_path(@conn, :styling_attributes) %></li>
+                <li><%= link "For links", to: html_attributes_path(@conn, :for_links) %></li>
+                <li><%= link "Data and javascript", to: html_attributes_path(@conn, :data_and_javascript) %></li>
               </ul>
             </ul>
         </div>
         <div class="CSS">
-          <h3>CSS</h3>
+          <h3><%= link "CSS", to: css_path(@conn, :index) %></h3>
             <ul>
-            <li>Selectors</li>
-            <li>Properties</li>
-            <li>Variables</li>
-            <li>Grid</li>
-            <li>Flexbox</li>
-            <li>Pseudo classes</li>
+            <li><%= link "Selectors", to: css_path(@conn, :selectors) %></li>
+            <li><%= link "Properties", to: css_path(@conn, :properties) %></li>
+            <li><%= link "Variables", to: css_path(@conn, :variables) %></li>
+            <li><%= link "Grid", to: css_path(@conn, :css_grid) %></li>
+            <li><%= link "Flexbox", to: css_path(@conn, :css_flexbox) %></li>
+            <li><%= link "Pseudo classes", to: css_path(@conn, :pseudo_classes) %></li>
               <ul>
-                <li>Links</li>
-                <li>Child and type</li>
-                <li>Form and input</li>
-                <li>Misc</li>
+                <li><%= link "Links", to: css_path(@conn, :pseudo_links) %></li>
+                <li><%= link "Child and type", to: css_path(@conn, :pseudo_child_and_type) %></li>
+                <li><%= link "Forms and input", to: css_path(@conn, :pseudo_forms_and_input) %></li>
+                <li><%= link "Misc", to: css_path(@conn, :pseudo_misc) %></li>
               </ul>
-            <li>Animations</li>
+            <li><%= link "Animations", to: css_path(@conn, :css_animations) %></li>
           </ul>
         </div>
         <div class="JAVASCRIPT">
-          <h3>JAVASCRIPT</h3>
+          <h3><%= link "JavaScript", to: javascript_path(@conn, :index) %></h3>
             <ul>
-              <li>Variables and data</li>
-              <li>Operators</li>
-              <li>Logic flow</li>
+              <li><%= link "Variables and data", to: javascript_path(@conn, :variables_and_data) %></li>
+              <li><%= link "Operators", to: javascript_path(@conn, :operators) %></li>
+              <li><%= link "Logic flow", to: javascript_path(@conn, :logic_flow) %></li>
                 <ul>
-                  <li>If else</li>
-                  <li>Switch</li>
+                  <li><%= link "If else", to: javascript_path(@conn, :logic_flow_if_else) %></li>
+                  <li><%= link "Switch", to: javascript_path(@conn, :logic_flow_switch) %></li>
                 </ul>
-              <li>Arrays</li>
-              <li>Functions</li>
-              <li>Objects</li>
-              <li>Loops</li>
+              <li><%= link "Arrays", to: javascript_path(@conn, :arrays) %></li>
+              <li><%= link "Functions", to: javascript_path(@conn, :functions) %></li>
+              <li><%= link "Objects", to: javascript_path(@conn, :objects) %></li>
+              <li><%= link "Loops", to: javascript_path(@conn, :loops) %></li>
                 <ul>
-                  <li>For with in</li>
+                  <li><%= link "For and in", to: javascript_path(@conn, :loops_for_and_in) %></li>
                 </ul>
-              <li>Scope</li>
-              <li>Misc</li>
+              <li><%= link "Scope", to: javascript_path(@conn, :scope) %></li>
+              <li><%= link "Misc", to: javascript_path(@conn, :misc) %></li>
             </ul>
         </div>
         <div class="ELIXIR">
-          <h3>ELIXIR</h3>
+          <h3><%= link "Elixir", to: elixir_path(@conn, :index) %></h3>
             <ul>
-              <li>Iex</li>
-              <li>Mix</li>
-              <li>Data types</li>
-              <li>Operators</li>
-              <li>Collections</li>
-              <li>Pattern matching</li>
-              <li>Modules and functions</li>
-              <li>Comprehensions</li>
-              <li>Enumerables</li>
-              <li>EXUnit and API</li>
-              <li>Recursion</li>
+              <li><%= link "Iex", to: elixir_path(@conn, :iex_example) %></li>
+              <li><%= link "Mix", to: elixir_path(@conn, :mix_example) %></li>
+              <li><%= link "Data types", to: elixir_path(@conn, :data_types) %></li>
+              <li><%= link "Operators", to: elixir_path(@conn, :operators) %></li>
+              <li><%= link "Collections", to: elixir_path(@conn, :collections) %></li>
+              <li><%= link "Pattern matching", to: elixir_path(@conn, :pattern_matching) %></li>
+              <li><%= link "Modules and functions", to: elixir_path(@conn, :modules_and_functions) %></li>
+              <li><%= link "Comprehensions", to: elixir_path(@conn, :comprehensions) %></li>
+              <li><%= link "Enmerables", to: elixir_path(@conn, :enumerables) %></li>
+              <li><%= link "EXUnit and API", to: elixir_path(@conn, :ex_unit_and_api) %></li>
+              <li><%= link "Recursion", to: elixir_path(@conn, :recursion) %></li>
             </ul>
         </div>
         <div class="PHOENIX">
-          <h3>PHOENIX</h3>
+          <h3><%= link "Phoenix", to: phoenix_path(@conn, :index) %></h3>
             <ul>
-              <li>Data flow</li>
-              <li>Major parts</li>
+              <li><%= link "Data flow", to: phoenix_path(@conn, :data_flow) %></li>
+              <li><%= link "Major parts", to: phoenix_path(@conn, :major_parts) %></li>
                 <ul>
-                  <li>Controller</li>
-                  <li>View</li>
-                  <li>Template</li>
-                  <li>Router</li>
+                  <li><%= link "Controller", to: phoenix_path(@conn, :example_controller) %></li>
+                  <li><%= link "View", to: phoenix_path(@conn, :example_view) %></li>
+                  <li><%= link "Template", to: phoenix_path(@conn, :example_template) %></li>
+                  <li><%= link "Router", to: phoenix_path(@conn, :example_router) %></li>
                 </ul>
-              <li>Plugs and conn</li>
-              <li>Ecto</li>
+              <li><%= link "Plug and conn", to: phoenix_path(@conn, :example_plug_and_conn) %></li>
+              <li><%= link "Ecto", to: phoenix_path(@conn, :example_ecto) %></li>
                 <ul>
-                  <li>Adapters</li>
-                  <li>Migrations</li>
-                  <li>Schema</li>
-                  <li>Mix tasks</li>
-                  <li>Repo</li>
-                  <li>Query</li>
-                  <li>Changeset</li>
-                  <li>Multi</li>
-                  <li>Associations</li>
-                  <li>Embeded</li>
+                  <li><%= link "Mix tasks", to: phoenix_path(@conn, :ecto_mix_tasks) %></li>
+                  <li><%= link "Adapters", to: phoenix_path(@conn, :example_adapters) %></li>
+                  <li><%= link "Migrations", to: phoenix_path(@conn, :example_migrations) %></li>
+                  <li><%= link "Schema", to: phoenix_path(@conn, :example_schema) %></li>
+                  <li><%= link "Repo", to: phoenix_path(@conn, :example_repo) %></li>
+                  <li><%= link "Query", to: phoenix_path(@conn, :example_query) %></li>
+                  <li><%= link "Changeset", to: phoenix_path(@conn, :example_changeset) %></li>
+                  <li><%= link "Multi", to: phoenix_path(@conn, :example_multi) %></li>
+                  <li><%= link "Associations", to: phoenix_path(@conn, :example_associations) %></li>
+                  <li><%= link "Embedded", to: phoenix_path(@conn, :example_embedded) %></li>
                 </ul>
             </ul>
         </div>
         <div class="ASSOCIATION EXAMPLE">
-          <h3>ASSOCIATION EXAMPLE</h3>
+          <h3><%= link "Association example", to: association_example_path(@conn, :index) %></h3>
         </div>
 
       </div>
