@@ -1,0 +1,30 @@
+.pk-table{
+  border:1px solid #e8491d;
+  text-align:center;
+}
+.pk-table th{
+  border:1px solid #e8491d;
+  padding:0.5em;
+  background-color:#35424a;
+  color:#f2f2f2;
+}
+.pk-table td{
+  padding:0.5em
+}
+.pk-table tr:nth-child(even){
+  background-color:#35424a;
+  color:#f2f2f2;
+}
+.pk-table tr:nth-child(even) a{
+  color:#f2f2f2;
+}
+.pk-table tr:nth-child(odd) a{
+  color:initial;
+}
+.left-column {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}

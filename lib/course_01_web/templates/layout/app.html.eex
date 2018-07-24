@@ -14,26 +14,28 @@
   <body>
     <div class="pk-main-grid-layout">
 
-      <div class="pk-grid-area-navbar">
-        <p>NAVBAR</p>
+      <div class="pk-grid-area-navbar pk-background-secondary">
+        <div class="pk-margin-left-1em">
+        <h1 class="pk-color-secondary">PK documentation project</h1>
+      </div>
       </div>
 
-      <div class="pk-grid-area-sidebar">
-        <div class="PLANNING AND PROBLEMSOLVING">
+      <div class="pk-grid-area-sidebar pk-background-secondary pk-color-secondary">
+        <div class="pk-margin-05em">
           <h3>Planning and problemsolving</h3>
             <ul>
               <li><%= link "Planning", to: planning_problem_path(@conn, :planning) %></li>
               <li><%= link "Problem solving", to: planning_problem_path(@conn, :problem_solving) %></li>
             </ul>
         </div>
-        <div class="GIT">
+        <div class="pk-margin-05em">
           <h3><%= link "Git", to: git_example_path(@conn, :index) %></h3>
             <ul>
               <li><%= link "Git commands", to: git_example_path(@conn, :git_commands) %></li>
               <li><%= link "Git routines", to: git_example_path(@conn, :git_routines) %></li>
             </ul>
         </div>
-        <div class="HTML">
+        <div class="pk-margin-05em">
           <h3><%= link "HTML", to: html_tags_path(@conn, :index) %></h3>
             <ul>
               <li><%= link "Tags", to: html_tags_path(@conn, :tags) %><span onclick="showTags(this)" class="pk-span-cursor"> &plus;</span></li>
@@ -44,7 +46,7 @@
                 <li><%= link "Media", to: html_tags_path(@conn, :media) %></li>
                 <li><%= link "Form and input", to: html_tags_path(@conn, :form_and_input) %></li>
                 <li><%= link "Sections", to: html_tags_path(@conn, :sections) %></li>
-                <li><%= link "Typography", to: html_tags_path(@conn, :typography) %></li>
+                <li><%= link "Typography", to: html_tags_path(@conn, :typography)%></li>
                 <li><%= link "Textformatting", to: html_tags_path(@conn, :textformatting) %></li>
                 <li><%= link "Code and script", to: html_tags_path(@conn, :code_and_script) %></li>
                 <li><%= link "Icons and buttons", to: html_tags_path(@conn, :icons_and_buttons) %></li>
@@ -61,7 +63,7 @@
               </ul>
             </ul>
         </div>
-        <div class="CSS">
+        <div class="pk-margin-05em">
           <h3><%= link "CSS", to: css_path(@conn, :index) %></h3>
             <ul>
             <li><%= link "Selectors", to: css_path(@conn, :selectors) %></li>
@@ -79,7 +81,7 @@
             <li><%= link "Animations", to: css_path(@conn, :css_animations) %></li>
           </ul>
         </div>
-        <div class="JAVASCRIPT">
+        <div class="pk-margin-05em">
           <h3><%= link "JavaScript", to: javascript_path(@conn, :index) %></h3>
             <ul>
               <li><%= link "Variables and data", to: javascript_path(@conn, :variables_and_data) %></li>
@@ -100,7 +102,7 @@
               <li><%= link "Misc", to: javascript_path(@conn, :misc) %></li>
             </ul>
         </div>
-        <div class="ELIXIR">
+        <div class="pk-margin-05em">
           <h3><%= link "Elixir", to: elixir_path(@conn, :index) %></h3>
             <ul>
               <li><%= link "Iex", to: elixir_path(@conn, :iex_example) %></li>
@@ -116,7 +118,7 @@
               <li><%= link "Recursion", to: elixir_path(@conn, :recursion) %></li>
             </ul>
         </div>
-        <div class="PHOENIX">
+        <div class="pk-margin-05em">
           <h3><%= link "Phoenix", to: phoenix_path(@conn, :index) %></h3>
             <ul>
               <li><%= link "Data flow", to: phoenix_path(@conn, :data_flow) %></li>
@@ -143,14 +145,16 @@
                 </ul>
             </ul>
         </div>
-        <div class="ASSOCIATION EXAMPLE">
+        <div class="pk-margin-05em">
           <h3><%= link "Association example", to: association_example_path(@conn, :index) %></h3>
         </div>
 
       </div>
 
       <main role="main" class= "pk-grid-area-main">
-        <%= render @view_module, @view_template, assigns %>
+        <div class="pk-margin-1em">
+          <%= render @view_module, @view_template, assigns %>
+        </div>
       </main>
 
     </div>
