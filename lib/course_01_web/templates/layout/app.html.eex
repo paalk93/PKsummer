@@ -80,24 +80,24 @@
           </ul>
         </div>
         <div class="JAVASCRIPT">
-          <h3>JAVASCRIPT</h3>
+          <h3><%= link "JavaScript", to: javascript_path(@conn, :index) %></h3>
             <ul>
-              <li>Variables and data</li>
-              <li>Operators</li>
-              <li>Logic flow</li>
+              <li><%= link "Variables and data", to: javascript_path(@conn, :variables_and_data) %></li>
+              <li><%= link "Operators", to: javascript_path(@conn, :operators) %></li>
+              <li><%= link "Logic flow", to: javascript_path(@conn, :logic_flow) %></li>
                 <ul>
-                  <li>If else</li>
-                  <li>Switch</li>
+                  <li><%= link "If else", to: javascript_path(@conn, :logic_flow_if_else) %></li>
+                  <li><%= link "Switch", to: javascript_path(@conn, :logic_flow_switch) %></li>
                 </ul>
-              <li>Arrays</li>
-              <li>Functions</li>
-              <li>Objects</li>
-              <li>Loops</li>
+              <li><%= link "Arrays", to: javascript_path(@conn, :arrays) %></li>
+              <li><%= link "Functions", to: javascript_path(@conn, :functions) %></li>
+              <li><%= link "Objects", to: javascript_path(@conn, :objects) %></li>
+              <li><%= link "Loops", to: javascript_path(@conn, :loops) %></li>
                 <ul>
-                  <li>For with in</li>
+                  <li><%= link "For and in", to: javascript_path(@conn, :loops_for_and_in) %></li>
                 </ul>
-              <li>Scope</li>
-              <li>Misc</li>
+              <li><%= link "Scope", to: javascript_path(@conn, :scope) %></li>
+              <li><%= link "Misc", to: javascript_path(@conn, :misc) %></li>
             </ul>
         </div>
         <div class="ELIXIR">
