@@ -49,15 +49,15 @@
                 <li><%= link "Code and script", to: html_tags_path(@conn, :code_and_script) %></li>
                 <li><%= link "Icons and buttons", to: html_tags_path(@conn, :icons_and_buttons) %></li>
               </ul>
-              <li>Attributes</li>
+              <li><%= link "Attributes", to: html_attributes_path(@conn, :attributes) %></li>
               <ul>
-                <li>General</li>
-                <li>For form and input</li>
-                <li>For media</li>
-                <li>For table and list</li>
-                <li>For styling</li>
-                <li>For links</li>
-                <li>Data and javascript</li>
+                <li><%= link "General", to: html_attributes_path(@conn, :general) %></li>
+                <li><%= link "For form and input", to: html_attributes_path(@conn, :for_form_and_input) %></li>
+                <li><%= link "For media", to: html_attributes_path(@conn, :for_media) %></li>
+                <li><%= link "For table and list", to: html_attributes_path(@conn, :for_table_and_list) %></li>
+                <li><%= link "Styling attributes", to: html_attributes_path(@conn, :styling_attributes) %></li>
+                <li><%= link "For links", to: html_attributes_path(@conn, :for_links) %></li>
+                <li><%= link "Data and javascript", to: html_attributes_path(@conn, :data_and_javascript) %></li>
               </ul>
             </ul>
         </div>
