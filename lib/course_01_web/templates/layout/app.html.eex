@@ -144,7 +144,7 @@
             </ul>
         </div>
         <div class="ASSOCIATION EXAMPLE">
-          <h3>ASSOCIATION EXAMPLE</h3>
+          <h3><%= link "Association example", to: association_example_path(@conn, :index) %></h3>
         </div>
 
       </div>
