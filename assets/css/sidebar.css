@@ -1,0 +1,8 @@
+.pk-hidden-list{
+  display:none;
+}
+
+.pk-span-cursor{
+  cursor:pointer;
+  font-size: 1.3em;
+}
