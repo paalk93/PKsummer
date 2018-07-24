@@ -5,7 +5,8 @@
   </div>
   <div>
     <h3>Visual example </h3>
-    <table>
+    <span><%= link "New User", to: association_example_path(@conn, :new) %></span>
+    <table class="pk-table">
       <thead>
         <tr>
           <th>ID</th>
