@@ -4,26 +4,26 @@
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
-  <div class="form-group">
-    <%= label f, :fname, class: "control-label" %>
-    <%= text_input f, :fname, class: "form-control" %>
+  <div class="pk-form-container">
+    <%= label f, :fname %>
+    <%= text_input f, :fname %>
     <%= error_tag f, :fname %>
   </div>
-  <div class="form-group">
-    <%= label f, :lname, class: "control-label" %>
-    <%= text_input f, :lname, class: "form-control" %>
+  <div class="pk-form-container">
+    <%= label f, :lname %>
+    <%= text_input f, :lname %>
     <%= error_tag f, :lname %>
   </div>
 
   <%= inputs_for f, :adress, fn p -> %>
-  <div class="form-group">
-    <%= label p, :city, class: "control-label" %>
-    <%= text_input p, :city, class: "form-control" %>
+  <div class="pk-form-container">
+    <%= label p, :city %>
+    <%= text_input p, :city %>
     <%= error_tag p, :city %>
   </div>
-  <div class="form-group">
-    <%= label p, :country, class: "control-label" %>
-    <%= text_input p, :country, class: "form-control" %>
+  <div class="pk-form-container">
+    <%= label p, :country %>
+    <%= text_input p, :country %>
     <%= error_tag p, :country %>
   </div>
 <% end %>

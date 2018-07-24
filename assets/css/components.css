@@ -1,3 +1,4 @@
+/* Table start */
 .pk-table{
   border:1px solid #e8491d;
   text-align:center;
@@ -21,10 +22,23 @@
 .pk-table tr:nth-child(odd) a{
   color:initial;
 }
-.left-column {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  overflow-y:scroll;
-  overflow-x:hidden;
+/* Table end */
+
+/* Form start */
+.pk-form-container{
+  width: 20em;
 }
+.pk-form-container input{
+  width: 100%;
+  padding:0.3em;
+  font-family:
+}
+.pk-form-container input:focus{
+  border-color:#51b5f2;
+  box-shadow:1px 1px 1px grey
+}
+.pk-form-container input:hover{
+  border-color:#51b5f2;
+  box-shadow:1px 1px 1px grey
+}
+/* Form end */

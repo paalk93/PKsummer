@@ -1,23 +1,23 @@
 <h2>Show User</h2>
-<ul>
-  <li>
+<ul class="pk-no-list-style">
+  <li class="pk-margin-05em">
     <strong>ID</strong>
     <%= @user.id %>
   </li>
-  <li>
+  <li class="pk-margin-05em">
     <strong>Fname:</strong>
     <%= @user.fname %>
   </li>
-  <li>
+  <li class="pk-margin-05em">
     <strong>Lname:</strong>
     <%= @user.lname %>
   </li>
-  <li>
+  <li class="pk-margin-05em">
     <strong>City:</strong>
     <%= @adress.city %>
   </li>
 
-  <li>
+  <li class="pk-margin-05em">
     <strong>Country:</strong>
     <%= @adress.country %>
   </li>
