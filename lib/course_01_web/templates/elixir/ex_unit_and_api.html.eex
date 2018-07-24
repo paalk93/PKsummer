@@ -79,6 +79,6 @@
       And the cycle they run trough and how they all are connected.
     </p>
     <p>These are different components which recieve and sends requests, passing data information onwards.</p>
-    <p>For more details about the phoenix components visit the "link phoenix flow section".</p>
+    <p>For more details about the phoenix components visit the <%= link "Phoenix Major parts", to: phoenix_path(@conn, :major_parts) %> section.</p>
   </div>
 </section>

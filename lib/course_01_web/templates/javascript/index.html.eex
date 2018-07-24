@@ -18,7 +18,10 @@
       document.getElementsByClassName("class")[0], using [0] we find the FIRST element which has said class name.<br>
       document.querySelector("#id" or ".class"). Using class will select the first element with said class.<br>
     </p>
-    <p>Wrapping a function inside (()) will make it run when the page loads.
+    <p>Wrapping a function inside (()) will make it run when the page loads.<p>
+      <pre> (function myfunction(){
+        alert("Hello")
+      }())</pre>
     <p>We can create html elements with javascript list.innerHTML = "&lt;li&gt;" + content + &lt;/li&gt;</p>
     <p>or by using docuent.createElement(li) and appendChild.</p>
   </div>

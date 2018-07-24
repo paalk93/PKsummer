@@ -14,7 +14,7 @@
     <p><strong>mix deps.get - </strong>Fetch and install dependecies.</p>
     <p><strong>mix phx.server - </strong>Runs your phoenix server on localhost.</p>
     <p><strong>iex -S mix - </strong>Runs Elixir's interactive shell in your project.</p>
-    <p>We also have ecto commands but they will be covered in the "link ecto section"</p>
+    <p>We also have ecto commands but they will be covered in the <%= link "Ecto mix tasks", to: phoenix_path(@conn, :ecto_mix_tasks) %> section.</p>
   </div>
   <div>
     <h3>Code example</h3>
