@@ -62,21 +62,21 @@
             </ul>
         </div>
         <div class="CSS">
-          <h3>CSS</h3>
+          <h3><%= link "CSS", to: css_path(@conn, :index) %></h3>
             <ul>
-            <li>Selectors</li>
-            <li>Properties</li>
-            <li>Variables</li>
-            <li>Grid</li>
-            <li>Flexbox</li>
-            <li>Pseudo classes</li>
+            <li><%= link "Selectors", to: css_path(@conn, :selectors) %></li>
+            <li><%= link "Properties", to: css_path(@conn, :properties) %></li>
+            <li><%= link "Variables", to: css_path(@conn, :variables) %></li>
+            <li><%= link "Grid", to: css_path(@conn, :css_grid) %></li>
+            <li><%= link "Flexbox", to: css_path(@conn, :css_flexbox) %></li>
+            <li><%= link "Pseudo classes", to: css_path(@conn, :pseudo_classes) %></li>
               <ul>
-                <li>Links</li>
-                <li>Child and type</li>
-                <li>Form and input</li>
-                <li>Misc</li>
+                <li><%= link "Links", to: css_path(@conn, :pseudo_links) %></li>
+                <li><%= link "Child and type", to: css_path(@conn, :pseudo_child_and_type) %></li>
+                <li><%= link "Forms and input", to: css_path(@conn, :pseudo_forms_and_input) %></li>
+                <li><%= link "Misc", to: css_path(@conn, :pseudo_misc) %></li>
               </ul>
-            <li>Animations</li>
+            <li><%= link "Animations", to: css_path(@conn, :css_animations) %></li>
           </ul>
         </div>
         <div class="JAVASCRIPT">
