@@ -101,19 +101,19 @@
             </ul>
         </div>
         <div class="ELIXIR">
-          <h3>ELIXIR</h3>
+          <h3><%= link "Elixir", to: elixir_path(@conn, :index) %></h3>
             <ul>
-              <li>Iex</li>
-              <li>Mix</li>
-              <li>Data types</li>
-              <li>Operators</li>
-              <li>Collections</li>
-              <li>Pattern matching</li>
-              <li>Modules and functions</li>
-              <li>Comprehensions</li>
-              <li>Enumerables</li>
-              <li>EXUnit and API</li>
-              <li>Recursion</li>
+              <li><%= link "Iex", to: elixir_path(@conn, :iex_example) %></li>
+              <li><%= link "Mix", to: elixir_path(@conn, :mix_example) %></li>
+              <li><%= link "Data types", to: elixir_path(@conn, :data_types) %></li>
+              <li><%= link "Operators", to: elixir_path(@conn, :operators) %></li>
+              <li><%= link "Collections", to: elixir_path(@conn, :collections) %></li>
+              <li><%= link "Pattern matching", to: elixir_path(@conn, :pattern_matching) %></li>
+              <li><%= link "Modules and functions", to: elixir_path(@conn, :modules_and_functions) %></li>
+              <li><%= link "Comprehensions", to: elixir_path(@conn, :comprehensions) %></li>
+              <li><%= link "Enmerables", to: elixir_path(@conn, :enumerables) %></li>
+              <li><%= link "EXUnit and API", to: elixir_path(@conn, :ex_unit_and_api) %></li>
+              <li><%= link "Recursion", to: elixir_path(@conn, :recursion) %></li>
             </ul>
         </div>
         <div class="PHOENIX">
