@@ -14,9 +14,9 @@
   </div>
   <div>
     <p>I decided not to use any visual examples for functions because we use functions in almost every part of our documentation.</p>
-    <p>In the "link logic flow if/else" section we used functions with if else statements.</p>
-    <p>In the "link logic flow switch" section we used a function with a switch statement.</p>
-    <p>In the "link arrays" section we used a function to loop over our array.</p>
+    <p>In the <%= link "If else", to: javascript_path(@conn, :logic_flow_if_else) %> section we used functions with if else statements.</p>
+    <p>In the <%= link "Switch", to: javascript_path(@conn, :logic_flow_switch) %> section we used a function with a switch statement.</p>
+    <p>In the <%= link "Arrays", to: javascript_path(@conn, :arrays) %> section we used a function to loop over our array.</p>
   </div>
   <div>
     <h3>Code example</h3>

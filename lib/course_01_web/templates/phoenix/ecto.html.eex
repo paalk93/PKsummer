@@ -9,6 +9,9 @@
     <p><strong>Schema - </strong>Used to map any data source into an Elixir struct. We will often use them to map tables into Elixir data.</p>
     <p><strong>Changeset - </strong>Provides ways to filter and cast external parameters, as well as validateing changes before they are applied to your data.</p>
     <p><strong>Query - </strong>Written in elixir syntax, queries are used to retrieve information from a given repository.</p>
-    <p>We will look closer on the major components in the Repo, Schema, Changeset and Query section.</p>
+    <p>We will look closer on the major components in the <%= link "Repo", to: phoenix_path(@conn, :example_repo) %>,
+      <%= link "Schema", to: phoenix_path(@conn, :example_schema) %>,
+      <%= link "Changeset", to: phoenix_path(@conn, :example_changeset) %> and
+       <%= link "Query", to: phoenix_path(@conn, :example_query) %> section.</p>
   </div>
 </section>

@@ -38,7 +38,7 @@
     </pre>
     <p>We can have multiple scopes with different "/paths".</p>
     <p>And many get "/with_other_paths".</p>
-    <p>Say we have as cope with "/hello" route. And we add a get with "/world" route.<br>
+    <p>Say we have a scope with "/hello" route. And we add a get with "/world" route.<br>
       Then the route to over page would be /hello/world.
     </p>
   </div>
