@@ -117,29 +117,29 @@
             </ul>
         </div>
         <div class="PHOENIX">
-          <h3>PHOENIX</h3>
+          <h3><%= link "Phoenix", to: phoenix_path(@conn, :index) %></h3>
             <ul>
-              <li>Data flow</li>
-              <li>Major parts</li>
+              <li><%= link "Data flow", to: phoenix_path(@conn, :data_flow) %></li>
+              <li><%= link "Major parts", to: phoenix_path(@conn, :major_parts) %></li>
                 <ul>
-                  <li>Controller</li>
-                  <li>View</li>
-                  <li>Template</li>
-                  <li>Router</li>
+                  <li><%= link "Controller", to: phoenix_path(@conn, :example_controller) %></li>
+                  <li><%= link "View", to: phoenix_path(@conn, :example_view) %></li>
+                  <li><%= link "Template", to: phoenix_path(@conn, :example_template) %></li>
+                  <li><%= link "Router", to: phoenix_path(@conn, :example_router) %></li>
                 </ul>
-              <li>Plugs and conn</li>
-              <li>Ecto</li>
+              <li><%= link "Plug and conn", to: phoenix_path(@conn, :example_plug_and_conn) %></li>
+              <li><%= link "Ecto", to: phoenix_path(@conn, :example_ecto) %></li>
                 <ul>
-                  <li>Adapters</li>
-                  <li>Migrations</li>
-                  <li>Schema</li>
-                  <li>Mix tasks</li>
-                  <li>Repo</li>
-                  <li>Query</li>
-                  <li>Changeset</li>
-                  <li>Multi</li>
-                  <li>Associations</li>
-                  <li>Embeded</li>
+                  <li><%= link "Mix tasks", to: phoenix_path(@conn, :ecto_mix_tasks) %></li>
+                  <li><%= link "Adapters", to: phoenix_path(@conn, :example_adapters) %></li>
+                  <li><%= link "Migrations", to: phoenix_path(@conn, :example_migrations) %></li>
+                  <li><%= link "Schema", to: phoenix_path(@conn, :example_schema) %></li>
+                  <li><%= link "Repo", to: phoenix_path(@conn, :example_repo) %></li>
+                  <li><%= link "Query", to: phoenix_path(@conn, :example_query) %></li>
+                  <li><%= link "Changeset", to: phoenix_path(@conn, :example_changeset) %></li>
+                  <li><%= link "Multi", to: phoenix_path(@conn, :example_multi) %></li>
+                  <li><%= link "Associations", to: phoenix_path(@conn, :example_associations) %></li>
+                  <li><%= link "Embedded", to: phoenix_path(@conn, :example_embedded) %></li>
                 </ul>
             </ul>
         </div>

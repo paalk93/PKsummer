@@ -135,7 +135,7 @@ defmodule Course01Web.Router do
     get "/ecto/changeset", PhoenixController, :example_changeset
     get "/ecto/multi", PhoenixController, :example_multi
     get "/ecto/associations", PhoenixController, :example_associations
-    get "/ecto/embeded", PhoenixController, :example_embeded
+    get "/ecto/embeded", PhoenixController, :example_embedded
   end
 
     scope "/association_example", Course01Web do
