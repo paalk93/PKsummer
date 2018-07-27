@@ -8,7 +8,7 @@
     <p>var countries = ["Norway", "Germany", "Sweden", "Greece"]</p>
     <p>If we call countries it will return as an object array with all our string values.</p>
     <p>But if we call countries[0] it will only return "Norway", because we are able to fetch just one of the values in our array.</p>
-    <p>When fetching one item in the array the count always start at[0], so eventho we have values we can only get [0], [1], [2] or [3].</p>
+    <p>When fetching one item in the array the count always start at[0], so eventho we have 4 values we can only get [0], [1], [2] or [3].</p>
     <p>If we do countires.length we will get the entire length of our array, i.e the amount of induvidual values.</p>
     <p>We are also able to push new values to our array by doing countries.push("Denmark").</p>
     <p>If we then call our variable countries it will return ["Norway", "Germany", "Sweden", "Greece", "Denmark"].</p>
@@ -18,7 +18,7 @@
     <p>Here we will loop our array and print out each induvidual item in the form of a list.</p>
     <button onclick="examplePrintArray()">Print list</button>
     <ul id="arrayExampleList">
-    </ul> 
+    </ul>
   </div>
   <div>
     <h3>Code example</h3>

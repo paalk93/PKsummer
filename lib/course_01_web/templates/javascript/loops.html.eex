@@ -48,8 +48,8 @@
           }
         }
         /* We set var i to 0, and we run the loop as long as the length of the list is higher than 0 /*
-        /* Then we create a &lt;li&gt; element in our list with each of the values. /*
-        /* We run the loop, find the first value, print it out */
+        /* Then we create a &lt;li&gt; element in our list with each of the values /*
+        /* We run the loop, find the first value, print it out and repeat */
 
 
         /* Simple for in loop */
@@ -61,8 +61,8 @@
             forInLoopExampleList.innerHTML += "&lt;li&gt;" + forInExamplePerson[x] + "&lt;/li&gt;";
           }
         }
-        /* Often used with objects, since the object have properties which have values */
-        /* We have to loop over the properties in the object and not the object itself */
+        /* Often used with objects, since the object have keys which have values */
+        /* We want to loop over the values IN the object. */
         /* So in this example we go over all they properties and the values */
         */ And we create a li element in our list with each of the values */
 

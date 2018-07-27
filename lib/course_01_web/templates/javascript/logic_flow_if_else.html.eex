@@ -4,7 +4,7 @@
     <p>When working with if/else using else if is not always needed. We can get a long way with just if and else.</p>
     <p>if() beeing the initial statement and condition we want to check.</p>
     <p>else if() beeing a second condition we want to check if the first was not true.</p>
-    <p>And else beeing the default we will run in case none of the above were true. Having a block of code to execute is always a good idea.</p>
+    <p>And else beeing the default we will run in case none of the above were true.</p>
     <p>We can think of it like asking, is this true?(if) no? How about this?(else if) Not that either? Alright then we go ahead and do this(else).</p>
     <p>When running a function with if else statements we always stop the script if one of the conditions were true and we execute a block of code.</p>
   </div>
@@ -39,12 +39,12 @@
     </pre>
     <p>We have a div with a style attribute, which set the background to grey.</p>
     <p>We run our function with the click of the button onclick="jsExampleIfElse()"</p>
-    <p>In our function we first check IF the background color is grey, and since it is execute the block of code<br>
+    <p>In our function we first check IF the background color is grey, and since it is we execute the block of code<br>
       which changes the background to coral.
     </p>
     <p>Then we run our function again and check IF the background color is grey. But it is not.<br>
       So then we skip that block of code and jump directly to our ELSE statement.<br>
-      The Else statement will execute because there were not any other conditions to check after the if statement.
+      The Else statement will execute because the other conditions we set were false.
     </p>
   </div>
   <hr>

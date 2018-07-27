@@ -8,5 +8,7 @@
     <p>The information plugs send and recieve is called connection, also known as conn.</p>
     <p>When the controller recieves a request from the router to pass some data to the view, they all work as plugs.</p>
     <p>And the data/information they passes on is the connection.</p>
+    <p>We can also use it to display the current url we are on:</p>
+    <p>current path: <%= @conn.request_path %></p>
   </div>
 </section>

@@ -23,6 +23,7 @@
         alert("Hello")
       }())</pre>
     <p>We can create html elements with javascript list.innerHTML = "&lt;li&gt;" + content + &lt;/li&gt;</p>
-    <p>or by using docuent.createElement(li) and appendChild.</p>
+    <p>or by using document.createElement(li) and appendChild.</p>
+    <p>We can also toggle a class with classList.toggle("class-name").</p>
   </div>
 </section>

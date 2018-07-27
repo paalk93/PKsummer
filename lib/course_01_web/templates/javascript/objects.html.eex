@@ -1,7 +1,7 @@
 <section>
   <div>
     <h1>Objects</h1>
-    <p>Objects have many properties and values.</p>
+    <p>Objects have many keys and values, name: is the key and "PK" is the value.</p>
     <p>To define an object in JavaScript we use curly brackets { }.</p>
     <p>Here we have a simple object set to a variable, var person = {name: "PK", age: 25, gender: "Male"}.</p>
     <p>If we call our variable it will return the entire object object Object.</p>
@@ -53,7 +53,7 @@
         persons[2].name
         result: "Espen"
 
-        
+
       /* We can also create object using the new method */
         var person = new Object()
         person.name = "PK"

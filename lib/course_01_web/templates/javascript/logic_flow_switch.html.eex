@@ -64,7 +64,7 @@
     <p>We use the value variable in our switch's parameter to use in our cases.</p>
     <p>When we define case 1, it is like saying if the value that was inputted is 1, execute this block of code.</p>
     <p>In our example we simply change the innerHTML of our paragraph to whichever value was inputted.</p>
-    <p>So as long as we enter a number between 1-5 our paragrapg will change to "You typed (number)"</p>
+    <p>So as long as we enter a number between 1-5 our paragraph will change to "You typed (number)"</p>
     <p>If we do not enter anything at all, or enter a number outside the range 1-5 all our cases will return false,<br>
       and we will execute our default block of code.
     </p>

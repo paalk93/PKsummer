@@ -6,7 +6,7 @@
     <p>Say we have our users table and we want users to have an adress attached to theri accounts.</p>
     <p>Instead of creating more fields on our schema with adress information we simply define a new schema.</p>
     <p>And use associations to relate them.</p>
-    <p>I used ecto associations in an earlier project wher i associated users and adresses.</p>
+    <p>I used ecto associations in an earlier project where i associated users and adresses.</p>
     <p>To create our schema's and changeset we need to "use Ecto.Schema", and "import Ecto.Changeset".</p>
     <p>In our User schema we can use has_many or has_one :adress, Ectoassoc.Identity.Adress(module name.)</p>
     <p>And in our adress we simply add belongs_to :user, Ectoassoc.Identity.User.</p>
@@ -88,6 +88,6 @@
       </code>
     </pre>
     <p>We also add a field user_id to our adress table which will reference the user it is associated with.</p>
-    <p>And upon deleteing the user we also delete teh adress.</p>
+    <p>And upon deleteing the user we also delete the adress.</p>
   </div>
 </section>

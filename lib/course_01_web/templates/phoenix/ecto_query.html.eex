@@ -22,6 +22,8 @@
     </pre>
     <p>We use query to search our users table in the database for users that are older than 18.</p>
     <p>Then we select said users by user name and pull them from our repo. Using Repo.all(query).</p>
-    <p>So using this query we could check if an user is above 18 years old, i.e if the user tried to view adult content.</p>
+    <p>So using this query we could check if an user is above 18 years old, i.e if the user tries to view or purchase something<br>
+      you have to be above 18 to do.
+    </p>
   </div>
 </section>

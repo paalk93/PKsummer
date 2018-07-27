@@ -8,9 +8,6 @@
     <p>External data beeing external to the application, i.e provided by users in a form.</p>
   </div>
   <div>
-    <h3>Visual example </h3>
-  </div>
-  <div>
     <h3>Code example</h3>
     <p>In the module where we had our schema we can also add a changeset.</p>
     <pre>
