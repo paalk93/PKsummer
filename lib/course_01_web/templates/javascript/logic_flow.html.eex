@@ -7,11 +7,11 @@
     </p>
     <p>We have a couple of statements.</p>
     <p><strong>if - </strong>Checks if a condition is true.</p>
-    <p><strong>else if - </strong>If the first condition was not true we check if this is true before jumping to else.</p>
+    <p><strong>else if - </strong>If the first condition was not true we check if (if else) is true before jumping to else.</p>
     <p><strong>else - </strong>If none of the conditions above were true, we execute this.</p>
-    <p><strong>switch - </strong>Like a if/else statement only it is built up different, can take alot of conditions.<br>
+    <p><strong>switch - </strong>Switch is like an if/else statement only it is built up different, can take alot of conditions.<br>
       A switch case always have a break; after each case block and always a default at the end of the switch;
     </p>
-    <p>We will look more on control flow on the <%= link "Switch", to: javascript_path(@conn, :logic_flow_switch) %>page and the <%= link "If else", to: javascript_path(@conn, :logic_flow_if_else) %> page.</p>
+    <p>We will look more on control flow on the <%= link "Switch", to: javascript_path(@conn, :logic_flow_switch) %> page and the <%= link "If else", to: javascript_path(@conn, :logic_flow_if_else) %> page.</p>
   </div>
 </section>

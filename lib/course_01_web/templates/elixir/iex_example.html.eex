@@ -4,20 +4,18 @@
     <p>Iex is elixir's interactive shell</p>
     <p>We use Iex to interact with elixir code in the terminal.</p>
     <p>Use it to create or access excisting functions.</p>
-    <p>To list all help commands in iex simple type into the terminal "iex h"<br>
-      This will list all the helpers.
-    </p>
+    <p>We use the iex commands in our terminal.</p>
     <p><strong>iex - </strong>Open Elixirs interactive shell.</p>
     <p><strong>iex -S mix - </strong>Use this to run tests, functions etc from your project.</p>
+    <p><strong>iex h - </strong>List all help commands for iex.</p>
   </div>
   <div>
     <h3>Code example</h3>
     <p>This example is from my Ecto association project.</p>
-    <p>With iex -S mix i was able to open the interactive terminal and run this function.</p>
+    <p>With iex -S mix i was able to open the interactive terminal and run my existing functions.</p>
     <p>So i could list all my users in the terminal with values, associations and everything.</p>
     <p>We are also able to create and delete users for example by using iex.</p>
-    <p>I did this by running iex - S mix.</p>
-    <p>Then typing Ectoassoc.Identity.list_users<br>
+    <p>Simply run iex -S mix in the terminal then typing Ectoassoc.Identity.list_users<br>
       Ectoassoc beeing the repo name, Identity the module name, and list_users the function i wanted to run.
     </p>
     <pre>
