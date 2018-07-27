@@ -14,7 +14,7 @@
 .css-animation-example-window{
   background: linear-gradient(to right, #ffffff , #00ccff, #fd5e53);
   background-size:400% 400%;
-  animation: css-backgroundchange-example 20s ease infinite;
+  animation:css-backgroundchange-example 20s ease infinite;
   width:20em;
   height:20em;
   border:1em solid grey;
