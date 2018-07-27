@@ -16,7 +16,7 @@
   <div>
     <h3>Visual example </h3>
     <p class="attribute-example-class">This paragraph have a class which changes the color to coral.</p>
-    <p id="attribute-example-id">This paragraph have a class which changes the color to red.</p>
+    <p id="attribute-example-id">This paragraph have an id which changes the color to red.</p>
     <p>This button is disabled.</p>
     <button type="button" name="button" disabled="true">Can't click me</button>
     <p lang="en">This paragaphs's content is english.</p>

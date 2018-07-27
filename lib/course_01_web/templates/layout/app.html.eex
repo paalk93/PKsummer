@@ -20,7 +20,7 @@
       </div>
       </div>
 
-      <div class="pk-grid-area-sidebar pk-background-secondary pk-color-secondary">
+      <div class="pk-grid-area-sidebar pk-background-secondary pk-color-secondary pk-scroll-sidebar">
         <div class="pk-margin-05em">
           <h3>Planning and problemsolving</h3>
             <ul>

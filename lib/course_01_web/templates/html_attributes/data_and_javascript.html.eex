@@ -24,7 +24,7 @@
     <button onmouseover="onmouseoverExample()">Hover me</button>
     <hr>
     <p>Embeded data attributes.</p>
-    <p>Click the li items to get the alart showing the embeded data.</p>
+    <p>Click the li items to get the alert showing the embeded data.</p>
     <ul>
       <li onclick="showDetails(this)" data-fruit-color="yellow">Banana</li>
       <li onclick="showDetails(this)" data-fruit-color="orange">Orange</li>
@@ -35,6 +35,7 @@
     <h3>Code example</h3>
     <pre>
       <code>
+        /* Html */
           &lt;button onclick="onclickExample()"&gt;Click me&lt;/button&gt;
           &lt;button onmouseover="onmouseoverExample()"&gt;Hover me&lt;/button&gt;
 
@@ -43,6 +44,12 @@
             &lt;li onclick="showDetails(this)" data-fruit-color="orange">Orange&lt;/li&gt;
             &lt;li onclick="showDetails(this)" data-fruit-color="red">Apple&lt;/li&gt;
           &lt;/ul&gt;
+
+        /* Javascript */
+          function showDetails(fruit){
+            var fruitColor = fruit.getAttribute("data-fruit-color");
+            alert("The color of the " + fruit.innerHTML + " is " + fruitColor + ".");
+          }
       </code>
     </pre>
   </div>

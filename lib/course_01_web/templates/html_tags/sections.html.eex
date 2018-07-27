@@ -15,7 +15,7 @@
     <p>Section is used to group a part of the document together into one.</p>
     <p>Personally I mostly use the div tag with classes that use grid or flexbox to make the areas of my document.</p>
     <p>But in this documentation project i use a section for the entire part of my HTML and i use div to seppareate it into sub parts based on content.</p>
-    <p>Span is used to add a hook to a part of a text, for example my favorite color is <span style="color:blue;">blue.</span>Here span let change the color of only the word blue.</p>
+    <p>Span is used to add a hook to a part of a text, for example my favorite color is <span style="color:blue;">blue.</span>Here the span let us change the color of the word blue.</p>
   </div>
   <div>
     <h3>Simple code example</h3>

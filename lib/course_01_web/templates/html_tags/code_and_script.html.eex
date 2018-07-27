@@ -21,7 +21,7 @@
     <hr>
     <p>The &lt;script&gt; tag is used to define client side script.<br>
       Either by linking to a script document, or writing javascript directly in.<br>
-      The script tag with the script is usually placed at the bottom of the body tag.
+      The script tag with the script is usually placed at the bottom of the body.
     </p>
     <p>Progress tag displays a progress bar.</p>
     <progress value="12" max="100">12%</progress>

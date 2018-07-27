@@ -2,10 +2,10 @@
   <div>
     <h1>CSS selectors</h1>
     <h3>Element selectors.</h3>
-    <p>Css have different selectors to select a sertain element in our document.</p>
+    <p>Css have different selectors to select a certain elements in our document.</p>
     <p><strong>.class - </strong>Set properties to a class which we can place on any element we want to give that element the styling.</p>
     <p><strong>#id - </strong>Set properties to an id which we can place on any element we want to give that styling.</p>
-    <p><strong>body - </strong>Set properties directly on a specified element by tag</p>
+    <p><strong>body/p/h1 etc - </strong>Set properties directly on a specified element by tag</p>
     <p><strong>class="class-name" - </strong>To give selected element said class.</p>
     <p><strong>id="id-name" - </strong>To give selected element said id.</p>
     <hr>
