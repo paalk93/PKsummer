@@ -10,6 +10,10 @@
     <p><strong>&lt;dd&gt; </strong>Defines a list item in a dl list.</p>
     <p><strong>&lt;caption&gt; </strong>Defines a caption/name for the table.</p>
     <p><strong>&lt;table&gt; </strong>Defines a table.</p>
+    <p><strong> </strong></p>
+    <p><strong>&lt;thead&gt; </strong>Defines the table head area, groups the head content.</p>
+    <p><strong>&lt;tbody&gt; </strong>Defines the table body area, groups the body content.</p>
+    <p><strong>&lt;tfoot&gt; </strong>Defines the footer area, groups the footer content.</p>
     <p><strong>&lt;tr&gt; </strong>Add a table row to your table.</p>
     <p><strong>&lt;th&gt; </strong>Add a table head item.</p>
     <p><strong>&lt;td&gt; </strong>Add a table body item.</p>
@@ -81,6 +85,28 @@
         &lt;/table&gt;
       </code>
     </pre>
-    <p></p>
+    <p>Table with thead, tbody and tfoot.</p>
+    <pre>
+      <code>
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Head item&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Body item&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Foot item&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tfoot&gt;
+        &lt;/table&gt;
+      </code>
+    </pre>
+    <p>If we place the tfood after the head and above the body it will still be displayed at the foot of the table.</p>
   </div>
 </section>
