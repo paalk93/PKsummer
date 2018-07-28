@@ -5,7 +5,11 @@
     <p>For example if you used variables adding color, it would be very easy to swap color theme in one go.</p>
     <p>We create it by adding it to the :root, and define our variable like this --my-color-var.</p>
     <p>After that we add what we want it to do, in this case we want it to use a color, --my-color-var:blue;</p>
-    <p><strong></strong></p>
+    <p>By using our variables when creating classes etc instead of the properties, if we later decide that we would like to<br>
+      change something, instead of changeing the property value of each class, we could simple change it in our variable and it would be<br>
+      applied to all our classes.
+    </p>
+    <p>CSS variables are not compatible with the IE web browser.</p>
   </div>
   <div>
     <h3>Code example</h3>
@@ -27,6 +31,9 @@
         }
         body{
           background-color: var(--bg-color-primary);
+        }
+        #id{
+          margin: var(--margin-1em);
         }
       </code>
     </pre>

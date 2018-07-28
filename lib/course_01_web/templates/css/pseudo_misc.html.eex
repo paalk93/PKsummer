@@ -12,6 +12,7 @@
     <p><strong>:empty - </strong>Represent any element that has no children.</p>
     <p><strong>:defined - </strong>Represent any element that has been defined.</p>
     <p><strong>:focus-within - </strong>Represents an element that has received focus or contains an element that has received focus.</p>
+    <p><strong>:first - </strong> Used with the @page rule and it represents the first page when we print.</p>
   </div>
   <div>
     <h3>Visual example </h3>
@@ -56,6 +57,11 @@
           text-decoration:underline;
         }
 
+        @page :first{
+          margin-top: 50%;
+          margin-left: 50%;
+        }
+        /* Adds margin to the first page when we print, adjusting the content to the center */
       </code>
     </pre>
   </div>
