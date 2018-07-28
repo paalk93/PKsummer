@@ -3,10 +3,10 @@
     <h1>Loops</h1>
     <p>Loops iterates over your code and can run your code multiple times.</p>
     <p>We have a couple of different type of loops.</p>
-    <p><strong>for - </strong>Iterates over a list for example.</p>
-    <p><strong>for in - </strong>Iterates over properties/values, an object for example.</p>
+    <p><strong>for - </strong>Iterates over something, like a list for example.</p>
+    <p><strong>for in - </strong>Iterates over properties/values inside an object for example.</p>
     <p><strong>for while - </strong>Execute a block of code as long as a specified condition is true.</p>
-    <p><strong>do while - </strong>Do while will always execute atleast once, because we run a block of code before checking the statement.</p>
+    <p><strong>do while - </strong>Do while will always execute atleast once, because we run a block of code before checking the condition.</p>
   </div>
   <div>
     <h3>Visual example </h3>
@@ -47,8 +47,9 @@
             forLoopExampleList.innerHTML += "&lt;li&gt;" + forExampleCountries[i] + "&lt;/li&gt;"
           }
         }
-        /* We set var i to 0, and we run the loop as long as the length of the list is higher than 0 /*
-        /* Then we create a &lt;li&gt; element in our list with each of the values /*
+        /* We set var i to 0, and we run the loop as long as the length of the list is higher than 0 */
+        /* We also increase the variable i for every run, so when have iterated over the entire list we stop */
+        /* Then we create a &lt;li&gt; element in our list with each of the values */
         /* We run the loop, find the first value, print it out and repeat */
 
 
@@ -64,7 +65,7 @@
         /* Often used with objects, since the object have keys which have values */
         /* We want to loop over the values IN the object. */
         /* So in this example we go over all they properties and the values */
-        */ And we create a li element in our list with each of the values */
+        /* And we create a li element in our list with each of the values */
 
 
         /* Simple for while loop */

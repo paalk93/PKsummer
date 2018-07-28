@@ -2,12 +2,32 @@
   <div>
     <h1>Data types</h1>
     <p>Elixir's basic data types.</p>
-    <p><strong>list - </strong>defined: [1, 2, 3].</p>
-    <p><strong>tuple - </strong>defined: {1, 2, 3}.</p>
+    <p><strong>list - </strong>defined: [1, 2, 3]. A list with multiple values. Stored as linked items.</p>
+    <p><strong>tuple - </strong>defined: {1, 2, 3}. Store elements contiguously in memory.</p>
     <p><strong>integer - </strong>defined: 1, a number</p>
-    <p><strong>float- </strong>defined: 1.0, a number with decimal.</p>
-    <p><strong>boolean - </strong>Boolean</p>
-    <p><strong>atom - </strong>defined: :atom, an atom is a constant and whose name is its value.</p>
-    <p><strong>string - </strong>defined: "string".</p>
+    <p><strong>float- </strong>defined: 1.0, a number with decimal. Has to have a number on both sides.</p>
+    <p><strong>Boolean - </strong>defined: true/false. Boolean is a statement like true or false.</p>
+    <p><strong>Atom - </strong>defined: :atom, an atom is a constant which whose name is its own value.</p>
+    <p><strong>String - </strong>defined: "string". String can contain text, with spaces aswell "This is a string", encoded in UTF-8.</p>
+  </div>
+  <div>
+    <h3>Simple code example</h3>
+    <pre>
+      <code>
+        list = [1, "string", :atom] 
+
+        tuple = {1, "string", :atom}
+
+        integer = 1
+
+        float = 5.5
+
+        boolean = true
+
+        atom = :myatom
+
+        string = "My String"
+      </code>
+    </pre>
   </div>
 </section>

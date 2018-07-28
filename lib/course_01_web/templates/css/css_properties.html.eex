@@ -4,7 +4,7 @@
     <p>CSS properties is a property used with the css selectors to put style or utillity on elements.</p>
     <h3>My most used properties.</h3>
     <p><strong>background-color - </strong>Sets the background color of an element.</p>
-    <p><strong>color - </strong>Sets the color color of an element.</p>
+    <p><strong>color - </strong>Sets the color, for example text color of an element.</p>
     <p><strong>margin - </strong>Creates air around the elements.</p>
     <p><strong>justify-content - </strong>Align content within a flexbox.</p>
     <p><strong>flex-direction - </strong>Sets the directional flow inside a flexbox.</p>

@@ -20,7 +20,8 @@
       </code>
     </pre>
     <p>We use cast to include all our files.</p>
-    <p>And we use validate_required to validate that none of the fields can be empty.</p>
+    <p>And we use validate_required to validate saying that none of the fields can be empty.</p>
     <p>If we tried creating a user without a last name it would give us an error.</p>
+    <p>In changesets we also have the option to set constraints on valid/invalid characters, length etc.</p>
   </div>
 </section>

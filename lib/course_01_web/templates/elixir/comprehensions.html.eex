@@ -2,6 +2,9 @@
   <div>
     <h1>Comprehensions</h1>
     <p>In Elixir comprehension is a way to loop over enumerables.</p>
+    <p>For example if we have a list with numbers, we can go over each number in the list and<br>
+      apply a function to them and we will get a result which is our list with the numbers after we applied the function.
+    </p>
     <p>Comprehension can be used on any data structure which can be looped over.</p>
   </div>
   <div>

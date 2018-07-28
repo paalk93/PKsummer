@@ -3,7 +3,7 @@
     <h1>Ecto Migrations</h1>
     <p>Migrations are used to modify your databse schema over time.</p>
     <p>Migrations uses up / down instructions, where up is used to update and down is used for rollbacks.</p>
-    <p>Migrations can also be automatically reversibly by implementing change instead of up / down.</p>
+    <p>Migrations can also be automatically reversibly by implementing <ins>change</ins> instead of up / down.</p>
     <p><strong>mix ecto.migrate - </strong>Runs the pending migrations for the given repo.</p>
     <p>Migration files can be found under priv/repo/migrations.</p>
     <p>They are usually named with a timestamp first, like 201809061735_create_users.exs.</p>

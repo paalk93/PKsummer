@@ -4,7 +4,7 @@
     <p>Iex is elixir's interactive shell</p>
     <p>We use Iex to interact with elixir code in the terminal.</p>
     <p>Use it to create or access excisting functions.</p>
-    <p>We use the iex commands in our terminal.</p>
+    <p>Iex terminal commands:</p>
     <p><strong>iex - </strong>Open Elixirs interactive shell.</p>
     <p><strong>iex -S mix - </strong>Use this to run tests, functions etc from your project.</p>
     <p><strong>iex h - </strong>List all help commands for iex.</p>

@@ -14,12 +14,15 @@
   <div>
     <h3>What is es6/es2015+</h3>
     <p>es6 or ECMAScript is actually the base language which JavaScript is based of.</p>
-    <p>Puts default value right in the sugnature of the function.</p>
-    <p>Multi line strings.</p>
-    <p>Enhanced object literals.</p>
-    <p>Arrow functions.</p>
-    <p>JavaScript classes.</p>
-    <p>Javascript template string literals.</p>
-    <p>Block scope local variable.</p>
+    <p>Some prominent feutures and functions.</p>
+    <ul>
+      <li>Puts default value right in the signature of the function.</li>
+      <li>Multi line strings.</li>
+      <li>Enhanced object literals.</li>
+      <li>Arrow functions.</li>
+      <li>JavaScript classes.</li>
+      <li>Javascript template string literals.</li>
+      <li>Block scope local variable.</li>
+    </ul>
   </div>
 </section>
