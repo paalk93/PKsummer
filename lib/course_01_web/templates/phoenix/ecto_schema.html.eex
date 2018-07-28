@@ -4,7 +4,7 @@
     <p>An ecto shcema is used to map any data source into an Elixir struct.</p>
     <p>One of such use cases is to map data coming from a repository, usually a table, into Elixir structs.</p>
     <p>By default a schema will automatically generate a primary key column named id and type :integer.</p>
-    <p>The field macro defines a field in the shcame with given name and type.</p>
+    <p>The field macro defines a field in the schema with given name and type.</p>
     <p>When creating a schema in our module we have to import the schema module by using "use Ecto.Schema".</p>
   </div>
   <div>

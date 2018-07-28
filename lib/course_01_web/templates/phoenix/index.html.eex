@@ -3,6 +3,9 @@
     <h1>Phoenix</h1>
     <p>Phoenix is a framework.</p>
     <p>Phoenix framework is written in Elixir.</p>
+    <p>Phoenix is built with a number of distinct parts and we will look closer at them here <%= link "Major parts", to: phoenix_path(@conn, :major_parts) %>. <br>
+      And we will look closer on how it all works together here <%= link "Data flow", to: phoenix_path(@conn, :data_flow) %>.
+    </p>
     <p>By default phoenix depend on the following packages:</p>
     <p><strong>Ecto - </strong>A language integrated query and database wrapper.</p>
     <p><strong>Phoenix - </strong>Phoenix web framework.</p>
