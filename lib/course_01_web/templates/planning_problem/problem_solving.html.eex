@@ -2,20 +2,25 @@
   <div>
     <h1>Problem solving</h1>
     <h3>Problem solving methods</h3>
-    <p>Use pen and paper, draw an example of what you are trying to do.</p>
+    <p>Use pen and paper, draw an example and illustrate what it is you are trying to do.</p>
     <p>Look at it from a different perspective, do not think in code.</p>
-    <p>If you have a failing function, go over it part for part.</p>
+    <p>If you have a failing function, go over it part for part. Think about what it is you are trying to send and recieve.</p>
     <p>Think loud and logically.</p>
     <hr>
     <h3>Difference between solo and teamwork.</h3>
-    <p>The planning process can be different. Perhaps you alone does not make all the calls.</p>
-    <p>It is always a good habit to fetch and pull changes when you start working every day.<br>
-      but in a team project it is nessecary, someone might have done changes, so you will need to fetch and pull<br>
-      more frequently.
+    <p>The planning process can be different. Perhaps you alone do not make all the decisions.</p>
+    <p>When working in a team there will be a lot more activity on the project.<br>
+      Meaning you have to pull, push and fetch more frequently.<br>
+      Using version control systems like Git must be done more activly, maybe you have to push a certain change in order for someone else to be able to do their job.<br>
+      And if you go home for the day and come back it is important to fetch and pull to make sure you got all the changes that were made when you were not working.<br>
+      Maybe someone did some changes which are in conflict with what you did, so you have to go over it together and find a solution that works for everyone.<br>
+      People do not always think alike.
     </p>
-    <p>So in a group proeject there will be more discussing, planning and more pushing,pulling etc.<br>
-      While working alone it is smart and good for your own sake to commit and push changes often, but in a group it is nessecary,<br>
-      There might be people who need you to push your changes before they can go on and do theirs.      
+    <p>There will also be many discussions, and sessions where the team would just sit down and talk about progress, fixes, ideas etc.</p>
+    <br>
+    <p>So in conclusion when working solo you alone do the planning, come up with the ideas, create everything the way you know best.</p>
+    <p>While in a group there will be alot more interaction, alot more cooperation and having some sort of synergy with the rest of the group.<br>
+      In a big group there might also be a chain of command which you have to follow.
     </p>
   </div>
 </section>
