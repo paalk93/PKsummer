@@ -261,4 +261,29 @@
       </code>
     </pre>
   </div>
+  <div>
+    <h3>Html code example</h3>
+    <p>In our html we use &lt;%= to execute a function, so for example we can loop over our user data and create elements for each user/item.</p>
+    <pre>
+      <code>
+        &lt;%= for user &lt;- @users do %&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;%= user.id %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= user.fname %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= user.lname %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= user.adress.city %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= user.adress.country %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= link "Show", to: association_example_path(@conn, :show, user) %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= link "Edit", to: association_example_path(@conn, :edit, user) %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= link "Delete", to: association_example_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"] %&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;% end %&gt;
+      </code>
+    </pre>
+    <p>This is done inside our table, what this loop does is that we create a &lt;tr&gt; with a &lt;td&gt; inside for every item from our users.</p>
+    <p>So for each user we create a row in our table, with a field for each item from the user, like name, adress etc.</p>
+    <p>We can even create links.</p>
+    <p>When looping over our users we will create a table row with all the fields for every user, once we looped over all the users it will stop.</p>
+    <p>We use user.fname to create a field with the first name of the user, and since adress is associated we have to use user.adress.country.</p>
+  </div>
 </section>
