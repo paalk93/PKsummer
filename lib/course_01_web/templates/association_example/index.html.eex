@@ -1,7 +1,11 @@
 <section>
   <div>
-    <h1>Association example</h1>
-    <p>On this page we will display associated and embeded data from our repo.</p>
+    <h1>Displaying data</h1>
+    <p>On this page we will display data from our repo.</p>
+    <p>In this example we use associations, if we were to display non associated data it would work the same way,<br>
+      only we remove the association between the two tables.
+    </p>
+    <p>Like removeing has_one and belongs_to, and also not casting the association.</p>
   </div>
   <div>
     <h3>Visual example </h3>
@@ -212,5 +216,74 @@
     <p>Our new function renders the new html which render the form html &lt;%= render "form.html", Map.put(assigns, :action, association_example_path(@conn, :create)) %&gt;<br>
       Which then again runs the create function with the parameters for our associated data.
     </p>
+  </div>
+  <div>
+    <h3>Code example user migration 201807230428_create_users.exs</h3>
+    <p>Here is our migration file for the user table.</p>
+    <pre>
+      <code>
+        defmodule Course01.Repo.Migrations.CreateUsers do
+          use Ecto.Migration
+
+          def change do
+            create table(:users) do
+              add :fname, :string
+              add :lname, :string
+
+              timestamps()
+            end
+
+          end
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example adress migration 201807230429_create_adresses.exs</h3>
+    <p>Here is our migration file for the adress table.</p>
+    <pre>
+      <code>
+        defmodule Course01.Repo.Migrations.CreateAdresses do
+          use Ecto.Migration
+
+          def change do
+            create table(:adresses) do
+              add :city, :string
+              add :country, :string
+              add :user_id, references(:users, on_delete: :delete_all)
+
+              timestamps()
+            end
+
+            create index(:adresses, [:user_id])
+          end
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Html code example</h3>
+    <p>In our html we use &lt;%= to execute a function, so for example we can loop over our user data and create elements for each user/item.</p>
+    <pre>
+      <code>
+        &lt;%= for user &lt;- @users do %&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;%= user.id %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= user.fname %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= user.lname %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= user.adress.city %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= user.adress.country %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= link "Show", to: association_example_path(@conn, :show, user) %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= link "Edit", to: association_example_path(@conn, :edit, user) %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= link "Delete", to: association_example_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"] %&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;% end %&gt;
+      </code>
+    </pre>
+    <p>This is done inside our table, what this loop does is that we create a &lt;tr&gt; with a &lt;td&gt; inside for every item from our users.</p>
+    <p>So for each user we create a row in our table, with a field for each item from the user, like name, adress etc.</p>
+    <p>We can even create links.</p>
+    <p>When looping over our users we will create a table row with all the fields for every user, once we looped over all the users it will stop.</p>
+    <p>We use user.fname to create a field with the first name of the user, and since adress is associated we have to use user.adress.country.</p>
   </div>
 </section>

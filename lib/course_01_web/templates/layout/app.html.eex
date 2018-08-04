@@ -146,7 +146,7 @@
             </ul>
         </div>
         <div class="pk-margin-05em">
-          <h3><%= link "Association example", to: association_example_path(@conn, :index) %></h3>
+          <h3><%= link "Displaying data", to: association_example_path(@conn, :index) %></h3>
         </div>
 
       </div>

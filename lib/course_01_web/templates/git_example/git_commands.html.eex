@@ -1,7 +1,28 @@
 <section>
   <div>
     <h1>Git terms</h1>
-    <p>Terms / command often used when working with git.</p>
+    <p>Common terms when working with git.</p>
+    <p><strong>config - </strong>Used when setting up a config, like a remote.</p>
+    <p><strong>clone - </strong>Used when cloneing a repository.</p>
+    <p><strong>init - </strong>Used when initializing a project as a git repository.</p>
+    <p><strong>status - </strong>Show the modified files in your project.</p>
+    <p><strong>add - </strong>Used when stageing changes makeing them ready for a commit.</p>
+    <p><strong>unstage - </strong>Used when unstaged staged changes.</p>
+    <p><strong>commit - </strong>Used when commiting the all staged changes done.</p>
+    <p><strong>branch - </strong>Used when working with branches, makeing a new branch of the project which you can work on.</p>
+    <p><strong>checkout - </strong>Used when changeing branches.</p>
+    <p><strong>remote - </strong>Used when working with a remote repoository.</p>
+    <p><strong>fetch - </strong>Used when fetching latest version/changes of a repository.</p>
+    <p><strong>pull - </strong>Used when pulling changes remotely.</p>
+    <p><strong>push - </strong>Used when pushing changes.</p>
+    <p><strong>merge - </strong>Used when mergeing a branch into a different branch for example.</p>
+    <p><strong>rebase - </strong>Used when rebaseing, for example putting your commit ahead of a different branch.</p>
+    <p><strong>reset - </strong>Used when unstageing changes and keeping or discarding them.</p>
+    <p><strong>stash - </strong>Used when saveing staged changes.</p>
+    <p><strong>blame - </strong>Used when finding which author last modified a file and which line.</p>
+    <hr>
+    <h1>Git commands</h1>
+    <p>Commands often used when working with git.</p>
     <h3>Configuration - configure user information for all local repositories.</h3>
     <p><strong>git config --global user.name [name] - </strong>Sets the name you want attached to your commits.</p>
     <p><strong>git config --global user.email [email adress] - </strong>Sets the email you want attatched to your commits.</p>
