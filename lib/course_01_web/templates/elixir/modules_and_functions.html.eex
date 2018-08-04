@@ -16,7 +16,7 @@
 
           end
 
-        /* Basic function syntas. */
+        /* Basic function syntax. */
         /* Defined by using the def keyword. */
 
           def myfunction(parameters) do

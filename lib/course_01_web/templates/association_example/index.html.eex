@@ -1,7 +1,11 @@
 <section>
   <div>
-    <h1>Association example</h1>
-    <p>On this page we will display associated and embeded data from our repo.</p>
+    <h1>Displaying data</h1>
+    <p>On this page we will display data from our repo.</p>
+    <p>In this example we use associations, if we were to display non associated data it would work the same way,<br>
+      only we remove the association between the two tables.
+    </p>
+    <p>Like removeing has_one and belongs_to, and also not casting the association.</p>
   </div>
   <div>
     <h3>Visual example </h3>
@@ -212,5 +216,49 @@
     <p>Our new function renders the new html which render the form html &lt;%= render "form.html", Map.put(assigns, :action, association_example_path(@conn, :create)) %&gt;<br>
       Which then again runs the create function with the parameters for our associated data.
     </p>
+  </div>
+  <div>
+    <h3>Code example user migration 201807230428_create_users.exs</h3>
+    <p>Here is our migration file for the user table.</p>
+    <pre>
+      <code>
+        defmodule Course01.Repo.Migrations.CreateUsers do
+          use Ecto.Migration
+
+          def change do
+            create table(:users) do
+              add :fname, :string
+              add :lname, :string
+
+              timestamps()
+            end
+
+          end
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example adress migration 201807230429_create_adresses.exs</h3>
+    <p>Here is our migration file for the adress table.</p>
+    <pre>
+      <code>
+        defmodule Course01.Repo.Migrations.CreateAdresses do
+          use Ecto.Migration
+
+          def change do
+            create table(:adresses) do
+              add :city, :string
+              add :country, :string
+              add :user_id, references(:users, on_delete: :delete_all)
+
+              timestamps()
+            end
+
+            create index(:adresses, [:user_id])
+          end
+        end
+      </code>
+    </pre>
   </div>
 </section>
