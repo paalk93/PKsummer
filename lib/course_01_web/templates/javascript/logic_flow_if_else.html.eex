@@ -49,7 +49,7 @@
   </div>
   <hr>
   <div>
-    <h3>Visual example simple if/else if/else</h3>
+    <h3>Visual example simple if/ else if/ else</h3>
     <p id="if-else-example-p">Hello World</p>
     <button onclick="jsExampleIfElseIf()">Change the html</button>
     <hr>
@@ -57,7 +57,7 @@
     <p>We toggle between 3 different variants using if, else if, else statements.</p>
   </div>
   <div>
-    <h3>Code example simple if/else if/else</h3>
+    <h3>Code example simple if/ else if/ else</h3>
     <pre>
       <code>
         /* Javascript */
