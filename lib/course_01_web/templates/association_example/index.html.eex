@@ -1,6 +1,6 @@
 <section>
   <div>
-    <h1>Displaying data</h1>
+    <h1>Displaying associated data</h1>
     <p>On this page we will display data from our repo.</p>
     <p>In this example we use associations, if we were to display non associated data it would work the same way,<br>
       only we remove the association between the two tables.
@@ -42,6 +42,7 @@
     <h3>Code example repo functions, association.ex</h3>
     <p>In the actual code i uses similar functions for adresses.</p>
     <p>But since they are associated with users the most important functions are these.</p>
+    <p>Here in our association module we define functions to create, delete, edit, list and so on.</p>
     <pre>
       <code>
         defmodule Course01.Association do
@@ -84,6 +85,10 @@
   </div>
   <div>
     <h3>Code example schema and changeset for users, user.ex</h3>
+    <p>Here in teh schema we define fields for our user.</p>
+    <p>And we use has_one to link the adress to the user schema.</p>
+    <p>And in the changeset we cast these fields with the association to our adress schema.</p>
+    <p>With the help of the changeset we can also decide which of the fields require validation and much more.</p>
     <pre>
       <code>
         defmodule Course01.Association.User do
@@ -110,6 +115,7 @@
   </div>
   <div>
     <h3>Code example schema and changeset for adresses, adress.ex</h3>
+    <p>Close to the user schema only here we do not use cast_assoc, and we use belongs_to instead of has_one.</p>
     <pre>
       <code>
         defmodule Course01.Association.Adress do
@@ -137,7 +143,7 @@
   <div>
     <h3>Code example controller, association_example_controller.ex</h3>
     <p>In the controller we have all our functions which we use in our templates.</p>
-    <p>Controller functions often call functions from our association.ex file.</p>
+    <p>Controller functions use the functions we defined in our association.ex file.</p>
     <p>Like when we render and call the controller function index, it will list the users and adresses.</p>
     <pre>
       <code>
@@ -257,6 +263,18 @@
 
             create index(:adresses, [:user_id])
           end
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example for association example view, association_example_view.ex</h3>
+    <p>The view looks like any other view, no particular changes done to it.</p>
+    <p>I decided to bring it in the example to simple collect all the parts required.</p>
+    <pre>
+      <code>
+        defmodule Course01Web.AssociationExampleView do
+          use Course01Web, :view
         end
       </code>
     </pre>

@@ -138,10 +138,12 @@ defmodule Course01Web.Router do
     get "/ecto/embeded", PhoenixController, :example_embedded
   end
 
-    scope "/association_example", Course01Web do
+    scope "/display_data", Course01Web do
       pipe_through :browser
 
-      resources "/", AssociationExampleController
+      resources "/associated_data", AssociationExampleController
+      resources "/simple_data", SimpleDataExampleController
+      resources "/example_products", ExampleProductsController
     end
   # Other scopes may use custom stacks.
   # scope "/api", Course01Web do
