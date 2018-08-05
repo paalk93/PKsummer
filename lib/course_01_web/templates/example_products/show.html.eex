@@ -1,0 +1,9 @@
+<div>
+  <h3><%= @product.name %></h3>
+  <ul class="pk-no-list-style">
+    <li>Price: <%= @product.price %></li>
+    <li>Product number: <%= @product.pnr %></li>
+    <li>About: <%= @product.summary %></li>
+    <li>Storage status: <%= @product.storage_status %></li>
+  </ul>
+</div>

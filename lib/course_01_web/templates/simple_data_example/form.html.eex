@@ -1,0 +1,41 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div>
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="pk-form-container">
+    <%= label f, :name %><br>
+    <%= text_input f, :name %>
+    <%= error_tag f, :name %>
+  </div>
+
+  <div class="pk-form-container">
+    <%= label f, :price %><br>
+    <%= text_input f, :price %>
+    <%= error_tag f, :price %>
+  </div>
+
+  <div class="pk-form-container">
+    <%= label f, :summary%><br>
+    <%= text_input f, :summary %>
+    <%= error_tag f, :summary %>
+  </div>
+
+  <div class="pk-form-container">
+    <%= label f, :pnr%><br>
+    <%= text_input f, :pnr %>
+    <%= error_tag f, :pnr %>
+  </div>
+
+  <div class="pk-form-container">
+    <%= label f, :storage_status %><br>
+    <%= number_input f, :storage_status %>
+    <%= error_tag f, :storage_status %>
+  </div>
+
+  <div>
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

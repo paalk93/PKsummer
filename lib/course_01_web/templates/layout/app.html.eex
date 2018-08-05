@@ -146,7 +146,12 @@
             </ul>
         </div>
         <div class="pk-margin-05em">
-          <h3><%= link "Displaying data", to: association_example_path(@conn, :index) %></h3>
+          <h3>Displaying data</h3>
+          <ul>
+            <li><%= link "Associated data", to: association_example_path(@conn, :index) %></li>
+            <li><%= link "Simple data", to: simple_data_example_path(@conn, :index) %></li>
+            <li><%= link "Example products", to: example_products_path(@conn, :index)%> </li>
+          </ul>
         </div>
 
       </div>

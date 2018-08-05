@@ -29,3 +29,7 @@ body{
 .pk-no-list-style{
   list-style:none;
 }
+.pk-link-style{
+  text-decoration:none;
+  color:black;
+}
