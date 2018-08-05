@@ -15,6 +15,7 @@
         <th>Product summary</th>
         <th>Price</th>
         <th>Storage status</th>
+        <th colspan="2;">Change</th>
       </tr>
       <%= for product <- @products do %>
       <tr>

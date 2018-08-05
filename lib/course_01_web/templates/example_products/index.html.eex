@@ -1,5 +1,5 @@
 <div>
-  <p>Try searching for a mug by name, price or summary.</p>
+  <p>Try searching by name, price or summary.</p>
 <%= form_for @conn, example_products_path(@conn, :index), [method: :get], fn f -> %>
   <%= search_input f, :query %>
   <%= submit "Search" %>
