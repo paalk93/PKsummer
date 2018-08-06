@@ -1,0 +1,71 @@
+<section>
+  <div>
+    <h1>Pseudo child and type classes.</h1>
+    <p>Pseudo classes which selects child and type elements.</p>
+    <p><strong>:first-child - </strong>Select every given element that is the first child of its parent.</p>
+    <p><strong>:last-child - </strong>Select every given element that is the last child of its parent.</p>
+    <p><strong>:nth-child() - </strong>Select every given element that is the (numver) of its parent.</p>
+    <p><strong>:nth-last-child() - </strong>Select every given element that is the (numver) of its parent, countring from the last child.</p>
+    <p><strong>:only-child() - </strong>Select every given element that is the only child of its parent.</p>
+    <p><strong>:first-of-type - </strong>Select every given element that is the first given element of its parent.</p>
+    <p><strong>:last-of-type - </strong>Select every given element that is the last given element of its parent.</p>
+    <p><strong>:only-of-type - </strong>Select every given element that is the only given element of its parent.</p>
+    <p><strong>:nth-of-type() - </strong>Selects every given element that is the (number) given element of its parent.</p>
+    <p>The different between child and type is that first-child for example will only work if the element IS FIRST.</p>
+    <p>While first-of-type will work even if the element is not first, it will still work on the first element of the type we set it to.</p>
+    <p>Let's look at the example</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <div class="css-example-pseudo-type">
+      <div>
+        <h3>header</h3>
+        <p>One</p>
+        <p>Two</p>
+      </div>
+      <div>
+        <p>Three</p>
+      </div>
+    </div>
+    <p>Here we have a &lt;div&gt; with two divs inside, inside the first div we got one &lt;h3&gt; and two &lt;p&gt;</p>
+    <p>The second &lt;div&gt; only got one &lt;p&gt;</p>
+    <p>if we use p:first-of-type One and Three will be colored because they are the first paragraph of their parent.</p>
+    <hr>
+    <div class="css-example-pseudo-child">
+      <div>
+        <h3>header</h3>
+        <p>One</p>
+        <p>Two</p>
+      </div>
+      <div>
+        <p>Three</p>
+      </div>
+    </div>
+    <p>Here we use first-child.</p>
+    <p>Only the paragraph Three will be colored. Because it is the first element of its parent.</p>
+    <p>One is the first paragraph of its parent, but it is the second element, &lt;h3&gt; beeing the first.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        /* Html */
+        &lt;div class="css-example-pseudo-type"&gt;
+          &lt;div&gt;
+            &lt;h3&gt;header&lt;/h3&gt;
+            &lt;p&gt;One&lt;/p&gt;
+            &lt;p&gt;Two&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;p&gt;Three&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        /* Css */
+        .css-example-pseudo-type p:first-of-type{
+          color:red;
+        }
+      </code>
+    </pre>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+<section>
+  <div>
+    <h1>Git Routines</h1>
+    <p>My personal routines when working with git.</p>
+    <h3>With github desktop</h3>
+    <p>Personally i do not use that many git commands, most of the pushing, commiting, mergeing i do with the help of the editor, Github desktop app, and github.com</p>
+    <p>I start off by creating or forking a repository on github.com, or create it locally and publish it using the desktop app.</p>
+    <p>If i did not create it locally i would use the desktop app to clone and download.</p>
+    <p>Then i create a new branch with the desktop app. And open the project in my editor.</p>
+    <p>Then i sometimes do use the git branch command just to make sure i am actually working on the correct branch.</p>
+    <p>After doing some changes i simply stage and commit them using the editor.</p>
+    <p>Then i move over to the desktop app and push the branch to it's remote. Also i have to publish the branch to make it remote if i allready haven't done that.</p>
+    <p>After the changes are pushed remotely, i go to my project on github.com, and i can see i have a new merge request. I simply click that request and merge my branch into the master.</p>
+    <p>Resolving any conflicts before continuing ofcourse.</p>
+    <p>Then we can go back the github desktop, change to the master branch and fetch and pull the changes.</p>
+    <p>If this was a group project i would still do the same process but now i would send a pullrequest from my master to the master i forked from.</p>
+    <hr>
+    <h3>Without github desktop.</h3>
+    <p>If i were to not use the desktop app i would start off forking or creating a new repo on github.com.</p>
+    <p>I would use git clone [url] and run git init and git remote add [origin] [url] if needed.</p>
+    <p>Then i would get to work, creating a new branch using git branch [name], and then git checkout [name], to create and change branches.</p>
+    <p>Run git branch just to make sure i am on the correct one.</p>
+    <p>After doing the changes i want i want to stage them using git add. to stage all changes.</p>
+    <p>Then i run git commit -m "with my message".</p>
+    <p>This time i just want to merge my branch with my master before pushing. So i do git checkout master to change to the master branch.</p>
+    <p>Then we do git merge [branchname] to merge it with the master.</p>
+    <p>Resolve any conflicts if there are any and then run git push.</p>
+  </div>
+    <hr>
+    <p>When working in group projects there might have been changes done to the project that i have missed. So starting everyday its important to remember to fetch and pull.</p>
+</section>

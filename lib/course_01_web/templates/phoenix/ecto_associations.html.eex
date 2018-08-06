@@ -1,0 +1,93 @@
+<section>
+  <div>
+    <h1>Ecto Associations</h1>
+    <p>Ecto associations does what it sounds like.</p>
+    <p>Creates associations between two tables in our database.</p>
+    <p>Say we have our users table and we want users to have an adress attached to theri accounts.</p>
+    <p>Instead of creating more fields on our schema with adress information we simply define a new schema.</p>
+    <p>And use associations to relate them.</p>
+    <p>I used ecto associations in an earlier project where i associated users and adresses.</p>
+    <p>To create our schema's and changeset we need to "use Ecto.Schema", and "import Ecto.Changeset".</p>
+    <p>In our User schema we can use has_many or has_one :adress, Ectoassoc.Identity.Adress(module name.)</p>
+    <p>And in our adress we simply add belongs_to :user, Ectoassoc.Identity.User.</p>
+    <p>We can then use cast_assoc(:adress) in our changeset for our user schema to cast our associated fields.</p>
+    <p>We can also keep in mind that when we work with functions and association we might have to use preload quite often.<br>
+      preload helps load the associated information like |&gt; Ectoassoc.Repo.preload(:adress)
+    </p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <p>This example is set up with basic associations, and is from an earlier project i did.</p>
+    <pre>
+      <code>
+        /* Users schema */
+        defmodule Ectoassoc.Identity.User do
+          use Ecto.Schema
+          import Ecto.Changeset
+
+          schema "users" do
+            field :fname, :string
+            field :lname, :string
+            field :phone, :string
+            field :email, :string
+            has_many :adress, Ectoassoc.Identity.Adress
+            timestamps()
+          end
+
+          def changeset(user, attrs \\ %{}) do
+            user
+            |&gt; cast(attrs, [:fname, :lname, :phone, :email])
+            |&gt; cast_assoc(:adress)
+            |&gt; validate_required([:fname, :lname, :phone, :email])
+          end
+        end
+
+        /* Adress schema */
+
+        defmodule Ectoassoc.Identity.Adress do
+
+          use Ecto.Schema
+          import Ecto.Changeset
+
+          schema "adresses" do
+            field :adress, :string
+            field :post_number, :integer
+            field :city, :string
+            field :country, :string
+            belongs_to :user, Ectoassoc.Identity.User
+
+            timestamps()
+          end
+
+          def changeset(adress, attrs \\ %{}) do
+            adress
+            |&gt; cast(attrs, [:adress, :post_number, :city, :country, :user_id])
+            |&gt; validate_required([:adress, :post_number, :city, :country])
+          end
+        end
+
+        /* Create adress migrations */
+
+        defmodule Ectoassoc.Repo.Migrations.CreateAdresses do
+          use Ecto.Migration
+
+          def change do
+            create table(:adresses) do
+            add :adress, :string
+            add :post_number, :integer
+            add :city, :string
+            add :country, :string
+            add :user_id, references(:users, on_delete: :delete_all)
+
+            timestamps()
+          end
+
+          create index(:adresses, [:user_id])
+          end
+        end
+      </code>
+    </pre>
+    <p>We also add a field user_id to our adress table which will reference the user it is associated with.</p>
+    <p>And upon deleteing the user we also delete the adress.</p>
+  </div>
+</section>

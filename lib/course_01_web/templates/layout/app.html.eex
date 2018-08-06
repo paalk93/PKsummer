@@ -12,11 +12,157 @@
   </head>
 
   <body>
+    <div class="pk-main-grid-layout">
 
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
+      <div class="pk-grid-area-navbar pk-background-secondary">
+        <div class="pk-margin-left-1em">
+        <h1 class="pk-color-secondary">PK documentation project</h1>
+      </div>
+      </div>
+
+      <div class="pk-grid-area-sidebar pk-background-secondary pk-color-secondary pk-scroll-sidebar">
+        <div class="pk-margin-05em">
+          <h3>Planning and problemsolving</h3>
+            <ul>
+              <li><%= link "Planning", to: planning_problem_path(@conn, :planning) %></li>
+              <li><%= link "Problem solving", to: planning_problem_path(@conn, :problem_solving) %></li>
+            </ul>
+        </div>
+        <div class="pk-margin-05em">
+          <h3><%= link "Git", to: git_example_path(@conn, :index) %></h3>
+            <ul>
+              <li><%= link "Git commands", to: git_example_path(@conn, :git_commands) %></li>
+              <li><%= link "Git routines", to: git_example_path(@conn, :git_routines) %></li>
+            </ul>
+        </div>
+        <div class="pk-margin-05em">
+          <h3><%= link "HTML", to: html_tags_path(@conn, :index) %></h3>
+            <ul>
+              <li><%= link "Tags", to: html_tags_path(@conn, :tags) %><span onclick="showTags(this)" class="pk-span-cursor"> &plus;</span></li>
+              <ul class="pk-hidden-list" id="navigationTagsList">
+                <li><%= link "Head", to: html_tags_path(@conn, :head_tags) %></li>
+                <li><%= link "Body", to: html_tags_path(@conn, :body_tags) %></li>
+                <li><%= link "Table and list", to: html_tags_path(@conn, :table_and_list) %></li>
+                <li><%= link "Media", to: html_tags_path(@conn, :media) %></li>
+                <li><%= link "Form and input", to: html_tags_path(@conn, :form_and_input) %></li>
+                <li><%= link "Sections", to: html_tags_path(@conn, :sections) %></li>
+                <li><%= link "Typography", to: html_tags_path(@conn, :typography)%></li>
+                <li><%= link "Textformatting", to: html_tags_path(@conn, :textformatting) %></li>
+                <li><%= link "Code and script", to: html_tags_path(@conn, :code_and_script) %></li>
+                <li><%= link "Icons and buttons", to: html_tags_path(@conn, :icons_and_buttons) %></li>
+              </ul>
+              <li><%= link "Attributes", to: html_attributes_path(@conn, :attributes) %><span onclick="showAttributes(this)" class="pk-span-cursor"> &plus;</span></li>
+              <ul class="pk-hidden-list" id="navigationAttributesList">
+                <li><%= link "General", to: html_attributes_path(@conn, :general) %></li>
+                <li><%= link "For form and input", to: html_attributes_path(@conn, :for_form_and_input) %></li>
+                <li><%= link "For media", to: html_attributes_path(@conn, :for_media) %></li>
+                <li><%= link "For table and list", to: html_attributes_path(@conn, :for_table_and_list) %></li>
+                <li><%= link "Styling attributes", to: html_attributes_path(@conn, :styling_attributes) %></li>
+                <li><%= link "For links", to: html_attributes_path(@conn, :for_links) %></li>
+                <li><%= link "Data and javascript", to: html_attributes_path(@conn, :data_and_javascript) %></li>
+              </ul>
+            </ul>
+        </div>
+        <div class="pk-margin-05em">
+          <h3><%= link "CSS", to: css_path(@conn, :index) %></h3>
+            <ul>
+            <li><%= link "Selectors", to: css_path(@conn, :selectors) %></li>
+            <li><%= link "Properties", to: css_path(@conn, :properties) %></li>
+            <li><%= link "Variables", to: css_path(@conn, :variables) %></li>
+            <li><%= link "Grid", to: css_path(@conn, :css_grid) %></li>
+            <li><%= link "Flexbox", to: css_path(@conn, :css_flexbox) %></li>
+            <li><%= link "Pseudo classes", to: css_path(@conn, :pseudo_classes) %><span onclick="showPseudoClasses(this)" class="pk-span-cursor"> &plus;</span></li>
+              <ul class="pk-hidden-list" id="navigationPseudoList">
+                <li><%= link "Links", to: css_path(@conn, :pseudo_links) %></li>
+                <li><%= link "Child and type", to: css_path(@conn, :pseudo_child_and_type) %></li>
+                <li><%= link "Forms and input", to: css_path(@conn, :pseudo_forms_and_input) %></li>
+                <li><%= link "Misc", to: css_path(@conn, :pseudo_misc) %></li>
+              </ul>
+            <li><%= link "Animations", to: css_path(@conn, :css_animations) %></li>
+          </ul>
+        </div>
+        <div class="pk-margin-05em">
+          <h3><%= link "JavaScript", to: javascript_path(@conn, :index) %></h3>
+            <ul>
+              <li><%= link "Variables and data", to: javascript_path(@conn, :variables_and_data) %></li>
+              <li><%= link "Operators", to: javascript_path(@conn, :operators) %></li>
+              <li><%= link "Logic flow", to: javascript_path(@conn, :logic_flow) %><span onclick="showLogicFlow(this)" class="pk-span-cursor"> &plus;</span></li>
+                <ul class="pk-hidden-list" id="navigationLogicFlowList">
+                  <li><%= link "If else", to: javascript_path(@conn, :logic_flow_if_else) %></li>
+                  <li><%= link "Switch", to: javascript_path(@conn, :logic_flow_switch) %></li>
+                </ul>
+              <li><%= link "Arrays", to: javascript_path(@conn, :arrays) %></li>
+              <li><%= link "Functions", to: javascript_path(@conn, :functions) %></li>
+              <li><%= link "Objects", to: javascript_path(@conn, :objects) %></li>
+              <li><%= link "Loops", to: javascript_path(@conn, :loops) %><span onclick="showForAndIn(this)" class="pk-span-cursor"> &plus;</span></li>
+                <ul class="pk-hidden-list" id="navigationForAndInList">
+                  <li><%= link "For and in", to: javascript_path(@conn, :loops_for_and_in) %></li>
+                </ul>
+              <li><%= link "Scope", to: javascript_path(@conn, :scope) %></li>
+              <li><%= link "Misc", to: javascript_path(@conn, :misc) %></li>
+            </ul>
+        </div>
+        <div class="pk-margin-05em">
+          <h3><%= link "Elixir", to: elixir_path(@conn, :index) %></h3>
+            <ul>
+              <li><%= link "Iex", to: elixir_path(@conn, :iex_example) %></li>
+              <li><%= link "Mix", to: elixir_path(@conn, :mix_example) %></li>
+              <li><%= link "Data types", to: elixir_path(@conn, :data_types) %></li>
+              <li><%= link "Operators", to: elixir_path(@conn, :operators) %></li>
+              <li><%= link "Collections", to: elixir_path(@conn, :collections) %></li>
+              <li><%= link "Pattern matching", to: elixir_path(@conn, :pattern_matching) %></li>
+              <li><%= link "Modules and functions", to: elixir_path(@conn, :modules_and_functions) %></li>
+              <li><%= link "Comprehensions", to: elixir_path(@conn, :comprehensions) %></li>
+              <li><%= link "Enmerables", to: elixir_path(@conn, :enumerables) %></li>
+              <li><%= link "EXUnit and API", to: elixir_path(@conn, :ex_unit_and_api) %></li>
+              <li><%= link "Recursion", to: elixir_path(@conn, :recursion) %></li>
+            </ul>
+        </div>
+        <div class="pk-margin-05em">
+          <h3><%= link "Phoenix", to: phoenix_path(@conn, :index) %></h3>
+            <ul>
+              <li><%= link "Data flow", to: phoenix_path(@conn, :data_flow) %></li>
+              <li><%= link "Major parts", to: phoenix_path(@conn, :major_parts) %><span onclick="showMajorParts(this)" class="pk-span-cursor"> &plus;</span></li>
+                <ul class="pk-hidden-list" id="navigationMajorPartsList">
+                  <li><%= link "Controller", to: phoenix_path(@conn, :example_controller) %></li>
+                  <li><%= link "View", to: phoenix_path(@conn, :example_view) %></li>
+                  <li><%= link "Template", to: phoenix_path(@conn, :example_template) %></li>
+                  <li><%= link "Router", to: phoenix_path(@conn, :example_router) %></li>
+                </ul>
+              <li><%= link "Plug and conn", to: phoenix_path(@conn, :example_plug_and_conn) %></li>
+              <li><%= link "Ecto", to: phoenix_path(@conn, :example_ecto) %><span onclick="showEcto(this)" class="pk-span-cursor"> &plus;</span></li>
+                <ul class="pk-hidden-list" id="navigationEctoList">
+                  <li><%= link "Mix tasks", to: phoenix_path(@conn, :ecto_mix_tasks) %></li>
+                  <li><%= link "Adapters", to: phoenix_path(@conn, :example_adapters) %></li>
+                  <li><%= link "Migrations", to: phoenix_path(@conn, :example_migrations) %></li>
+                  <li><%= link "Schema", to: phoenix_path(@conn, :example_schema) %></li>
+                  <li><%= link "Repo", to: phoenix_path(@conn, :example_repo) %></li>
+                  <li><%= link "Query", to: phoenix_path(@conn, :example_query) %></li>
+                  <li><%= link "Changeset", to: phoenix_path(@conn, :example_changeset) %></li>
+                  <li><%= link "Multi", to: phoenix_path(@conn, :example_multi) %></li>
+                  <li><%= link "Associations", to: phoenix_path(@conn, :example_associations) %></li>
+                  <li><%= link "Embedded", to: phoenix_path(@conn, :example_embedded) %></li>
+                </ul>
+            </ul>
+        </div>
+        <div class="pk-margin-05em">
+          <h3>Displaying data</h3>
+          <ul>
+            <li><%= link "Associated data", to: association_example_path(@conn, :index) %></li>
+            <li><%= link "Simple data", to: simple_data_example_path(@conn, :index) %></li>
+            <li><%= link "Example products", to: example_products_path(@conn, :index)%> </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <main role="main" class= "pk-grid-area-main">
+        <div class="pk-margin-1em">
+          <%= render @view_module, @view_template, assigns %>
+        </div>
       </main>
 
+    </div>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

@@ -1,0 +1,26 @@
+<section>
+  <div>
+    <h1>Major parts and context</h1>
+    <h3>Major parts.</h3>
+    <p><strong>Endpoint - </strong>The start and end of the request lifecycle. Handle requests up until the point where the router takes over.</p>
+    <p><strong>Router - </strong>Parses incoming reuqests and dispatches them to the correct controller/action.Provides helpers to generate route paths or urls to resources.</p>
+    <p><strong>Controller - </strong>Provid functions called actions to handle requests, prepare data and passes it into the view.</p>
+    <p><strong>View - </strong>View render the template, act as an presentation layer.</p>
+    <p><strong>Template - </strong>Our files containing the contents that will be served in a response.Allow dynamic data to be substituted in, are precompiled and fast.</p>
+    <p><strong>Channels - </strong>Manages sockets for easy realtime communications.</p>
+    <p><strong>PubSub - </strong>Underline the channel layer and allow clients to subscribe to topics.</p>
+  </div>
+  <div>
+    <h3>Contexts</h3>
+    <p>When talking about contexts is phoenix we are talking about how it all is connected.</p>
+    <p>We seen how the major parts are connected and the way data flows.</p>
+    <p>But in phoenix we can import other modules to other modules to use their functions etc.<br>
+      When i was working with associations for example i had one file with a module where all my functions were.<br>
+      And these functions used data from changesets and schemas in other modules.<br>
+      But this was no issue, because by using "alias.ModuleName" I was able to make them work together.<br>
+      Same if i am to write a query, i have to import the ecto.query module by simply doing "import Ecto.Query."<br>
+      Which then allow me to use the ecto query modules functions to write queries.<br>
+      Same when working with schema and changesets, we have to "use Ecto.Schema" and "import Ecto.Changeset".
+    </p>
+  </div>
+</section>

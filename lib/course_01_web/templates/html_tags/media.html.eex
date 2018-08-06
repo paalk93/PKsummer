@@ -1,0 +1,40 @@
+<section>
+  <div>
+    <h1>Media tags</h1>
+    <p>Tags used for different media input and outputs.</p>
+    <p><strong>&lt;video&gt; </strong>Specifies a video, like a video clip.</p>
+    <p><strong>&lt;audio&gt; </strong>Defines audio, such as music.</p>
+    <p><strong>&lt;map&gt; </strong>Defines a client side image map.</p>
+    <p><strong>&lt;img&gt; </strong>Defines an image in a HTML page.</p>
+    <p><strong>&lt;iframe&gt; </strong>Specifies an inline frame.</p>
+    <p><strong>&lt;canvas&gt; </strong>Defines an area for drawing graphics on the fly. Usually with the help of JS</p>
+    <p><strong>&lt;figure&gt; </strong>Used to mark up a image in a document.</p>
+    <p><strong>&lt;figcaption&gt; </strong>Adding text to the figure element.</p>
+    <p><strong>&lt;track&gt; </strong>Specifies text tracks for media elements like video and audio.</p>
+  </div>
+  <div>
+    <h3>Visual example</h3>
+    <p>A figure with an image and text.</p>
+    <figure>
+      <img src="<%= static_path(@conn, "/images/summer.png") %>" height="320" width="400">
+      <figcaption>A caption to our image.</figcaption>
+    </figure>
+    <p>Iframe</p>
+    <figure>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57129.97701333791!2d10.368551743319985!3d63.41871898548577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x466d319747037e53%3A0xbf7c8288f3cf3d4!2sTrondheim!5e0!3m2!1sno!2sno!4v1531756832022" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <figcaption>Using iframe to link google maps.</figcaption>
+  </figure>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        <p>simple example on how to use a figure with an image.</p>
+        &lt;figure&gt;
+          &lt;img src="&lt;%= static_path(@conn, "/images/summer.png") %&gt;" height="320" width="400"&gt;
+          &lt;figcaption&gt;A caption to our image.&lt;/figcaption&gt;
+        &lt;/figure&gt;
+      </code>
+    </pre>
+  </div>
+</section>

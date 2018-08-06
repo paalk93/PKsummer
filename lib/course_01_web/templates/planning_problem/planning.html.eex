@@ -1,0 +1,61 @@
+<section>
+  <div>
+    <h1>Planning projects</h1>
+    <p>When planning a project the first thing we do is coming up with an idea, what are we actually makeing.</p>
+    <p>Once we know what it is that we are makeing and what we want it to be we can start thinking about what feutures we want,<br>
+      and what feutures we need.
+    </p>
+    <p>How many pages do we want, what will they all look like etc</p>
+    <p>When planning projects it is always good to use <ins>pen and paper</ins></p>
+    <p>When we have figured out what the pages are and what feutures we have we can use pen and paper to start drawing.<br>
+      We draw up the layout, and add our feutures and functions accordingly.
+    </p>
+    <p>We can think of it like creating the entire project with pen and paper first and then simply transforming it into code.</p>
+    <p>We can also make a to do list.<br>
+      First week we are going to complete this task, second week another task, and so on.<br>
+      This helps us keep track of what we have done, what needs to be done and if we are ahead or behind schedule.<br>
+      When starting out it might not be easy to estimate the time needed to finish but having a to do list can also help us establish a timeline.
+    </p>
+    <hr>
+    <p>When i planned this project i allready had a task, a list of languages and terms/functions which i had to write documentation for.</p>
+    <p>I knew i was going to use phoenix framework, and i knew i wanted a grid area with a small navbar, sidebar with my navigation links<br>
+      and a main area where i would render my documentation pages.
+    </p>
+    <p>Using pen and paper i drew the basic layout with links and everything.</p>
+    <p>I also knew i wanted to divide the content of my page into sections. Starting with basic information or related keywords and tags,<br>
+      a visual example if needed and a code example at the end.
+    </p>
+    <p>So i created a simple "template" where i used section and divs to be applied to every page so i could simply fill in the information in the correct areas.</p>
+    <p>This was a big task so i decided to sort it into smaller pieces.</p>
+    <p>I divided it into major categories first, like Phoenix beeing one category, Elixir another and so on.<br>
+      And i divided the content of those into sub categories, like for HTML i wanted tags and attributes to be categories<br>
+      which again had their own categories where i sorted different tags and attributes together.<br>
+      Like putting tags for table and list on the same page because i felt they have the same use area, they are both for sorting our html.
+    </p>
+    <p>First i did this roughyl on pen and paper and then in more detail using notepad.</p>
+    <br>
+    <p>Since i was going to use Phoenix Framework i drew down and planned the scopes for the router.</p>
+    <p>I wanted one scope for each of the major categories like HTML, CSS, JavaScript etc and i would just use the routes to divide the sub categories.<br>
+      JavaScript for example would be /javascript in the scope and i would have a route for logic flow /logic_flow inside the scope, and the sub categories for<br>
+      logic flow i would create by makeing a route like /logic_flow/switch. So the entire url for this page would be javascript/logic_flow/switch.
+    </p>
+    <p>So again with pen and paper i created all the scopes and routes i needed and placed the pages i needed accordingly.</p>
+    <p>Same with the controllers, i decided to have one controller for each main category with multiple functions instead of one controller for each page.<br>
+      And ofcourse a view to match every controller.
+    </p>
+    <br>
+    <p>After all this planning and sorting were done i created a folder for each major category.<br>
+      And inside i created a text document for each sub category and their sub category.<br>
+      So for example i made a folder for JavaScript with a text document for logic flow which would be the splash page,<br>
+      and a text document for switch which would be the switch documentation.<br>
+      And this was done with every item in the task.
+    </p>
+    <p>Before i started typing in my actual project i wrote all the documentation and keywords inside these text files.<br>
+      And i created functions and such for my visual and code examples using codepen which i could later use in my project.
+    </p>
+    <p>It was first when i felt i had all the information i needed and wanted written down that i started working inside my actual project.<br>
+      Simply setting up the pages and filling in the information and adding functions.<br>
+      Doing this twice actually gave me a second chance to look over it, add extra information if needed and correct typos.
+    </p>
+  </div>
+</section>

@@ -1,0 +1,84 @@
+<section>
+  <div>
+    <h1>EXUnit and API</h1>
+    <h3>ExUnit</h3>
+    <p>ExUnit is simply elixirs built-in unit testing framework.</p>
+    <p>In the example shown below we use ExUnit.start() to start the ExUnit.</p>
+    <p>We place our test in the test folder and simple call it basic_math_test.exs.</p>
+    <p>We will use assert function to check if our result return true or false.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <p>In this code finished project i do not want any tests so we simple use the code example to explain.</p>
+    <pre>
+      <code>
+        /* The path we place our module and functions */
+          test/basic_math_test.exs
+
+        /* Here we tell the test to start */
+          ExUnit.start()
+
+        /* We define a module and name it BasicMath *&
+          defmodule BasicMath do
+        /* We have to import and use the ExUnit.Case */
+            use ExUnit.Case
+
+        /* Here we define our test */
+            test "basic math" do
+            assert 1 + 1 == 2
+            end
+          end
+
+      </code>
+    </pre>
+    <p>To run our test we simply type in our terminal elixir test/basic_math_test.exs.</p>
+    <p>We will then see the that we ran 1 test and had 0 failures.</p>
+    <p>If we change our assert to 1 + 1 == 2.</p>
+    <pre>
+      <code>
+        ExUnit.start()
+
+        defmodule BasicMath do
+          use ExUnit.Case
+
+          test "basic math" do
+          assert 1 + 1 == 3
+          end
+
+        end
+
+      /* And now we run the test again, it will tell us 1 test 1 failures. /*
+      /* And we can see what went wrong */
+
+      test basic math (BasicMath)
+      test/basic_math_test.exs:6
+      Assertion with == failed
+      code:  assert 1 + 1 == 3
+      left:  2
+      right: 3
+      stacktrace:
+      test/basic_math_test.exs:7: (test)
+    /* Left hand side was equal to the value 2 */
+    /* While right hand side was equal to the value 3 */
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>API</h3>
+    <p>API stands for Application Programming Interface.</p>
+    <p>They consist of a set of clearly defined methods of communication between various components.</p>
+    <p>Makes it easier to develop by providing all the building blocks. Simplifies programming.</p>
+    <p>API's are used in: <br>
+      Libraries and frameworks.<br>
+      Operating systems.<br>
+      Remote APIs.<br>
+      Web APIs.
+    </p>
+    <hr>
+    <p>Some of the major parts of the phoenix API is the router, controller and the templates.<br>
+      And the cycle they run trough and how they all are connected.
+    </p>
+    <p>These are different components which recieve and sends requests, passing data information onwards.</p>
+    <p>For more details about the phoenix components visit the <%= link "Phoenix Major parts", to: phoenix_path(@conn, :major_parts) %> section.</p>
+  </div>
+</section>

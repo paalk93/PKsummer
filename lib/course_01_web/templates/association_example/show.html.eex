@@ -1,0 +1,25 @@
+<h2>Show User</h2>
+<ul class="pk-no-list-style">
+  <li class="pk-margin-05em">
+    <strong>ID</strong>
+    <%= @user.id %>
+  </li>
+  <li class="pk-margin-05em">
+    <strong>Fname:</strong>
+    <%= @user.fname %>
+  </li>
+  <li class="pk-margin-05em">
+    <strong>Lname:</strong>
+    <%= @user.lname %>
+  </li>
+  <li class="pk-margin-05em">
+    <strong>City:</strong>
+    <%= @adress.city %>
+  </li>
+
+  <li class="pk-margin-05em">
+    <strong>Country:</strong>
+    <%= @adress.country %>
+  </li>
+</ul>
+<span><%= link "Back", to: association_example_path(@conn, :index) %></span>

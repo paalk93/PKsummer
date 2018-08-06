@@ -1,0 +1,24 @@
+<div>
+  <p>Try searching by name, price or summary.</p>
+<%= form_for @conn, example_products_path(@conn, :index), [method: :get], fn f -> %>
+  <%= search_input f, :query %>
+  <%= submit "Search" %>
+  <% end %>
+</div>
+<div class="pk-products-flex">
+  <%= for product <-@products do %>
+    <div class="pk-product-card">
+      <div class="pk-card-top">
+        <p><%=product.name%></p>
+      </div>
+      <div class="pk-card-middle">
+        <p><%=product.summary%></p>
+      </div>
+      <div class="pk-card-bottom">
+        <p style="display:inline-block;"><%=product.price%></p>
+        <button>Buy</button>
+        <button><%= link "Info", to: example_products_path(@conn, :show, product), class: "pk-link-style" %></button>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,9 @@
+<section>
+  <div>
+    <h1>Pseudo classes.</h1>
+    <p>Pseudo classes are used to define a special state of an element.</p>
+    <p>Like a style when the element is beeing hovered.</p>
+    <p>Or style a link when it is unvisited or has been visited.</p>
+    <p>Pseudo classes are defined by using " : "</p>
+  </div>
+</section>

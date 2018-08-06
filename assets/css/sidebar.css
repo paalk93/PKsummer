@@ -1,0 +1,17 @@
+.pk-hidden-list{
+  display:none;
+}
+
+.pk-span-cursor{
+  cursor:pointer;
+  font-size: 1.3em;
+}
+.pk-scroll-sidebar{
+  position:fixed;
+  z-index:1;
+  top:0;
+  bottom:0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width:18%;
+}

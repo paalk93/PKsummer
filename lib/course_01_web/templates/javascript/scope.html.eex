@@ -1,0 +1,27 @@
+<section>
+  <div>
+    <h1>Javascript scope</h1>
+    <p>Scopes determine te acessibillity of variables</p>
+    <p>We have Two main types, local scope and global scope.</p>
+    <p>Local scopes can only be accessed within the function they are defined.</p>
+    <p>Global scopes are defined outside functions and can be accessed by other functions aswell.</p>
+    <p>It is important to be very aware when you define global variables, and only do so if you have to.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        var global = 1;
+
+        function functionOne(){
+          var local = 1;
+      /* The local and global variable can be used in this function */
+        }
+
+        function functionTwo(){
+      /* Only our global variable can be used in this function */
+        }
+      </code>
+    </pre>
+  </div>
+</section>

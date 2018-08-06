@@ -1,0 +1,12 @@
+<section>
+  <div>
+    <h1>Elixir</h1>
+    <p>Elixir is a dynamic, functional language designed for building scalable<br>
+      and maintainable applications.
+    </p>
+    <p>Elixir leverages the the Erland VM(virtual machine), known for running low-latency,<br>
+      distributed and fault-tolerant systems.<br>
+      While also beeing successfully used in web development and embedded software domain.
+    </p>
+  </div>
+</section>

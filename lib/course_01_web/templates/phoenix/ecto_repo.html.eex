@@ -1,0 +1,24 @@
+<section>
+  <div>
+    <h1>Ecto Repo</h1>
+    <p>Repo means repository and it defines a repository.</p>
+    <p>A repository maps to an underlying data store, controlled by the adapters.</p>
+    <p>For example, Ecto ships with a Postgres adapter that stores data into a PostgreSQL database.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <p>Configureing our adapter to our repo using postgres.</p>
+    <p>Found under config/dev.exs.</p>
+    <pre>
+      <code>
+        config :my_app, Repo,
+          adapter: Ecto.Adapters.Postgres,
+          database: "ecto_simple",
+          username: "postgres",
+          password: "postgres",
+          hostname: "localhost"
+      </code>
+    </pre>
+    <p>Ecto ships with postgres adapters that stores data into a postgreSQL database.</p>
+  </div>
+</section>

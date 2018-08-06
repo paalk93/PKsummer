@@ -1,0 +1,56 @@
+<section>
+  <div>
+    <h1>Data and javascript attributes</h1>
+    <p>Attributes often used with a script.</p>
+    <p><strong>data - </strong>Specifies URL of the resource to be used by the object element.</p>
+    <p>Can be used with: &lt;object&gt;</p>
+    <p><strong>data-* - </strong>Used to store embeded data, private to the page.</p>
+    <p>Can be used with: Global(all elements)</p>
+    <p><strong>onclick - </strong>Script that runs when the element is clicked.</p>
+    <p>Can be used with: All visible elements.</p>
+    <p><strong>onmouseover - </strong>Script that runs when the element is hovered.</p>
+    <p>Can be used with: All visible elements.</p>
+    <p><strong>onmousedown - </strong>Script that runs when the mousebutton is clicked down.</p>
+    <p>Can be used with: All visible elements.</p>
+    <p><strong>onmouseup - </strong>Script that runs then the mousebutton is released.</p>
+    <p>Can be used with: All visible elements.</p>
+    <p><strong>onload - </strong>Script that runs when the element is loaded.</p>
+    <p>Can be used with: &lt;body&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;input&gt;, &lt;link&gt;, &lt;script&gt;, &lt;style&gt;</p>
+  </div>
+  <div>
+    <h3>Visual example</h3>
+    <p>Functions which will display an alert when the button is clicked and hovered.</p>
+    <button onclick="onclickExample()">Click me</button>
+    <button onmouseover="onmouseoverExample()">Hover me</button>
+    <hr>
+    <p>Embeded data attributes.</p>
+    <p>Click the li items to get the alert showing the embeded data.</p>
+    <ul>
+      <li onclick="showDetails(this)" data-fruit-color="yellow">Banana</li>
+      <li onclick="showDetails(this)" data-fruit-color="orange">Orange</li>
+      <li onclick="showDetails(this)" data-fruit-color="red">Apple</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        /* Html */
+          &lt;button onclick="onclickExample()"&gt;Click me&lt;/button&gt;
+          &lt;button onmouseover="onmouseoverExample()"&gt;Hover me&lt;/button&gt;
+
+          &lt;ul&gt;
+            &lt;li onclick="showDetails(this)" data-fruit-color="yellow">Banana&lt;/li&gt;
+            &lt;li onclick="showDetails(this)" data-fruit-color="orange">Orange&lt;/li&gt;
+            &lt;li onclick="showDetails(this)" data-fruit-color="red">Apple&lt;/li&gt;
+          &lt;/ul&gt;
+
+        /* Javascript */
+          function showDetails(fruit){
+            var fruitColor = fruit.getAttribute("data-fruit-color");
+            alert("The color of the " + fruit.innerHTML + " is " + fruitColor + ".");
+          }
+      </code>
+    </pre>
+  </div>
+</section>

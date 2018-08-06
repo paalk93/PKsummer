@@ -1,0 +1,82 @@
+<section>
+  <div>
+    <h1>Git terms</h1>
+    <p>Common terms when working with git.</p>
+    <p><strong>config - </strong>Used when setting up a config, like a remote.</p>
+    <p><strong>clone - </strong>Used when cloneing a repository.</p>
+    <p><strong>init - </strong>Used when initializing a project as a git repository.</p>
+    <p><strong>status - </strong>Show the modified files in your project.</p>
+    <p><strong>add - </strong>Used when stageing changes makeing them ready for a commit.</p>
+    <p><strong>unstage - </strong>Used when unstaged staged changes.</p>
+    <p><strong>commit - </strong>Used when commiting the all staged changes done.</p>
+    <p><strong>branch - </strong>Used when working with branches, makeing a new branch of the project which you can work on.</p>
+    <p><strong>checkout - </strong>Used when changeing branches.</p>
+    <p><strong>remote - </strong>Used when working with a remote repoository.</p>
+    <p><strong>fetch - </strong>Used when fetching latest version/changes of a repository.</p>
+    <p><strong>pull - </strong>Used when pulling changes remotely.</p>
+    <p><strong>push - </strong>Used when pushing changes.</p>
+    <p><strong>merge - </strong>Used when mergeing a branch into a different branch for example.</p>
+    <p><strong>rebase - </strong>Used when rebaseing, for example putting your commit ahead of a different branch.</p>
+    <p><strong>reset - </strong>Used when unstageing changes and keeping or discarding them.</p>
+    <p><strong>stash - </strong>Used when saveing staged changes.</p>
+    <p><strong>blame - </strong>Used when finding which author last modified a file and which line.</p>
+    <hr>
+    <h1>Git commands</h1>
+    <p>Commands often used when working with git.</p>
+    <h3>Configuration - configure user information for all local repositories.</h3>
+    <p><strong>git config --global user.name [name] - </strong>Sets the name you want attached to your commits.</p>
+    <p><strong>git config --global user.email [email adress] - </strong>Sets the email you want attatched to your commits.</p>
+    <hr>
+    <h3>Create - Start a new repository or obtain one from an existing URL.</h3>
+    <p><strong>git init - </strong>Initialize an exsisting directory as a git repository.</p>
+    <p><strong>git clone [url] - </strong>Clone a repository from a url.</p>
+    <hr>
+    <h3>Local changes - Review edits and craft a commit transaction.</h3>
+    <p><strong>git status - </strong>Show modified files in directory, staged for your next commit.</p>
+    <p><strong>git diff - </strong>Show file differences not yet staged.</p>
+    <p><strong>git add. - </strong>Add all current changes to the next commit(stage).</p>
+    <p><strong>git add [file] - Add changes in file as it looks to your next commit(stage).</strong></p>
+    <p><strong>git commit -a -m [description] - </strong>Commit all staged and unstaged files with your description message.</p>
+    <p><strong>got commit -m [description]- </strong>Commit staged files and add description.</p>
+    <hr>
+    <h3>Branches - Create, change and delete working branches.</h3>
+    <p><strong>git branch - </strong>List all branches.</p>
+    <p><strong>git branch [name] - </strong>Create a new branch with the given name.</p>
+    <p><strong>git checkout -b [name] - </strong>Create and checkout to the branch created.</p>
+    <p><strong>git checkout [name] - </strong>Change branch.</p>
+    <p><strong>git branch -d [name] - </strong>Delete local branch.</p>
+    <p><strong>git branch -dr [name] - </strong>Delete remote branch.</p>
+    <hr>
+    <h3>Update and publish - Set remote, fetch, pull and push changes.</h3>
+    <p><strong>git remote -v - </strong>List all currently configured remotes.</p>
+    <p><strong>git remote show [name] - </strong>Show information about a remote.</p>
+    <p><strong>git remote add [name] [url] - </strong>Add a git url as an alias.</p>
+    <p><strong>git remote rm [name] - </strong>Delete a remote.</p>
+    <p><strong>git fetch [alias] - </strong>Fetch all the changes from a git remote.</p>
+    <p><strong>git pull - </strong>Fetch and merge all the changes from a git remote.</p>
+    <p><strong>git pull upstream master - </strong>Fetch and merge all the changes from forked remote repo.</p>
+    <p><strong>git push --set-upstream origin master - </strong>Sets the master(also allow to simply use git push for pushes).</p>
+    <p><strong>git push origin [branch] - </strong>Push the local branch to the remote.</p>
+    <p><strong>git push [alias] [branch] - </strong>Push the local changes to a remote repository.</p>
+    <hr>
+    <h3>Merge and rebase - Merge or go back to earlier changes.</h3>
+    <p><strong>git merge [branch] - </strong>Merge the specified branch into the current one.</p>
+    <p><strong>git rebase [base] - </strong>Apply commits of current branch ahead of a specified branch.</p>
+    <p><strong>git rebase --abort- </strong>Abort a rebase.</p>
+    <p><strong>git rebase --continue - </strong>Continue a rebase after resolving conflicts.</p>
+    <hr>
+    <h3>Undo - Undo and reset unwanted changes.</h3>
+    <p><strong>git reset HEAD [file] - </strong>Unstage files and keep local changes.</p>
+    <p><strong>git reset [commit] - </strong>Unstage a file and preserve all changes as unchanged changes.</p>
+    <p><strong>git reset --hard [commit] - </strong>Unstage a file and discard all changes since then.</p>
+    <hr>
+    <h3>Save Fragments - Save and stash changes for later use.</h3>
+    <p><strong>git stash - </strong>Save modified and staged changes.</p>
+    <p><strong>git stash list - </strong>List all stashed changes.</p>
+    <p><strong>git stash pop - </strong>Write working from top of a stash stack.</p>
+    <p><strong>git stash drop - </strong>Discard changes from top of stash stack.</p>
+    <hr>
+    <h3>Git blame</h3>
+    <p><strong>git-blame - </strong>Show what revision and authoor last modified each line of a file.</p>
+  </div>
+</section>

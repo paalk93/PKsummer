@@ -1,0 +1,21 @@
+<section>
+  <div>
+    <h1>Data Flow</h1>
+    <p>How data flows in phoenix.</p>
+    <p>Core parts of the phoenix data flow.</p>
+    <p><strong>Endpoint - </strong>The start and end of the request lifecycle. Handle requests up until the point where the router takes over.</p>
+    <p><strong>Router - </strong>Parses incoming reuqests and dispatches them to the correct controller/action.</p>
+    <p><strong>Controller - </strong>Provide functions called actions to handle requests, prepare data and passes it into the view.</p>
+    <p><strong>View - </strong>View render the template, act as an presentation layer.</p>
+    <p><strong>Template - </strong>Our files containing the contents that will be served in a response.</p>
+    <hr>
+    <p>Say we just clicked a link to change the page of our site.<br>
+      The endpoint will take this request and pass into the designated router.<br>
+      In our router we have scopes and routes to our pages, every route is linked to a controller and a function.<br>
+      So the router passes the information to the correct controller.<br>
+      The controller prepares the data and passes it onwards to the view.<br>
+      Our view then find the correct template which the controller asked for and render it.<br>
+      And now our template containing all the content is displayed on the site.
+    </p>
+  </div>
+</section>

@@ -1,0 +1,114 @@
+<section>
+  <div>
+    <h1>Loops</h1>
+    <p>Loops iterates over your code and can run your code multiple times.</p>
+    <p>We have a couple of different type of loops.</p>
+    <p><strong>for - </strong>Iterates over something, like a list for example.</p>
+    <p><strong>for in - </strong>Iterates over properties/values inside an object for example.</p>
+    <p><strong>for while - </strong>Execute a block of code as long as a specified condition is true.</p>
+    <p><strong>do while - </strong>Do while will always execute atleast once, because we run a block of code before checking the condition.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <p>Using for loop with arrays.</p>
+    <ul id="forLoopExampleList">
+
+    </ul>
+    <button onclick="simpleForLoopExample()">Print the array</button>
+    <hr>
+    <p>Using for in loop with objects.</p>
+    <ul id="forInLoopExampleList">
+
+    </ul>
+    <button onclick="simpleForInLoopExample()">Print the object</button>
+    <hr>
+    <p>Using while loop.</p>
+    <ul id="whileLoopExampleList">
+
+    </ul>
+    <button onclick="simpleWhileLoopExample()">Print the numbers</button>
+    <hr>
+    <p>Using do while loop.</p>
+    <ul id="doWhileLoopExampleList">
+
+    </ul>
+    <button onclick="simpleDoWhileLoopExample()">Print atleast once</button>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        /* Simple for loop */
+        function simpleForLoopExample(){
+          var forExampleCountries = ["Norway", "Germany", "Sweden", "Greece"];
+          var forLoopExampleList = document.getElementById("forLoopExampleList");
+          forLoopExampleList.innerHTML ="";
+          for (var i = 0; i &lt; forExampleCountries.length; i++){
+            forLoopExampleList.innerHTML += "&lt;li&gt;" + forExampleCountries[i] + "&lt;/li&gt;"
+          }
+        }
+        /* We set var i to 0, and we run the loop as long as the length of the list is higher than 0 */
+        /* We also increase the variable i for every run, so when have iterated over the entire list we stop */
+        /* Then we create a &lt;li&gt; element in our list with each of the values */
+        /* We run the loop, find the first value, print it out and repeat */
+
+
+        /* Simple for in loop */
+        function simpleForInLoopExample(){
+          var forInExamplePerson = {name:"PK", age:25, gender:"Male"};
+          var forInLoopExampleList = document.getElementById("forInLoopExampleList");
+          forInLoopExampleList.innerHTML =""
+          for (x in forInExamplePerson){
+            forInLoopExampleList.innerHTML += "&lt;li&gt;" + forInExamplePerson[x] + "&lt;/li&gt;";
+          }
+        }
+        /* Often used with objects, since the object have keys which have values */
+        /* We want to loop over the values IN the object. */
+        /* So in this example we go over all they properties and the values */
+        /* And we create a li element in our list with each of the values */
+
+
+        /* Simple for while loop */
+        function simpleWhileLoopExample(){
+          var whileLoopExampleList = document.getElementById("whileLoopExampleList");
+          var whileExampleNumber = 1;
+          while(whileExampleNumber &lt;= 5){
+            whileLoopExampleList.innerHTML += "&lt;li&gt;" + whileExampleNumber + "&lt;/li&gt;"
+            whileExampleNumber++;
+          }
+        }
+        /* Here we have the variable whileExampleNumber with the value 1 */
+        /* In the while loop we check if i is less or equal to 10 */
+        /* So we print out our number while the condition is true and increase it by 1 everytime */
+        /* The loop stops when we reach 10 */
+
+
+        /* Simple do while loop */
+        function simpleDoWhileLoopExample(){
+          var doWhileLoopExampleList = document.getElementById("doWhileLoopExampleList");
+          var doWhileExampleNumber = 1;
+          doWhileLoopExampleList.innerHTML ="";
+        do{
+          doWhileLoopExampleList.innerHTML = "&lt;li&gt;" + doWhileExampleNumber + "&lt;/li&gt;";
+          doWhileExampleNumber ++;
+        }
+        while(doWhileExampleNumber &lt;= 0);
+        }
+        /* Almost like the for while loop but here we execute some code atleast once no matter what */
+        /* Our condition is that we continue while the number is less or equal to 0 */
+        /* Since the number is 1 the loop will not continue */
+        /* But we are still able to print the number because we check the condition after the first block of code */
+      </code>
+    </pre>
+    <p>To go into detail on the difference between while and do while.</p>
+    <p>In the while loop we check if the conidtion is true before continuing, i.e is 0 &lt; 5, if true, continue.</p>
+    <p>And we increase the number on every run, so eventually we will reach 5.</p>
+    <p>Then we will have is 5 &lt; 5? Which is false, 5 is not less than 5. So this is where we stop.</p>
+    <br>
+    <p>In do while we always execute some code before checking the statement.</p>
+    <p>Here we run some code.</p>
+    <p>Then we check is 1 &lt; 0? No it is not, so this is where we stop.</p>
+    <p>But we still print our number or execute our code one time no matter what.</p>
+    <p>if we would use 1 &lt; 0 in a while loop we would get no result, because the condition is false and we will not continue.</p>
+  </div>
+</section>

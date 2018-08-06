@@ -1,0 +1,29 @@
+<section>
+  <div>
+    <h1>Javascript</h1>
+    <p>JavaScript is the programming language of HTML and the web.</p>
+    <p>We talked about how HTML is the visual content and CSS is the styling.</p>
+    <p>And javaScript is the functionallity. We run scripts and create functions which we can call upon.<br>
+      We can perform various tasks with JavaScript like mathematic calculations and more!.
+    </p>
+    <p>A simple way to learn JavaScript is by opening the f12 menu in your web browser and you can<br>
+      trying out things. Like asigning variables and doing mathematics.
+    </p>
+    <p>When defining functions etc in JavaScript we often use "camelCase".</p>
+  </div>
+  <div>
+    <h3>Handy things to know.</h3>
+    <p>A couple of element selectors we can use are:<br>
+      document.getElementById("id") - Select an element by looking for the id.<br>
+      document.getElementsByClassName("class")[0], using [0] we find the FIRST element which has said class name.<br>
+      document.querySelector("#id" or ".class"). Using class will select the first element with said class.<br>
+    </p>
+    <p>Wrapping a function inside (()) will make it run when the page loads.<p>
+      <pre> (function myfunction(){
+        alert("Hello")
+      }())</pre>
+    <p>We can create html elements with javascript list.innerHTML = "&lt;li&gt;" + content + &lt;/li&gt;</p>
+    <p>or by using document.createElement(li) and appendChild.</p>
+    <p>We can also toggle a class with classList.toggle("class-name").</p>
+  </div>
+</section>

@@ -1,0 +1,47 @@
+<section>
+  <div>
+    <h1>CSS selectors</h1>
+    <h3>Selectors in css.</h3>
+    <p>Css have different selectors to select a certain elements in our document.</p>
+    <p><strong>.class - </strong>Set properties to a class which we can place on any element we want to give that element the styling.</p>
+    <p><strong>#id - </strong>Set properties to an id which we can place on any element we want to give that styling.</p>
+    <p><strong>body/p/h1 etc - </strong>Set properties directly on a specified element by tag</p>
+    <p><strong>class="class-name" - </strong>To give selected element said class.</p>
+    <p><strong>id="id-name" - </strong>To give selected element said id.</p>
+    <hr>
+    <h3>Combineing selectors</h3>
+    <p>Selectors can be combined, say we have a &lt;div&gt; with different elements inside.</p>
+    <p>Let's say our div have a class called "testclass". And we only want to style the paragraphs inside it.</p>
+    <p>If we set a class on a div for example, the child elements inside will also be effected by the styling, but in this case we only want the paragraph.</p>
+    <p>In our css file we can do this: .testclass p{properties}</p>
+    <p>So we say only paragraphs under this class shall get these properties.</p>
+    <p>We can also select multiple classes/id/elements by using the comma( , ).</p>
+    <p>For example: .testclass p, .testclass h4{properties} will set our style to &lt;p&gt; and &lt;h4&gt; elements under that class.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <div class="css-selector-example">
+      <h4>This headline will not be styled</h4>
+      <p>This paragraph will be styled</p>
+    </div>
+    <p>In this example we have a div with a class and it contains a &lt;h4&gt; and a &lt;p&gt;.</p>
+    <p>In our css file we select the &lt;p&gt; tag under said class and add style to it.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        /* CSS */
+        .css-selector-example p{
+          color:red;
+        }
+
+        /* HTML */
+        &lt;div class="css-selector-example"&gt;
+          &lt;h4&gt;This headline will not be styled&lt;/h3&gt;
+          &lt;p&gt;This paragraph will be styled&lt;/p&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+</section>

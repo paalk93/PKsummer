@@ -1,0 +1,9 @@
+<section>
+  <div>
+    <h1>HTML Tags</h1>
+    <p>Tags is something we use to define an element in HTML.</p>
+    <p>Tags are defined by using "&lt; &gt;".</p>
+    <p>Say if i wanted to make paragraph it would look like &lt;p&gt;Text goes here&lt;/p&gt;.</p>
+    <p>Or div to group some content &lt;div&gt;Tags placed inside&lt;/div&gt;</p>
+  </div>
+</section>

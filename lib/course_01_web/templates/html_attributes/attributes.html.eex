@@ -1,0 +1,11 @@
+<section>
+  <div>
+    <h1>HTML attributes</h1>
+    <p>Attributes provide additional information about our html elements.</p>
+    <p>An element can have multiple attributes.</p>
+    <p>Attributes are defined by using the attribute name followed by = and then a property or value "".<br>
+    Like so: &lt;p style="color:red;"&gt;This paragraph would be colored red.&lt;/p&gt;</p>
+    <p>Or if we have a link tag &lt;a&gt; and we want to attach a link using the href atribute.<br>
+      &lt;a href="somelink"&gt;Link name&lt;/a&gt;</p>
+  </div>
+</section>

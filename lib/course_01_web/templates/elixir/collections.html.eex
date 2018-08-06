@@ -1,0 +1,46 @@
+<section>
+  <div>
+    <h1>Collections</h1>
+    <p>Collections are data structures which contain many values.</p>
+    <p><strong>list - </strong>Defined with [ ], List is a collection of values, can contain values of any type.</p>
+    <p><strong>tuple - </strong>Defined with { }, Similar to list but are stored contigously in memory.</p>
+    <p><strong>map - </strong>Defined with %{ }, Allow keys of any type and are unordered.</p>
+    <p><strong>keyword list - </strong>defined with [{ }, { }], list of tuples where the first key is an atom.</p>
+    <p><strong>mapset - </strong>Mapset is another type of collections but it does not allow duplicates.</p>
+    <p><strong>struct - </strong>Struct are extensions built on top of maps, that provide compile-time checks and default values.<br>
+       If you do not specify a key value when defining a struct it will return nil.
+     </p>
+     <p>Lists are actually stored as linked lists, so insertions,deletions are very fast.</p>
+     <p>Tuples on the other hand are stored in contiguous memory block, which make accessing them faster,<br>
+        but adds an additional cost to insertion and deletions.
+      </p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+      /* list */
+        mylist = ["PK", :blue, 25, true]
+      /* Stored in memory as linked lists to find the length we have to go over the entire list and each item */
+
+      /* tuple */
+        mytuple = {"PK", :blue, 25, true}
+      /* Stored contintigously in memory, easy and quick to access elements by index */
+
+      /* map */
+        mymap = %{name: "PK", age: 25}
+
+      /* keyword list */
+        myklist = [{:a, 1}, {:b, 2}]
+
+      /* mapset */
+        mymapset = MapSet.new([1, 1, 1, 2])
+        MapSet.size(mymapset)
+      /* will return 2 because it does not count duplicates*/
+
+      /* struct in iex */
+        defmodule User do defstruct name: "PK", age 25 end
+      </code>
+    </pre>
+  </div>
+</section>

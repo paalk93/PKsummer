@@ -1,0 +1,66 @@
+<section>
+  <div>
+    <h1>Variables and data</h1>
+    <p>Variables can hold many data types.</p>
+    <hr>
+    <p>Variable</p>
+    <p><strong>var = </strong>Used to define a variable.</p>
+    <p>Datatypes</p>
+    <p><strong>"string" </strong>Use " " to define a string, save plain text as data value.</p>
+    <p>For example: var name = "Some name". Will asign the value "Some name" to the variable.</p>
+    <p><strong>number </strong>5 for example is a number.A number is its own data value.</p>
+    <p>For example: var number = 5, will asign the value 5 to the variable number.</p>
+    <p><strong>[array] </strong> use [ ] to define an array. Like a list with multiple values inside.</p>
+    <p>For example: var list = ["Item 1", "Item 2", "Item 3"]</p>
+    <p><strong>{object} </strong>Use { } to define and object. An object have many properties with their own values.</p>
+    <p>for example: var person = {name: "PK", age: 25}</p>
+    <p><strong>bolean </strong>Booleans are true/false statements</p>
+    <p>for example: 10 > 9 = true, check if 10 is greater than 9, will return true.</p>
+  </div>
+  <div>
+    <h3>Code examples</h3>
+    <p>Simple addition.</p>
+    <pre>
+      <code>
+        <p>Let us define some variables.</p>
+        var number = 1
+        var string = "1"
+        <p>We can now do some mathematic calculations.</p>
+        number + number = 2
+        <p>We take the variable number with the value of 1 and add it to itself.</p>
+        <p>But if we do number + string the result will be a bit different.</p>
+        number + string = "11"
+        <p>When adding a number to a string it will simply turn the number value into a string.<br>
+          So it would be like if we did "1" + "1", which will result in 11.
+        </p>
+      </code>
+    </pre>
+    <hr>
+    <p>Variables can also hold other variables</p>
+    <pre>
+      <code>
+        var result = number + number
+        <p>Then if we call result we will get:</p>
+        2
+        <p>We can also create multiple variables at once.</p>
+        var person = "PK", age = 25, gender = "male"
+        <p>Now we can call each variable.</p>
+        person - "PK"
+        age - 25
+        gender - male
+      </code>
+    </pre>
+    <hr>
+    <p>We can even have functions as variables.</p>
+    <pre>
+      <code>
+        var myfunction = function(){
+          return "Hello World"
+        }
+      </code>
+    </pre>
+    <p>I like using variables when i am getting an element with the JavaScript selector.</p>
+    <p>var myelement = "document.getElementById("myid")".</p>
+    <p>This way whenever i want to do changes to that id in JavaScript I can simply call the variable.</p>
+  </div>
+</section>

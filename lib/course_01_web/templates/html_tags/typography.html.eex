@@ -1,0 +1,46 @@
+<section>
+  <div>
+    <h1>Typography tags</h1>
+    <p>Used to define paragraphes and headlines</p>
+    <p><strong>&lt;p&gt; </strong>Defines a paragraph.</p>
+    <p><strong>&lt;h&gt; </strong>Creates a headline, by default larger than the paragraph, h1-h6.</p>
+    <p><strong>&lt;pre&gt; </strong>Defines a preformated text, It preserves spaces and line breaks.</p>
+    <p><strong>&lt;br&gt; </strong>Add a line break to your text.</p>
+    <p><strong>&lt;wbr&gt; </strong>Specifies where in a text it would be ok to add a line break unpon resizeing.</p>
+    <p><strong>&lt;hr&gt; </strong>Defines a thematic break in an HTML page.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <hr>
+    <h2>This headline uses h2</h2>
+    <hr>
+    <p>This is a paragraph</p>
+    <hr>
+    <p>This is a paragraph with a<br>linebreak</p>
+    <hr>
+    <pre>
+      <p>This is a pararaph in a preformated text
+           We can see how it keep the linebreaks and       spaces
+      </p>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        &lt;h2&gt;This headline uses h2&lt;/h2&gt;
+        &lt;hr&gt;
+        &lt;p&gt;This is a paragraph&lt;/p&gt;
+        &lt;hr&gt;
+        &lt;p&gt;This is a paragraph with a&lt;br&gt;linebreak&lt;/p&gt;
+        &lt;hr&gt;
+        &lt;pre&gt;
+          &lt;p&gt;This is a pararaph in a preformated text
+               We can see how it keep the linebreaks and       spaces
+          &lt;/p&gt;
+        &lt;/pre&gt;
+      </code>
+    </pre>
+    <p></p>
+  </div>
+</section>

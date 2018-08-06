@@ -1,0 +1,27 @@
+<section>
+  <div>
+    <h1>Ecto Changeset</h1>
+    <p>Changesets allow us to filter, cast, validate and define constraints when manipulating structs.</p>
+    <p>Changesets provide both validation and constraints which are turned into errors in case something goes wrong.</p>
+    <p>They also allow us to work with internal and external data.</p>
+    <p>Internal data beeing internal to the application, programatically generated from other subsystems.</p>
+    <p>External data beeing external to the application, i.e provided by users in a form.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <p>In the module where we had our schema we can also add a changeset.</p>
+    <pre>
+      <code>
+        def changeset(user, attrs \\ %{}) do
+          user
+          |> cast(attrs, [:fname, :lname, :phone, :email])
+          |> validate_required([:fname, :lname, :phone, :email])
+        end
+      </code>
+    </pre>
+    <p>We use cast to include all our files.</p>
+    <p>And we use validate_required to validate saying that none of the fields can be empty.</p>
+    <p>If we tried creating a user without a last name it would give us an error.</p>
+    <p>In changesets we also have the option to set constraints on valid/invalid characters, length etc.</p>
+  </div>
+</section>

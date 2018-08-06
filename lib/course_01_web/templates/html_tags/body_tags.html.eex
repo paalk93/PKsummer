@@ -1,0 +1,35 @@
+<section>
+  <div>
+    <h1>Body tags</h1>
+    <p>Body tags for defining distinct areas.</p>
+    <p><strong>&lt;body&gt; </strong>Defines the body for your document, where all html goes.</p>
+    <p><strong>&lt;header&gt; </strong>Defines a header area in your document.</p>
+    <p><strong>&lt;footer&gt; </strong>Defines a footer area in your document.</p>
+    <p><strong>&lt;main&gt; </strong>Defines the area with the main content in your document.</p>
+    <p><strong>&lt;nav&gt; </strong>Defines a navbar area in your document.</p>
+  </div>
+  <div>
+    <h3>Example of a bodytag and defining areas.</h3>
+    <pre>
+      <code>
+        &lt;body&gt;
+          &lt;nav&gt;
+           This is our navbar area
+          &lt;/nav&gt;
+          &lt;header&gt;
+           This is our header area
+          &lt;/header&gt;
+          &lt;main&gt;
+           This is our main area
+          &lt;/main&gt;
+          &lt;footer&gt;
+           This is our footer area
+          &lt;/footer&gt;
+        &lt;/body&gt;
+      </code>
+    </pre>
+    <p>We simply just use these tags to define distinct areas of our document.<br>
+      And we put content accordinly.
+    </p>
+  </div>
+</section>

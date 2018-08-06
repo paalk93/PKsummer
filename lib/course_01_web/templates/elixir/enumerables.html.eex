@@ -1,0 +1,73 @@
+<section>
+  <div>
+    <h1>Enumerables</h1>
+    <p>The Enum module allow us to work the with the enumerable protocol,<br>
+      the protocol provides a huge range of functions to transform, sort, group, filter and retrieve enumerables.<br>
+      Enumerables is a type of data structure which we can loop over, or go over each item if you like. Like a list or a map.
+    </p>
+    <p><strong>Enum.map() - </strong>Return a list where each item is the result of invokeing a function.</p>
+    <p><strong>Enum.each() - </strong>Built on recursion, invokes a function for each item.</p>
+    <p><strong>Enum.count() - </strong>Return the size of a list for example.</p>
+    <p><strong>Enum.filter() - </strong>Userd to filter out items after running a function.</p>
+    <p><strong>Enum.empty?() - </strong>Checks if our enumerable is empty.</p>
+    <p><strong>Enum.member?() - </strong>Check if given item is a member of the enumerable.</p>
+    <p><strong>Enum.sort() - </strong>Orderly sort the enumerable.</p>
+    <p><strong>Enum.fetch() - </strong>Find the position of the given item.</p>
+    <p><strong>Enum.uniq_by() - </strong>Use to remove all duplicates in the enumerable.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <p>For these Enum function examples we simply use the iex terminal.</p>
+    <p>In our example we will be using Enum with anonymous functions.</p>
+    <pre>
+      <code>
+        /* Definining our list */
+          list = [1, 2, 3]
+
+
+          Enum.map(list, fn(x) -> x + 1 end)
+          result: [2, 3, 4]
+        /* Returns a list where each item is the result of invokeing the function */
+
+          Enum.each(list, fn(x) -> x + 1 end)
+          result: 1, 2, 3
+        /* Invokes teh given function for each item */
+
+          Enum.count(list)
+          result: [3]
+        /* Return the size of the list */
+
+          Enum.filter(list, fn(x) -> rem(x, 2) === 0 end)
+          result: [2]
+        /* Find the number which's remainder is equal to 0 when divided by 2 */
+
+          Enum.empty?(list)
+          result: false
+        /* Determines if the list is empty */
+
+          Enum.member?(list, 2)
+          result: true
+        /* Checks if the number 2 is part of our list */
+
+        /* Define a new unsorted list */
+          list = [2, 6, 7, 4, 3, 9, 1, 5, 8]
+
+
+          Enum.sort(list)
+          result = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        /* Sort our list nice and orderly /*
+
+          Enum.fetch(list, 3)
+          result {:ok, 4}
+        /* Find the position where the number 3 is located */
+
+        /* A list with duplicates /*
+          list = [1, 1, 2, 2, 3, 3, 4, 4]
+
+          Enum.uniq_by(list, fn(x) -> x end)
+          result [1, 2, 3, 4]
+        /* Remove all duplicates from our enumerable. */
+      </code>
+    </pre>
+  </div>
+</section>

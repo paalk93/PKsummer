@@ -1,0 +1,252 @@
+<section>
+  <div>
+    <h1>Displaying simple data</h1>
+    <p>In this example we display non associated data, we only have one schema on it's own.</p>
+    <p>In this example i also added a search function, if we navigate to the <%= link "Example products", to: example_products_path(@conn, :index)%> we can search for our products.</p>
+    <p>While on this page we will create, delete and edit products.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <span><%= link "Add Product", to: simple_data_example_path(@conn, :new) %></span>
+    <table class="pk-table">
+      <tr>
+        <th>Product ID</th>
+        <th>Product name</th>
+        <th>Product summary</th>
+        <th>Price</th>
+        <th>Storage status</th>
+        <th colspan="2;">Change</th>
+      </tr>
+      <%= for product <- @products do %>
+      <tr>
+        <td><%= product.id %></td>
+        <td><%= product.name %></td>
+        <td><%= product.summary %></td>
+        <td><%= product.price %></td>
+        <td><%= product.storage_status %></td>
+        <td><%= link "Delete", to: simple_data_example_path(@conn, :delete, product), method: :delete, data: [confirm: "Are you sure?"] %></td>
+        <td><%= link "Edit", to: simple_data_example_path(@conn, :edit, product) %></td>
+      </tr>
+      <% end %>
+    </table>
+    <span><%= link "Add Product", to: simple_data_example_path(@conn, :new)%></span>
+  </div>
+  <hr>
+  <div>
+    <h3>Code example repo functions for simple data product, product.ex</h3>
+    <p>These functions work the same way and are almost identical to what we saw in the association example.</p>
+    <p>Only in the list_products function i took param and implemented the query which we will use to search.</p>
+    <pre>
+      <code>
+        defmodule Course01.Product do
+          import Ecto.Query, warn: false
+          alias Course01.Repo
+
+          alias Course01.Product.Products
+
+          def list_products(params) do
+            search_term = get_in(params, ["query"])
+            Products
+            |> Products.search(search_term)
+            |> Repo.all()
+          end
+
+          def get_product!(id), do: Repo.get!(Products,id)
+
+          def create_product(attrs \\ %{}) do
+            %Products{}
+            |> Products.changeset(attrs)
+            |> Repo.insert
+          end
+
+          def change_product(%Products{} = products) do
+              Products.changeset(products, %{})
+          end
+
+          def delete_product(%Products{} = product) do
+              Repo.delete(product)
+          end
+
+          def update_product(%Products{} = product, attrs) do
+            product
+            |> Products.changeset(attrs)
+            |> Repo.update()
+          end
+
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example schema and changeset for simple data products, products.ex</h3>
+    <p>The schema works the same way, use fields to define our fields for the database table.</p>
+    <p>We use the changeset to cast and validate our fields.</p>
+    <p>And we added a search function to search for our products on the product page.</p>
+    <pre>
+      <code>
+        defmodule Course01.Product.Products do
+          use Ecto.Schema
+          import Ecto.Changeset
+          import Ecto.Query, only: [from: 2]
+
+          schema "products" do
+            field :name, :string
+            field :pnr, :string
+            field :summary, :string
+            field :price, :integer
+            field :storage_status, :integer
+
+            timestamps()
+          end
+
+          def changeset(products, attrs) do
+            products
+            |> cast(attrs, [:name, :pnr, :summary, :price, :storage_status])
+            |> validate_required([:name, :pnr, :summary, :price, :storage_status])
+          end
+
+          def search(query, search_term) do
+            wildcard_search = "%#{search_term}"
+
+            from products in query,
+            where: ilike(products.name, ^wildcard_search),
+            or_where: ilike(products.summary, ^wildcard_search),
+            or_where: ilike(products.pnr, ^wildcard_search)
+          end
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example for simple data products controller, simple_data_example_controller.ex</h3>
+    <p>More or less identical to our associated data controller.</p>
+    <p>But here we do not need to list user and adresses, we only have one schema so we only list products.</p>
+    <pre>
+      <code>
+        defmodule Course01Web.SimpleDataExampleController do
+          use Course01Web, :controller
+
+            import Ecto.Query, warn: false
+            alias Course01.Product
+            alias Course01.Product.Products
+
+            def index(conn, params) do
+              products = Product.list_products(params)
+              render(conn, "index.html", products: products)
+            end
+
+            def create(conn, %{"products" => products_params}) do
+            case Product.create_product(products_params) do
+              {:ok, products} ->
+                conn
+                |> redirect(to: simple_data_example_path(conn, :index, products: products))
+              {:error, %Ecto.Changeset{} = changeset} ->
+                render(conn, "new.html", changeset: changeset)
+            end
+          end
+
+          def new(conn, _params) do
+            changeset = Product.change_product(%Products{})
+            render(conn, "new.html", changeset: changeset)
+          end
+
+          def delete(conn, %{"id" => id}) do
+            product = Product.get_product!(id)
+            {:ok, _product} = Product.delete_product(product)
+            conn
+            |> put_flash(:info, "Product deleted successfully.")
+            |> redirect(to: simple_data_example_path(conn, :index))
+          end
+
+          def edit(conn, %{"id" => id}) do
+            product = Product.get_product!(id)
+            changeset = Product.change_product(product)
+            render(conn, "edit.html", products: product, changeset: changeset)
+          end
+
+          def update(conn, %{"id" => id, "products" => products_params}) do
+            product = Product.get_product!(id)
+            case Product.update_product(product, products_params) do
+              {:ok, product} ->
+                conn
+                |> put_flash(:info, "Product updated successfully.")
+                |> redirect(to: simple_data_example_path(conn, :index, products: product))
+              {:error, %Ecto.Changeset{} = changeset} ->
+                render(conn, "edit.html", products: product, changeset: changeset)
+            end
+          end
+
+          end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example for simple data products migration, 201808051927_create_products.exs</h3>
+    <p>No creating index or references like we did in the associations.</p>
+    <p>We simply just add our fields to the database table.</p>
+    <pre>
+      <code>
+        defmodule Course01.Repo.Migrations.CreateProduct do
+          use Ecto.Migration
+
+          def change do
+            create table(:products) do
+              add :name, :string
+              add :pnr, :string
+              add :summary, :string
+              add :price, :integer
+              add :storage_status, :integer
+
+              timestamps()
+            end
+          end
+
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example for simple data example view, simple_data_example_view.ex</h3>
+    <p>The view looks like any other view, no particular changes done to it.</p>
+    <p>I decided to bring it in the example to simple collect all the parts required.</p>
+    <pre>
+      <code>
+        defmodule Course01Web.SimpleDataExampleView do
+          use Course01Web, :view
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example for the html for simple data products, index.html.eex</h3>
+    <p>We have a span with the link to create new products, and we define a table.</p>
+    <p>The &lt;th&gt; are predefined.</p>
+    <p>We wrap a loop around our &lt;td&gt; so those fields will be created automatically for each product in our database.</p>
+    <pre>
+      <code>
+        &lt;span&gt;&lt;%= link "Add Product", to: simple_data_example_path(@conn, :new) %&gt;&lt;/span&gt;
+        &lt;table class="pk-table"&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Product ID&lt;/th&gt;
+            &lt;th&gt;Product name&lt;/th&gt;
+            &lt;th&gt;Product summary&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+            &lt;th&gt;Storage status&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;%= for product &lt;- @products do %&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;%= product.id %&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;%= product.name %&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;%= product.summary %&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;%= product.price %&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;%= product.storage_status %&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;%= link "Delete", to: simple_data_example_path(@conn, :delete, product), method: :delete, data: [confirm: "Are you sure?"] %&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;%= link "Edit", to: simple_data_example_path(@conn, :edit, product) %&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;% end %&gt;
+        &lt;/table&gt;
+        &lt;span&gt;&lt;%= link "Add Product", to: simple_data_example_path(@conn, :new)%&gt;&lt;/span&gt;
+      </code>
+    </pre>
+  </div>
+</section>

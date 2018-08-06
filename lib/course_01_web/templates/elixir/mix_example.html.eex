@@ -1,0 +1,30 @@
+<section>
+  <div>
+    <h1>MIX</h1>
+    <p>Mix is like a toolbox which provies tasks for creating, compiling and testing elixir projects,<br>
+       and manageing dependecies.</p>
+    <p>The foundation of mix is a project.</p>
+    <p>A mix project can be be defined by using Mix.Project in a module usually placed in the mix.exs file.</p>
+    <p>Mix offer you various command to create files, with built in commands for files you create often.</p>
+    <p><strong>mix compile - </strong>Compiles the current project.</p>
+    <p><strong>mix test - </strong>Runs test for the current project.</p>
+    <p><strong>mix run - </strong>Runs a particular command inside the project.</p>
+    <p><strong>mix phx.gen.html - </strong>i.e mix phx.gen.html User users fname:string lname:string .Creates a controller, view, html, with functions and schema.</p>
+    <p><strong>mix phx.new - </strong>Create a new phoenix project.</p>
+    <p><strong>mix deps.get - </strong>Fetch and install dependecies.</p>
+    <p><strong>mix phx.server - </strong>Runs your phoenix server on localhost.</p>
+    <p><strong>iex -S mix - </strong>Runs Elixir's interactive shell in your project.</p>
+    <p>We also have ecto commands but they will be covered in the <%= link "Ecto mix tasks", to: phoenix_path(@conn, :ecto_mix_tasks) %> section.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <p>use Mix.Project in the module found inside mix.exs</p>
+    <pre>
+      <code>
+        defmodule Course01.Mixfile do
+          use Mix.Project
+        end
+      </code>
+    </pre>
+  </div>
+</section>

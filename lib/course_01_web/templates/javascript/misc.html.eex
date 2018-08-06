@@ -1,0 +1,28 @@
+<section>
+  <div>
+    <h1>Misc</h1>
+    <p>JSON and es6/es2015+</p>
+  </div>
+  <div>
+    <h3>What is JSON </h3>
+    <p>JSON is short for JavaScript Object Notation, JSON is a way to store data.</p>
+    <p>When exchanging information between a server and browser the data can only be text.</p>
+    <p>JSON is text and we can convert JavaScript into JSON and send JSON to the server.</p>
+    <p>We can also convert any JSON recieved from the server into JavaScript objects.</p>
+    <p>This way we work with the data as JavaScript objects, with no complicated parsing and translations.</p>
+  </div>
+  <div>
+    <h3>What is es6/es2015+</h3>
+    <p>es6 or ECMAScript is actually the base language which JavaScript is based of.</p>
+    <p>Some prominent feutures and functions.</p>
+    <ul>
+      <li>Puts default value right in the signature of the function.</li>
+      <li>Multi line strings.</li>
+      <li>Enhanced object literals.</li>
+      <li>Arrow functions.</li>
+      <li>JavaScript classes.</li>
+      <li>Javascript template string literals.</li>
+      <li>Block scope local variable.</li>
+    </ul>
+  </div>
+</section>

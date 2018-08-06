@@ -1,0 +1,18 @@
+<section>
+  <div>
+    <h1>Ecto Adapters</h1>
+    <p>Adapters are the middle man between the database and the project.</p>
+    <p>Adapter are tools to view and render the database code.</p>
+    <p>Newly generated phoenix projects comes with the PostgreSQL adapter which uses postgrex to communicate with the databse,<br>
+      and a connection pool such as poolboy.
+    </p>
+    <p>The PostgreSQL adapter give us full query support for associations and preloads.<br>
+      Support for transactions, data migrations and support for ecto.create and ecto.drop operations.
+    </p>
+    <p>Some other adapters are:<br>
+      MySQL<br>
+      MSSQL<br>
+      SQLite3
+    </p>
+  </div>
+</section>

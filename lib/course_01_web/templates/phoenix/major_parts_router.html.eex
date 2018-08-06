@@ -1,0 +1,45 @@
+<section>
+  <div>
+    <h1>Router</h1>
+    <p>The router is the main hub.</p>
+    <p>It recieves requests from the endpoint and passes it onwards to the designated controller.</p>
+    <p>It uses realtime channel handlers and defines a series of pipeline transformation for scopeing to routes.</p>
+    <p>The router is placed under "lib/projectname_web" and is defined like so "router.ex".</p>
+    <p>Scopes are defined inside the router and are used to group routes under a common path.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <p>The content of the basic router with a scope.</p>
+    <pre>
+      <code>
+        defmodule HelloWorldWeb.Router do
+          use HelloWorldWeb, :router
+
+          pipeline :browser do
+            plug :accepts, ["html"]
+            plug :fetch_session
+            plug :fetch_flash
+            plug :protect_from_forgery
+            plug :put_secure_browser_headers
+          end
+
+          pipeline :api do
+            plug :accepts, ["json"]
+          end
+
+          scope "/", HelloWorldWeb do
+            pipe_through :browser # Use the default browser stack
+
+            get "/", PageController, :index
+            resources "/user_page", UserController # Accepts macros like resources
+          end
+        end
+      </code>
+    </pre>
+    <p>We can have multiple scopes with different "/paths".</p>
+    <p>And many get "/with_other_paths".</p>
+    <p>Say we have a scope with "/hello" route. And we add a get with "/world" route.<br>
+      Then the route to over page would be /hello/world.
+    </p>
+  </div>
+</section>

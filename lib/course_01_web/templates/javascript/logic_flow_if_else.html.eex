@@ -1,0 +1,97 @@
+<section>
+  <div>
+    <h1>Logic flow if and else</h1>
+    <p>When working with if/else using else if is not always needed. We can get a long way with just if and else.</p>
+    <p>if() beeing the initial statement and condition we want to check.</p>
+    <p>else if() beeing a second condition we want to check if the first was not true.</p>
+    <p>And else beeing the default we will run in case none of the above were true.</p>
+    <p>We can think of it like asking, is this true?(if) no? How about this?(else if) Not that either? Alright then we go ahead and do this(else).</p>
+    <p>When running a function with if else statements we always stop the script if one of the conditions were true and we execute a block of code.</p>
+  </div>
+  <div>
+    <h3>Visual example simple if/else</h3>
+    <p>simple if else statement.</p>
+    <div class="js-if-else-example" style="background:grey;" id="if-else-example-div"></div>
+    <button onclick="jsExampleIfElse()">Change the color</button>
+    <hr>
+    <p>Upon clicking the button we change the color of our div.</p>
+    <p>Using an if, else statement we toggle between two colors.</p>
+  </div>
+  <div>
+    <h3>Code example simple if/else</h3>
+    <pre>
+      <code>
+        /* Javascript */
+        function jsExampleIfElse() {
+          var exampleDiv = document.getElementById("if-else-example-div");
+          if(exampleDiv.style.background == "grey"){
+            exampleDiv.style.background = "coral"
+          }
+          else{
+            exampleDiv.style.background = "grey"
+          }
+        }
+
+        /* Html */
+        &lt;div class="js-if-else-example" style="background:grey;" id="if-else-example-div"&gt;&lt;/div&gt;
+        &lt;button onclick="jsExampleIfElse()"&gt;Change the color&lt;/button&gt;
+      </code>
+    </pre>
+    <p>We have a div with a style attribute, which set the background to grey.</p>
+    <p>We run our function with the click of the button onclick="jsExampleIfElse()"</p>
+    <p>In our function we first check IF the background color is grey, and since it is we execute the block of code<br>
+      which changes the background to coral.
+    </p>
+    <p>Then we run our function again and check IF the background color is grey. But it is not.<br>
+      So then we skip that block of code and jump directly to our ELSE statement.<br>
+      The Else statement will execute because the other conditions we set were false.
+    </p>
+  </div>
+  <hr>
+  <div>
+    <h3>Visual example simple if/ else if/ else</h3>
+    <p id="if-else-example-p">Hello World</p>
+    <button onclick="jsExampleIfElseIf()">Change the html</button>
+    <hr>
+    <p>Uppon clicking the button we change the innerHTML our paragraph.</p>
+    <p>We toggle between 3 different variants using if, else if, else statements.</p>
+  </div>
+  <div>
+    <h3>Code example simple if/ else if/ else</h3>
+    <pre>
+      <code>
+        /* Javascript */
+        function jsExampleIfElseIf() {
+          var exampleP = document.getElementById("if-else-example-p");
+          if(exampleP.innerHTML == "Hello World"){
+            exampleP.innerHTML = "World Hello"
+          }
+          else if(exampleP.innerHTML == "World World"){
+            exampleP.innerHTML = "Hello World"
+          }
+          else{
+            exampleP.innerHTML = "World World"
+          }
+        }
+
+        /* Html */
+        &lt;p id="if-else-example-p"&gt;Hello World&lt;/&gt;
+        &lt;button onclick="jsExampleIfElseIf()"&gt;Change the html&lt;/button&gt;
+      </code>
+    </pre>
+    <p>In this example we still use if and else, but we also added else if. Lets go over it step by step.</p>
+    <p>First we check if the innerHTML of our paragraph is equal to Hello World.<br>
+      And since it is we go ahead and execute that block of code, which changes the innerHTML to "World Hello"
+    </p>
+    <p>On the second run we still check if the the innerHTML is Hello World, but it is not<br>
+      So we go ahead and check the else if statement to see if the innerHTML is World World, but neither this was true.
+    </p>
+    <p>So when both of our conditions turned out to be false, we go ahead and run our default which is the else statement.<br>
+      And in this example that will change the innerHTML to World World.
+    </p>
+    <p>On the thrid run we check if the innerHTML is Hello World, but it is not.<br>
+      Then we check if the innerHTML is World World in our else if statement, and since this is true we go ahead and change the innerHTML<br>
+      back to Hello World.
+    </p>
+  </div>
+</section>

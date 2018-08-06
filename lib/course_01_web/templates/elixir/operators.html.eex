@@ -1,0 +1,31 @@
+<section>
+  <div>
+    <h1>Operators</h1>
+    <p>Basic operators for elixir.</p>
+    <h3>Arthunetuc ioeratirs</h3>
+    <p><strong>+ --- </strong>Addition, 2 + 2 = 4.</p>
+    <p><strong>- --- </strong>Substraction, 4 - 2 = 2.</p>
+    <p><strong>* --- </strong>Multiplication, 2 * 2 = 4.</p>
+    <p><strong>/ --- </strong>Division, 4 / 2 = 2.</p>
+    <p><strong>div --- </strong>Used to get the quotient on division, div(20,10) = 2.</p>
+    <p><strong>rem --- </strong>Used to get the remained on division, rem(20,11) = 9.</p>
+    <hr>
+    <h3>Comprehension operators</h3>
+    <p><strong>== --- </strong>Checks if the left value is equal to the right value, 2 == 2 = true.</p>
+    <p><strong>!= --- </strong>Checks if the left value is not equal to the right value, 2 != 2 = false.</p>
+    <p><strong>=== --- </strong>Checks if the left value is identical to the right value, 2 === 2 = true.</p>
+    <p><strong>!== --- </strong>Checks if it is not identical, 2 !== 2 = false.</p>
+    <p><strong>&gt; --- </strong>Checks if the left value is greater than the right, 5 &gt; 2 = true.</p>
+    <p><strong>&lt; --- </strong>Checks if the left value is less than the right, 5 &lt; 2 = false.</p>
+    <p><strong>&gt;= --- </strong>Checks if the left value is greater or equal to the right 5 &gt;= 2 = true.</p>
+    <p><strong>&lt;= --- </strong>Checks if the left value is less or equal than the right, 5 &lt;= 5 = true.</p>
+    <hr>
+    <h3>Logical opreators</h3>
+    <p><strong>and --- </strong>Checks if both values provided are truthy.</p>
+    <p><strong>or --- </strong>Checks if one of the values provided is truthy.</p>
+    <p><strong>not --- </strong>Unary operator which inverts the value of given input.</p>
+    <p><strong>&& --- </strong>Non-strict and. Works same as and but does not expect first argument to be a Boolean.</p>
+    <p><strong>|| --- </strong>Non-strict or. Works same as or but does not expect first argument to be a Boolean.</p>
+    <p><strong>! --- </strong>Works same as not but does not expect the argument to be a Boolean.</p>
+  </div>
+</section>

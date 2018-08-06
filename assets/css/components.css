@@ -1,0 +1,79 @@
+/* Table start */
+.pk-table{
+  border:1px solid #e8491d;
+  text-align:center;
+}
+.pk-table th{
+  border:1px solid #e8491d;
+  padding:0.5em;
+  background-color:#35424a;
+  color:#f2f2f2;
+}
+.pk-table td{
+  padding:0.5em
+}
+.pk-table tr:nth-child(even){
+  background-color:#35424a;
+  color:#f2f2f2;
+}
+.pk-table tr:nth-child(even) a{
+  color:#f2f2f2;
+}
+.pk-table tr:nth-child(odd) a{
+  color:initial;
+}
+/* Table end */
+
+/* Form start */
+.pk-form-container{
+  width: 20em;
+}
+.pk-form-container input{
+  width: 100%;
+  padding:0.3em;
+  font-family:
+}
+.pk-form-container input:focus{
+  border-color:#51b5f2;
+  box-shadow:1px 1px 1px grey
+}
+.pk-form-container input:hover{
+  border-color:#51b5f2;
+  box-shadow:1px 1px 1px grey
+}
+/* Form end */
+
+/* Products flexbox start */
+.pk-products-flex{
+  display:flex;
+  height:100%;
+  flex-direction:row;
+  justify-content:space-around;
+  flex-wrap:wrap;
+}
+.pk-product-card{
+  display:grid;
+  grid-template-rows:20% 1fr 20%;
+  grid-template-columns:1fr;
+  width:15em;
+  height:15em;
+  background-color:#35424a;
+  color:#f2f2f2;
+  text-align:center;
+  border:solid 2px #e8491d;
+  margin:1em;
+}
+
+.pk-card-top{
+  grid-row:1/2;
+  grid-column:1/2;
+}
+.pk-card-middle{
+  grid-row:2/3;
+  grid-column:1/2;
+}
+.pk-card-bottom{
+  grid-row:3/4;
+  grid-column:1/2;
+}
+/* Products flexbox end */

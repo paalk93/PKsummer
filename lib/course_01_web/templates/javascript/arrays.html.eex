@@ -1,0 +1,46 @@
+<section>
+  <div>
+    <h1>Arrays</h1>
+    <p>When we think about arrays we can say it work like a list.</p>
+    <p>We can have a variable which is an array, and it can hold many value.</p>
+    <p>An array is defined by wrapping the values inside a [ ].</p>
+    <br>
+    <p>var countries = ["Norway", "Germany", "Sweden", "Greece"]</p>
+    <p>If we call countries it will return as an object array with all our string values.</p>
+    <p>But if we call countries[0] it will only return "Norway", because we are able to fetch just one of the values in our array.</p>
+    <p>When fetching one item in the array the count always start at[0], so eventho we have 4 values we can only get [0], [1], [2] or [3].</p>
+    <p>If we do countires.length we will get the entire length of our array, i.e the amount of induvidual values.</p>
+    <p>We are also able to push new values to our array by doing countries.push("Denmark").</p>
+    <p>If we then call our variable countries it will return ["Norway", "Germany", "Sweden", "Greece", "Denmark"].</p>
+  </div>
+  <div>
+    <h3>Visual example</h3>
+    <p>Here we will loop our array and print out each induvidual item in the form of a list.</p>
+    <button onclick="examplePrintArray()">Print list</button>
+    <ul id="arrayExampleList">
+    </ul>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        /* Html */
+        &lt;button onclick="examplePrintArray()"&gt;Print list&lt;/button&gt;
+        &lt;ul id="arrayExampleList"&gt;
+        &lt;/ul&gt;
+
+        /* Javascript */
+        function examplePrintArray(){
+          var arrayExampleCountries = ["Norway", "Germany", "Sweden", "Greece"]
+          var arrayExampleList = document.getElementById("arrayExampleList");
+          arrayExampleList.innerHTML ="";
+        for (var i = 0; i &lt; arrayExampleCountries.length; i++){
+        arrayExampleList.innerHTML += "&lt;li&gt;" + arrayExampleCountries[i] + "&lt;/li&gt;"
+          }
+        }
+      </code>
+    </pre>
+    <p>Here we do a simple loop to go our the values in the array using length.</p>
+    <p>When there are no more values we stop looping, and we create a li with the value inside for each item in the list.</p>
+  </div>
+</section>

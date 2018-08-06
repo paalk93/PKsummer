@@ -1,0 +1,308 @@
+<section>
+  <div>
+    <h1>Displaying associated data</h1>
+    <p>On this page we will display data from our repo.</p>
+    <p>In this example we use associations, if we were to display non associated data it would work the same way,<br>
+      only we remove the association between the two tables.
+    </p>
+    <p>Like removeing has_one and belongs_to, and also not casting the association.</p>
+  </div>
+  <div>
+    <h3>Visual example </h3>
+    <span><%= link "New User", to: association_example_path(@conn, :new) %></span>
+    <table class="pk-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Last name</th>
+          <th>City</th>
+          <th>Country</th>
+          <th colspan="3">Change</th>
+        </tr>
+      </thead>
+        <tbody>
+        <%= for user <- @users do %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.fname %></td>
+          <td><%= user.lname %></td>
+          <td><%= user.adress.city %></td>
+          <td><%= user.adress.country %></td>
+          <td><%= link "Show", to: association_example_path(@conn, :show, user) %></td>
+          <td><%= link "Edit", to: association_example_path(@conn, :edit, user) %></td>
+          <td><%= link "Delete", to: association_example_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"] %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <span><%= link "New User", to: association_example_path(@conn, :new) %></span>
+  </div>
+  <hr>
+  <div>
+    <h3>Code example repo functions, association.ex</h3>
+    <p>In the actual code i uses similar functions for adresses.</p>
+    <p>But since they are associated with users the most important functions are these.</p>
+    <p>Here in our association module we define functions to create, delete, edit, list and so on.</p>
+    <pre>
+      <code>
+        defmodule Course01.Association do
+          alias Course01.Repo
+
+          alias Course01.Association.User
+          alias Course01.Association.Adress
+
+          def list_users do
+            Repo.all(User)
+            |> Course01.Repo.preload(:adress)
+          end
+
+          def create_user(attrs \\ %{}) do
+          %User{}
+          | > Course01.Repo.preload(:adress)
+            |> User.changeset(attrs)
+            |> Repo.insert()
+          end
+
+          def get_user!(id), do: Repo.get!(User,id) |> Course01.Repo.preload(:adress)
+
+          def change_user(%User{} = user) do
+            User.changeset(user, %{})
+            end
+
+          def delete_user(%User{} = user) do
+            Repo.delete(user)
+          end
+
+          def update_user(%User{} = user, attrs) do
+            user
+            |> User.changeset(attrs)
+            |> Repo.update()
+          end
+
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example schema and changeset for users, user.ex</h3>
+    <p>Here in teh schema we define fields for our user.</p>
+    <p>And we use has_one to link the adress to the user schema.</p>
+    <p>And in the changeset we cast these fields with the association to our adress schema.</p>
+    <p>With the help of the changeset we can also decide which of the fields require validation and much more.</p>
+    <pre>
+      <code>
+        defmodule Course01.Association.User do
+          use Ecto.Schema
+          import Ecto.Changeset
+
+          schema "users" do
+            field :fname, :string
+            field :lname, :string
+            has_one :adress, Course01.Association.Adress
+            timestamps()
+          end
+
+          def changeset(user, attrs \\ %{}) do
+            user
+            |> cast(attrs, [:fname, :lname])
+            |> cast_assoc(:adress)
+            |> validate_required([:fname, :lname])
+          end
+
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example schema and changeset for adresses, adress.ex</h3>
+    <p>Close to the user schema only here we do not use cast_assoc, and we use belongs_to instead of has_one.</p>
+    <pre>
+      <code>
+        defmodule Course01.Association.Adress do
+          use Ecto.Schema
+          import Ecto.Changeset
+
+          schema "adresses" do
+            field :city, :string
+            field :country, :string
+            belongs_to :user, Course01.Association.User
+
+            timestamps()
+          end
+
+          def changeset(adress, attrs \\ %{}) do
+            adress
+            |> cast(attrs, [:city, :country, :user_id])
+            |> validate_required([:city, :country])
+          end
+
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example controller, association_example_controller.ex</h3>
+    <p>In the controller we have all our functions which we use in our templates.</p>
+    <p>Controller functions use the functions we defined in our association.ex file.</p>
+    <p>Like when we render and call the controller function index, it will list the users and adresses.</p>
+    <pre>
+      <code>
+        defmodule Course01Web.AssociationExampleController do
+          use Course01Web, :controller
+
+          import Ecto.Query, warn: false
+          alias Course01.Repo
+
+          alias Course01.Association
+          alias Course01.Association.User
+          alias Course01.Association.Adress
+
+          def index(conn, _params) do
+            users = Association.list_users()
+            adresses = Association.list_adresses()
+            render(conn, "index.html", users: users, adresses: adresses)
+          end
+
+          def show(conn, %{"id" => id}) do
+            user = Association.get_user!(id)
+            adress = Association.get_adress!(id)
+            render(conn, "show.html", user: user, adress: adress)
+          end
+
+          def new(conn, _params) do
+            changeset = User.changeset(%User{adress: %Adress{}})
+            render conn, "new.html", changeset: changeset
+          end
+
+          def create(conn, %{"user" => user_params}) do
+            changeset = User.changeset(%User{}, user_params)
+            case Repo.insert(changeset) do
+              {:ok, user} ->
+
+                conn
+                |> redirect(to: association_example_path(conn, :index))
+              {:error, changeset} ->
+            render(conn, "new.html", changeset: changeset)
+            end
+          end
+
+          def edit(conn, %{"id" => id}) do
+            user = Association.get_user!(id)
+            changeset = Association.change_user(user)
+            render(conn, "edit.html", user: user, changeset: changeset)
+          end
+
+          def update(conn, %{"id" => id, "user" => user_params}) do
+            user = Association.get_user!(id)
+
+            case Association.update_user(user, user_params) do
+              {:ok, user} ->
+                conn
+                |> put_flash(:info, "User updated successfully.")
+                |> redirect(to: association_example_path(conn, :show, user))
+              {:error, %Ecto.Changeset{} = changeset} ->
+              render(conn, "edit.html", user: user, changeset: changeset)
+            end
+          end
+
+          def delete(conn, %{"id" => id}) do
+            user = Association.get_user!(id)
+            {:ok, _user} = Association.delete_user(user)
+            conn
+            |> put_flash(:info, "User deleted successfully.")
+            |> redirect(to: association_example_path(conn, :index))
+          end
+
+        end
+      </code>
+    </pre>
+    <p>With phoenix templates we can use &lt;%= and %&gt; to run functions. Sort of like an onlcick in javascript.</p>
+    <p>Like this &lt;%= link "New User", to: association_example_path(@conn, :new) %&gt;</p>
+    <p>Which uses a link function, and uses our controller path with a connection and run our controller function.</p>
+    <p>Our new function renders the new html which render the form html &lt;%= render "form.html", Map.put(assigns, :action, association_example_path(@conn, :create)) %&gt;<br>
+      Which then again runs the create function with the parameters for our associated data.
+    </p>
+  </div>
+  <div>
+    <h3>Code example user migration 201807230428_create_users.exs</h3>
+    <p>Here is our migration file for the user table.</p>
+    <pre>
+      <code>
+        defmodule Course01.Repo.Migrations.CreateUsers do
+          use Ecto.Migration
+
+          def change do
+            create table(:users) do
+              add :fname, :string
+              add :lname, :string
+
+              timestamps()
+            end
+
+          end
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example adress migration 201807230429_create_adresses.exs</h3>
+    <p>Here is our migration file for the adress table.</p>
+    <pre>
+      <code>
+        defmodule Course01.Repo.Migrations.CreateAdresses do
+          use Ecto.Migration
+
+          def change do
+            create table(:adresses) do
+              add :city, :string
+              add :country, :string
+              add :user_id, references(:users, on_delete: :delete_all)
+
+              timestamps()
+            end
+
+            create index(:adresses, [:user_id])
+          end
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Code example for association example view, association_example_view.ex</h3>
+    <p>The view looks like any other view, no particular changes done to it.</p>
+    <p>I decided to bring it in the example to simple collect all the parts required.</p>
+    <pre>
+      <code>
+        defmodule Course01Web.AssociationExampleView do
+          use Course01Web, :view
+        end
+      </code>
+    </pre>
+  </div>
+  <div>
+    <h3>Html code example</h3>
+    <p>In our html we use &lt;%= to execute a function, so for example we can loop over our user data and create elements for each user/item.</p>
+    <pre>
+      <code>
+        &lt;%= for user &lt;- @users do %&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;%= user.id %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= user.fname %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= user.lname %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= user.adress.city %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= user.adress.country %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= link "Show", to: association_example_path(@conn, :show, user) %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= link "Edit", to: association_example_path(@conn, :edit, user) %&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;%= link "Delete", to: association_example_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"] %&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;% end %&gt;
+      </code>
+    </pre>
+    <p>This is done inside our table, what this loop does is that we create a &lt;tr&gt; with a &lt;td&gt; inside for every item from our users.</p>
+    <p>So for each user we create a row in our table, with a field for each item from the user, like name, adress etc.</p>
+    <p>We can even create links.</p>
+    <p>When looping over our users we will create a table row with all the fields for every user, once we looped over all the users it will stop.</p>
+    <p>We use user.fname to create a field with the first name of the user, and since adress is associated we have to use user.adress.country.</p>
+  </div>
+</section>

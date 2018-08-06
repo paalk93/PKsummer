@@ -1,0 +1,17 @@
+<section>
+  <div>
+    <h1>Ecto</h1>
+    <p>Ecto is the database wrapper and query generator for Elixir.</p>
+    <p>Ecto provides a standarised API for talking to all the different kinds of databases.</p>
+    <p>Newly generated phoenix project include ecto with the PostgreSQL adapter.</p>
+    <p>Ecto comes in 4 major components.</p>
+    <p><strong>Repo - </strong>Repositories are wrappers around the data store. Via the repository, we can create, update, delete and query existing entries.</p>
+    <p><strong>Schema - </strong>Used to map any data source into an Elixir struct. We will often use them to map tables into Elixir data.</p>
+    <p><strong>Changeset - </strong>Provides ways to filter and cast external parameters, as well as validateing changes before they are applied to your data.</p>
+    <p><strong>Query - </strong>Written in elixir syntax, queries are used to retrieve information from a given repository.</p>
+    <p>We will look closer on the major components in the <%= link "Repo", to: phoenix_path(@conn, :example_repo) %>,
+      <%= link "Schema", to: phoenix_path(@conn, :example_schema) %>,
+      <%= link "Changeset", to: phoenix_path(@conn, :example_changeset) %> and
+       <%= link "Query", to: phoenix_path(@conn, :example_query) %> section.</p>
+  </div>
+</section>

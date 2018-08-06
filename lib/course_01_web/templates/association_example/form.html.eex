@@ -1,0 +1,34 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+  <div class="pk-form-container">
+    <%= label f, :fname %>
+    <%= text_input f, :fname %>
+    <%= error_tag f, :fname %>
+  </div>
+  <div class="pk-form-container">
+    <%= label f, :lname %>
+    <%= text_input f, :lname %>
+    <%= error_tag f, :lname %>
+  </div>
+
+  <%= inputs_for f, :adress, fn p -> %>
+  <div class="pk-form-container">
+    <%= label p, :city %>
+    <%= text_input p, :city %>
+    <%= error_tag p, :city %>
+  </div>
+  <div class="pk-form-container">
+    <%= label p, :country %>
+    <%= text_input p, :country %>
+    <%= error_tag p, :country %>
+  </div>
+<% end %>
+
+  <div>
+    <%= submit "Submit" %>
+  </div>
+<% end %>

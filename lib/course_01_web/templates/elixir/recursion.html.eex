@@ -1,0 +1,53 @@
+<section>
+  <div>
+    <h1>Recursion</h1>
+    <p>A function is called recursively until a condition is reached.</p>
+    <p>The idea of recursion is that a functon calls itself,<br>
+      Like we loop over an enumerable and apply a funcion to each items.
+    </p>
+    <p>Enum functions like each or map are built with recursion.</p>
+    <hr>
+    <p>I noticed with the help of IO.puts, there is a difference between a loop and recursion.</p>
+    <p>We have our list, list = [1, 2, 3].</p>
+    <p>Then we run a for loop, for x &lt;- list, do: IO.puts x + 1, we loop over and add a function to each item.</p>
+    <p>IO.puts then give us the result 2, 3, 4, :ok, :ok, :ok.</p>
+    <p>The result is the value of each induvidual item.</p>
+    <br>
+    <p>If we run the same function using Enum.Each which is built on recursion.</p>
+    <p>Enum.each(list, fn(x) -> IO.puts x + 1 end).</p>
+    <p>The result is 2, 3, 4, :ok. Every item was altered but it is still the value of one list.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <pre>
+      <code>
+        /* This is something like a recursion function would look like */
+
+        /* If the list is empty, simply do nothing, we are done */
+
+          defmodule Mytest do
+            def each([], _func) do
+            :done
+          end
+
+        /* Pattern matching the head and the tail */
+
+          def each([head|tail], func) do
+
+        /* Then we call the funtion which is passed with the head of the list as the argument */
+
+            func.(head)
+
+        /* Then we call it again with what is left of the list, the tail */
+
+            each(tail, func)
+          end
+        end
+
+      </code>
+    </pre>
+    <p>We start by applying the function to the head. And the head of the list beeing the first item.</p>
+    <p>When that is done the function call itself and the first item of the tail becomes the head, and we apply the function there.</p>
+    <p>And it goes on like this until the list is empty.</p>
+  </div>
+</section>

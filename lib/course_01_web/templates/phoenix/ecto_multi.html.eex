@@ -1,0 +1,32 @@
+<section>
+  <div>
+    <h1>Ecto Multi</h1>
+    <p>Ecto multi is a data structure for grouping multiple Repo operations.</p>
+    <p>Packs operations that should be performed in a single transaction and queue them instead.</p>
+    <p>Operations will be executed in the order they were added.</p>
+  </div>
+  <div>
+    <h3>Code example</h3>
+    <p>Code example from hexdocs.</p>
+    <pre>
+      <code>
+        defmodule PasswordManager do
+          alias Ecto.Multi
+
+          def reset(account, params) do
+            Multi.new
+            |&gt; Multi.update(:account, Account.password_reset_changeset(account, params))
+            |&gt; Multi.insert(:log, Log.password_reset_changeset(account, params))
+            |&gt; Multi.delete_all(:sessions, Ecto.assoc(account, :sessions))
+          end
+        end
+      </code>
+    </pre>
+    <p>This example is used with relation to changeing the password of a user.</p>
+    <p>We update the account with the new information.</p>
+    <p>Log the request.</p>
+    <p>And remove all current sessions.</p>
+    <p>We can execute this function using repo.</p>
+    <p>Repo.transaction(PasswordManager.reset(account, params)).</p>
+  </div>
+</section>

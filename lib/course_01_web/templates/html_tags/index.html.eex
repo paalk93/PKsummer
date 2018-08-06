@@ -1,0 +1,30 @@
+<section>
+  <div>
+    <h1>HTML</h1>
+    <p>HTML stands for Hypertext Markup Language</p>
+    <p>When it comes to web development we can say that HTML is all the visual information we see.</p>
+    <p>Javascript beeing the functionallity and CSS beeing the makeup. The rest of the content is mainly HTML.</p>
+    <p>The majority of HTML consists of tags, attributes and plain text.</p>
+  </div>
+  <div>
+    <h3>Basic HTML setup for a html document.</h3>
+    <p>In Phoenix Framework using Html, head, body, Doctype tags isnt nessecary.</p>
+    <p>But if we were to create a html page outside Phoenix Framework it would look something like this.</p>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+            &lt;title&gt;Html Base&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </div>
+</section>
