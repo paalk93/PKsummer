@@ -22,17 +22,22 @@
     <p>Simple addition.</p>
     <pre>
       <code>
-        <p>Let us define some variables.</p>
+      /* Let us define some variables. */
+
         var number = 1
         var string = "1"
-        <p>We can now do some mathematic calculations.</p>
+
+      /* We can now do some mathematic calculations. */
+
         number + number = 2
-        <p>We take the variable number with the value of 1 and add it to itself.</p>
-        <p>But if we do number + string the result will be a bit different.</p>
+
+      /* We take the variable number with the value of 1 and add it to itself. */
+      /* But if we do number + string the result will be a bit different. */
+
         number + string = "11"
-        <p>When adding a number to a string it will simply turn the number value into a string.<br>
-          So it would be like if we did "1" + "1", which will result in 11.
-        </p>
+
+      /* When adding a number to a string it will simply turn the number value into a string. */
+      /* So it would be like if we did "1" + "1", which will result in 11. */
       </code>
     </pre>
     <hr>
@@ -40,14 +45,21 @@
     <pre>
       <code>
         var result = number + number
-        <p>Then if we call result we will get:</p>
+
+        /* Then if we call result we will get: /*
+
         2
-        <p>We can also create multiple variables at once.</p>
+        
+        /* We can also create multiple variables at once. */
+
         var person = "PK", age = 25, gender = "male"
-        <p>Now we can call each variable.</p>
+
+        /* Now we can call each variable. */
+
         person - "PK"
         age - 25
         gender - male
+
       </code>
     </pre>
     <hr>

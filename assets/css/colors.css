@@ -10,3 +10,9 @@ body{
 .pk-color-secondary{
   color:#f2f2f2;
 }
+pre{
+  width:60%;
+  background-color:#35424a;
+  color: #f2f2f2;
+  border-top: 1em solid #e8491d;
+}
