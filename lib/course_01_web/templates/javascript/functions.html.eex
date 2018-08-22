@@ -50,13 +50,13 @@
         }
 
         &lt;button onclick="numberFunction(5,5)"&gt;Click me&lt;button&gt;
-      -- We have to use numbers in the parameter here so we can do the mathematical calculation --
+      /* We have to use numbers in the parameter here so we can do the mathematical calculation */
 
       /* Function as a variable */
       var myVarFunction = function(a,b){
         return a + b;
       }
-    -- Now we can call our function with parameter values --
+      /* Now we can call our function with parameter values */
       myVarFunction(8,2)
       result: 10
       </code>
