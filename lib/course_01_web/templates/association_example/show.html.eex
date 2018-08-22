@@ -14,12 +14,12 @@
   </li>
   <li class="pk-margin-05em">
     <strong>City:</strong>
-    <%= @adress.city %>
+    <%= @user.adress.city %>
   </li>
 
   <li class="pk-margin-05em">
     <strong>Country:</strong>
-    <%= @adress.country %>
+    <%= @user.adress.country %>
   </li>
 </ul>
 <span><%= link "Back", to: association_example_path(@conn, :index) %></span>

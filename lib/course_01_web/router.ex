@@ -17,6 +17,10 @@ defmodule Course01Web.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/sign-in", SessionController, :new
+    post "/sign-in", SessionController, :create
+    delete "/sign-out", SessionController, :delete
+    get "/my_profile", AssociationExampleController, :my_profile
   end
 
   scope "/html", Course01Web do

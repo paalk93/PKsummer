@@ -16,8 +16,19 @@
 
       <div class="pk-grid-area-navbar pk-background-secondary">
         <div class="pk-margin-left-1em">
-        <h1 class="pk-color-secondary">PK documentation project</h1>
-      </div>
+          <h1 class="pk-color-secondary">PK documentation project</h1>
+        </div>
+        <div class="pk-margin-left-1em">
+          <ul>
+          <%= if signed_in?(@conn) do %>
+            <li><%= link "Sign out", to: session_path(@conn, :delete), method: :delete %></li>
+            <li><%= link my_user(@conn).email, to: association_example_path(@conn, :my_profile) %></li>
+          <% else %>
+            <li><%= link "Sign In", to: session_path(@conn, :new) %></li>
+            <li><%= link "Sign up", to: association_example_path(@conn, :new) %></li>
+          <% end %>
+          </ul>
+        </div>
       </div>
 
       <div class="pk-grid-area-sidebar pk-background-secondary pk-color-secondary pk-scroll-sidebar">

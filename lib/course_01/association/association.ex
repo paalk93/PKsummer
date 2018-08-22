@@ -4,6 +4,16 @@ defmodule Course01.Association do
   alias Course01.Association.User
   alias Course01.Association.Adress
 
+# Login functions
+
+def get_by_email(email) when is_nil(email) do
+  nil
+end
+
+def get_by_email(email) do
+  Repo.get_by(User, email: email)
+end
+
 # User functions
 
   def list_users do

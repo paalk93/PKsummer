@@ -7,6 +7,22 @@ defmodule Course01Web.AssociationExampleController do
   alias Course01.Association
   alias Course01.Association.User
   alias Course01.Association.Adress
+  alias Course01Web.Helpers.Auth
+
+  plug :check_auth when action in [:my_profile]
+
+defp check_auth(conn, _args) do
+  if user_id = get_session(conn, :current_user_id) do
+  current_user = Association.get_user!(user_id)
+  conn
+    |> assign(:current_user, current_user)
+  else
+    conn
+    |> put_flash(:error, "You need to be signed in to access this page.")
+    |> redirect(to: page_path(conn, :index))
+    |> halt()
+  end
+end
 
   def index(conn, _params) do
     users = Association.list_users()
@@ -20,6 +36,11 @@ defmodule Course01Web.AssociationExampleController do
     render(conn, "show.html", user: user, adress: adress)
   end
 
+  def my_profile(conn, _params) do
+    user = Auth.my_user(conn)
+    render(conn, "show.html", user: user)
+  end
+
   def new(conn, _params) do
     changeset = User.changeset(%User{adress: %Adress{}})
     render conn, "new.html", changeset: changeset
@@ -31,6 +52,8 @@ defmodule Course01Web.AssociationExampleController do
       {:ok, user} ->
 
         conn
+        |> put_session(:current_user_id, user.id)
+        |> put_flash(:info, "Signed up successfully.")
         |> redirect(to: association_example_path(conn, :index))
       {:error, changeset} ->
     render(conn, "new.html", changeset: changeset)
