@@ -162,6 +162,7 @@
             <li><%= link "Associated data", to: association_example_path(@conn, :index) %></li>
             <li><%= link "Simple data", to: simple_data_example_path(@conn, :index) %></li>
             <li><%= link "Example products", to: example_products_path(@conn, :index)%> </li>
+            <li><%= link "Login Example", to: login_example_path(@conn, :index) %></li>
           </ul>
         </div>
 

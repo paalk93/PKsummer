@@ -148,6 +148,7 @@ defmodule Course01Web.Router do
       resources "/associated_data", AssociationExampleController
       resources "/simple_data", SimpleDataExampleController
       resources "/example_products", ExampleProductsController
+      get "/login_example", LoginExampleController, :index
     end
   # Other scopes may use custom stacks.
   # scope "/api", Course01Web do
