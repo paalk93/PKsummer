@@ -165,7 +165,9 @@
             <li><%= link "Login Example", to: login_example_path(@conn, :index) %></li>
           </ul>
         </div>
-
+        <div class="pk-margin-05em">
+          <h3><%= link "Micropatterns", to: micropattern_path(@conn, :index) %></h3>
+        </div>
       </div>
 
       <main role="main" class= "pk-grid-area-main">
