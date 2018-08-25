@@ -1,0 +1,11 @@
+<section>
+  <div>
+    <h1>Micropatterns</h1>
+    <p>Micropatterns can be so many things. We can look at micropatterns as small things we do when working with a project.<br>
+      Like tasks and actions we do multiple times.
+    </p>
+    <p>Like using JavaScript to toggle a class or change html.</p>
+    <p>We can also look at templates, controllers and views are micropatterns.</p>
+    <p>It is something we define and re-use. Like a JS onclick function to change some HTML.</p>
+  </div>
+</section>

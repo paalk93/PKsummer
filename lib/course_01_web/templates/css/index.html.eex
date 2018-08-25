@@ -9,6 +9,12 @@
       Then css will be the makeup we put on to make it all look pretty.
     </p>
     <hr>
+    <h3>CSS limitations</h3>
+    <p>CSS can not perform logcial operations.</p>
+    <p>Can not read files using CSS.</p>
+    <p>Unable to interact with a database and request a web page.</p>
+    <p>Some CSS properties might be incompatible with certain web browesers.</p>
+    <hr>
     <h3>CSS box model</h3>
     <p>We can look at the css box model as a square.</p>
     <p>Right in the center of this square we have the content.</p>
