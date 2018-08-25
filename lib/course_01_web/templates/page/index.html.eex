@@ -45,6 +45,7 @@
   <hr>
   <h3>CSS</h3>
   <p>What is CSS?</p>
+  <p>CSS limitations</p>
   <p>CSS box model</p>
   <br>
   <p><strong>Selectors</strong></p>
@@ -215,4 +216,5 @@
   <p>Example and information on displaying simple data from repo</p>
   <p>Example page with product cards for simple data</p>
   <p>Search function for products</p>
+  <p>Login function</p>
 </section>
