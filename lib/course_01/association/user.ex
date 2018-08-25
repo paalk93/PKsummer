@@ -4,6 +4,8 @@ defmodule Course01.Association.User do
 
   schema "users" do
     field :fname, :string
+    field :email, :string
+    field :encrypted_password, :string
     field :lname, :string
     has_one :adress, Course01.Association.Adress
     timestamps()
@@ -11,8 +13,10 @@ defmodule Course01.Association.User do
 
   def changeset(user, attrs \\ %{}) do
     user
-    |> cast(attrs, [:fname, :lname])
+    |> cast(attrs, [:fname, :lname, :email, :encrypted_password])
     |> cast_assoc(:adress)
-    |> validate_required([:fname, :lname])
+    |> unique_constraint(:email)
+    |> validate_required([:fname, :lname, :email, :encrypted_password])
+    |> update_change(:encrypted_password, &Pbkdf2.hash_pwd_salt/1)
   end
 end

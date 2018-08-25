@@ -1,22 +1,6 @@
 body{
   margin:0;
 }
-.pk-grid-area-sidebar li{
-  list-style:none;
-  margin:1em;
-}
-.pk-grid-area-sidebar a{
-  text-decoration:none;
-  color:#f2f2f2;
-}
-.pk-grid-area-sidebar h3 a{
-  text-decoration:none;
-  color:#e8491d;
-}
-.pk-grid-area-sidebar h3{
-  text-decoration:none;
-  color:#e8491d;
-}
 .pk-margin-05em{
   margin:0.5em;
 }

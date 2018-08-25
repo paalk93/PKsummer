@@ -1,7 +1,22 @@
 .pk-hidden-list{
   display:none;
 }
-
+.pk-grid-area-sidebar li{
+  list-style:none;
+  margin:1em;
+}
+.pk-grid-area-sidebar a{
+  text-decoration:none;
+  color:#f2f2f2;
+}
+.pk-grid-area-sidebar h3 a{
+  text-decoration:none;
+  color:#e8491d;
+}
+.pk-grid-area-sidebar h3{
+  text-decoration:none;
+  color:#e8491d;
+}
 .pk-span-cursor{
   cursor:pointer;
   font-size: 1.3em;

@@ -1,3 +1,12 @@
+/* Pre tag start */
+pre{
+  width:60%;
+  background-color:#35424a;
+  color: #f2f2f2;
+  border-top: 1em solid #e8491d;
+}
+/* Pre tag end */
+
 /* Table start */
 .pk-table{
   border:1px solid #e8491d;
@@ -77,3 +86,18 @@
   grid-column:1/2;
 }
 /* Products flexbox end */
+
+/* Login links start */
+.pk-login-links{
+  text-align:right;
+}
+.pk-login-links li{
+  list-style:none;
+  display:inline-block;
+}
+.pk-login-links a{
+  text-decoration:none;
+  color:#f2f2f2;
+  margin:1em;
+}
+/* login links end */

@@ -17,6 +17,10 @@ defmodule Course01Web.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/sign-in", SessionController, :new
+    post "/sign-in", SessionController, :create
+    delete "/sign-out", SessionController, :delete
+    get "/my_profile", AssociationExampleController, :my_profile
   end
 
   scope "/html", Course01Web do
@@ -144,6 +148,7 @@ defmodule Course01Web.Router do
       resources "/associated_data", AssociationExampleController
       resources "/simple_data", SimpleDataExampleController
       resources "/example_products", ExampleProductsController
+      get "/login_example", LoginExampleController, :index
     end
   # Other scopes may use custom stacks.
   # scope "/api", Course01Web do
