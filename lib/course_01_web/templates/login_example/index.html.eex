@@ -1,6 +1,234 @@
 <section>
   <div>
     <h1>Login example documentation</h1>
+    <p>In this project i created a login function using phoenix sessions, comeonin and pbkdf2.</p>
+    <p>I added an email and password field to the user from the associated data example which is used for login information.</p>
+    <div>
+      <h3>Code example schema and migrations.</h3>
+      <p>In the shcema i added email, and encrypted password.</p>
+      <p>And in the migration i did the same.<br>
+        But i also created a unique index for the :email column, makeing it unique.
+      </p>
+      <pre>
+        <code>
+          /* Schema */
 
+          schema "users" do
+            field :fname, :string
+            field :email, :string
+            field :encrypted_password, :string
+            field :lname, :string
+            has_one :adress, Course01.Association.Adress
+            timestamps()
+          end
+
+          /* Migration */
+
+          def change do
+            create table(:users) do
+              add :fname, :string
+              add :lname, :string
+              add :email, :string
+              add :encrypted_password, :string
+              timestamps()
+            end
+            create unique_index(:users, [:email])
+          end
+        </code>
+      </pre>
+    </div>
+    <div>
+      <h3>Code user changeset.</h3>
+      <p>In the changeset i set the field email to be unique.</p>
+      <p>And using the pbkdf2 hash_pwd_salt function to encrypt the password.</p>
+      <pre>
+        <code>
+          def changeset(user, attrs \\ %{}) do
+            user
+            |&gt; cast(attrs, [:fname, :lname, :email, :encrypted_password])
+            |&gt; cast_assoc(:adress)
+            |&gt; unique_constraint(:email)
+            |&gt; validate_required([:fname, :lname, :email, :encrypted_password])
+            |&gt; update_change(:encrypted_password, &Pbkdf2.hash_pwd_salt/1)
+          end
+        </code>
+      </pre>
+    </div>
+    <div>
+      <h3>Code example session controller.</h3>
+      <p>The session controller consists of three functions, new, create, and delete.</p>
+      <p>New renders our login form, used when a user sign in.</p>
+      <p>If the username and password validates properly the create function will run upon completion.</p>
+      <p>The create functions checks the user by email and password and create a session accordingly.</p>
+      <p>When creating the session we put :current_user_id as the id of the user which logged in.</p>
+      <p>This can later be used to restrict the content of the users.</p>
+      <p>When the user signs out the delete function will run, deleting the current session for the user.</p>
+      <p>The two last functions in the controller is from the association.ex file.<br>
+        They get the user by email. We have one which does nothing if the email does not exsist.<br>
+        and one which fetch the user by email if the user do exsist.
+      </p>
+      <pre>
+        <code>
+          /* Controller */
+
+          defmodule Course01Web.SessionController do
+            use Course01Web, :controller
+
+            alias Course01.Association
+
+            def new(conn, _params) do
+              render(conn, "new.html")
+            end
+
+            def create(conn, %{"session" => auth_params}) do
+              user = Association.get_by_email(auth_params["email"])
+              case Comeonin.Pbkdf2.check_pass(user, auth_params["password"]) do
+                {:ok, user} ->
+                  conn
+                  |&gt; put_session(:current_user_id, user.id)
+                  |&gt; put_flash(:info, "Signed in successfully")
+                  |&gt; redirect(to: page_path(conn, :index))
+                {:error, _} ->
+                  conn
+                  |&gt; put_flash(:error, "There was a problem with your email or password.")
+                  |&gt; render("new.html")
+              end
+            end
+
+            def delete(conn, _params) do
+              conn
+              |&gt; delete_session(:current_user_id)
+              |&gt; put_flash(:info, "Signed out successfully.")
+              |&gt; redirect(to: page_path(conn, :index))
+            end
+
+          end
+
+        /* Functions from association.ex */
+
+        def get_by_email(email) when is_nil(email) do
+          nil
+        end
+
+        def get_by_email(email) do
+          Repo.get_by(User, email: email)
+        end
+        </code>
+      </pre>
+    </div>
+    <div>
+      <h3>Code example for helper functions.</h3>
+      <p>Under controllers i added a helpers folder with auth.ex.</p>
+      <p>There i created two helper functions.</p>
+      <p>One to check if the user is logged in, and one to asign a user to the my_profile page.</p>
+      <p>To use the helper functions i imported them in the lib/course_01_web.ex file.</p>
+      <pre>
+        <code>
+
+          /* Helpers auth.ex functions */
+
+          defmodule Course01Web.Helpers.Auth do
+            alias Course01.Association
+
+            def signed_in?(conn) do
+              user_id = Plug.Conn.get_session(conn, :current_user_id)
+              if user_id, do: !!Course01.Repo.get(Course01.Association.User, user_id)
+            end
+
+            def my_user(conn) do
+              user_id = Plug.Conn.get_session(conn, :current_user_id)
+              user = Association.get_user!(user_id)
+            end
+
+          end
+
+          /* Importing the helper functions */
+
+          def view do
+            quote do
+              use Phoenix.View, root: "lib/course_01_web/templates",
+                                namespace: Course01Web
+
+              # Import convenience functions from controllers
+              import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
+              import Course01Web.Helpers.Auth, only: [signed_in?: 1, my_user: 1] &lt;-- This line.
+              # Use all HTML functionality (forms, tags, etc)
+              use Phoenix.HTML
+
+              import Course01Web.Router.Helpers
+              import Course01Web.ErrorHelpers
+              import Course01Web.Gettext
+            end
+          end
+        </code>
+      </pre>
+    </div>
+    <div>
+      <h3>Code example from the user controller.</h3>
+      <p>In the allready exsisting user controller i used a plug to check authentication when running the my_profile function.</p>
+      <p>The plug runs the function check_auth, which get the user by session id, and assign it to the page.</p>
+      <p>And the my_profile function simple get the user and load the my_profile.html page.</p>
+      <p>The reason i chose to use my_profile.html instead of just show.html is so the users can have their own page but say an admin for example
+        can still render show.html to see information about each user without going to their profiles.
+        <br></p>
+      <pre>
+        <code>
+          plug :check_auth when action in [:my_profile]
+
+          defp check_auth(conn, _args) do
+            if user_id = get_session(conn, :current_user_id) do
+            current_user = Association.get_user!(user_id)
+            conn
+              |&gt; assign(:current_user, current_user)
+            else
+              conn
+              |&gt; put_flash(:error, "You need to be signed in to access this page.")
+              |&gt; redirect(to: page_path(conn, :index))
+              |&gt; halt()
+            end
+          end
+
+          def my_profile(conn, _params) do
+              user = Auth.my_user(conn)
+              render(conn, "my_profile.html", user: user)
+            end
+        </code>
+      </pre>
+    </div>
+    <div>
+      <h3>Code example router.</h3>
+      <p>In the router i added routes for signing in, out and to load the user page.</p>
+      <p>We use get to render the login form upon clicking sign in, and post to create the session if email and password is correct.</p>
+      <p>Delete simply deletes the session when the user sign out.</p>
+      <p>And my profile simply loads the user page.</p>
+      <p>In the layout i used if else to render the links accoringly, changeing sign up to the users email, and sign in to sign out.</p>
+      <pre>
+        <code>
+          /* Router */
+
+          scope "/", Course01Web do
+            pipe_through :browser # Use the default browser stack
+
+            get "/", PageController, :index
+            get "/sign-in", SessionController, :new
+            post "/sign-in", SessionController, :create
+            delete "/sign-out", SessionController, :delete
+            get "/my_profile", AssociationExampleController, :my_profile
+          end
+
+        /* Layout HTML */
+
+        &lt;ul&gt;
+        &lt;%= if signed_in?(@conn) do %&gt;
+          &lt;li&gt;&lt;%= link "Sign out", to: session_path(@conn, :delete), method: :delete %&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;%= link my_user(@conn).email, to: association_example_path(@conn, :my_profile) %&gt;&lt;/li&gt;
+        &lt;% else %&gt;
+          &lt;li&gt;&lt;%= link "Sign In", to: session_path(@conn, :new) %&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;%= link "Sign up", to: association_example_path(@conn, :new) %&gt;&lt;/li&gt;
+        &lt;% end %&gt;
+        &lt;/ul&gt;
+        </code>
+      </pre>
+    </div>
   </div>
 </section>

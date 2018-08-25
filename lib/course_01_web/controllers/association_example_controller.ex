@@ -9,7 +9,7 @@ defmodule Course01Web.AssociationExampleController do
   alias Course01.Association.Adress
   alias Course01Web.Helpers.Auth
 
-  plug :check_auth when action in [:my_profile]
+plug :check_auth when action in [:my_profile]
 
 defp check_auth(conn, _args) do
   if user_id = get_session(conn, :current_user_id) do
@@ -38,7 +38,7 @@ end
 
   def my_profile(conn, _params) do
     user = Auth.my_user(conn)
-    render(conn, "show.html", user: user)
+    render(conn, "my_profile.html", user: user)
   end
 
   def new(conn, _params) do
