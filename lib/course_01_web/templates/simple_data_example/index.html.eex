@@ -15,6 +15,7 @@
         <th>Product summary</th>
         <th>Price</th>
         <th>Storage status</th>
+        <th>Supplier</th>
         <th colspan="2;">Change</th>
       </tr>
       <%= for product <- @products do %>
@@ -24,6 +25,7 @@
         <td><%= product.summary %></td>
         <td><%= product.price %></td>
         <td><%= product.storage_status %></td>
+        <td><%= product.supplier.company_name %></td>
         <td><%= link "Delete", to: simple_data_example_path(@conn, :delete, product), method: :delete, data: [confirm: "Are you sure?"] %></td>
         <td><%= link "Edit", to: simple_data_example_path(@conn, :edit, product) %></td>
       </tr>

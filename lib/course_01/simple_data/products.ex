@@ -1,6 +1,7 @@
 defmodule Course01.Product.Products do
   use Ecto.Schema
   import Ecto.Changeset
+  alias Course01.Product.Supplier
   import Ecto.Query, only: [from: 2]
 
   schema "products" do
@@ -9,7 +10,7 @@ defmodule Course01.Product.Products do
     field :summary, :string
     field :price, :integer
     field :storage_status, :integer
-
+    embeds_one :supplier, Course01.Product.Supplier
     timestamps()
   end
 
@@ -17,6 +18,7 @@ defmodule Course01.Product.Products do
     products
     |> cast(attrs, [:name, :pnr, :summary, :price, :storage_status])
     |> validate_required([:name, :pnr, :summary, :price, :storage_status])
+    |> cast_embed(:supplier)
   end
 
   def search(query, search_term) do
