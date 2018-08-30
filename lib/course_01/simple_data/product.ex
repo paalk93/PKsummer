@@ -3,6 +3,7 @@ defmodule Course01.Product do
   alias Course01.Repo
 
   alias Course01.Product.Products
+  alias Course01.Product.Supplier
 
   def list_products(params) do
     search_term = get_in(params, ["query"])

@@ -2,8 +2,10 @@ defmodule Course01Web.SimpleDataExampleController do
   use Course01Web, :controller
 
     import Ecto.Query, warn: false
+    alias Course01.Repo
     alias Course01.Product
     alias Course01.Product.Products
+    alias Course01.Product.Supplier
 
     def index(conn, params) do
       products = Product.list_products(params)
@@ -11,7 +13,8 @@ defmodule Course01Web.SimpleDataExampleController do
     end
 
     def create(conn, %{"products" => products_params}) do
-    case Product.create_product(products_params) do
+      changeset = Products.changeset(%Products{}, products_params)
+    case Repo.insert(changeset) do
       {:ok, products} ->
         conn
         |> redirect(to: simple_data_example_path(conn, :index, products: products))
@@ -21,7 +24,7 @@ defmodule Course01Web.SimpleDataExampleController do
   end
 
   def new(conn, _params) do
-    changeset = Product.change_product(%Products{})
+    changeset = Product.change_product(%Products{supplier: %Supplier{}})
     render(conn, "new.html", changeset: changeset)
   end
 

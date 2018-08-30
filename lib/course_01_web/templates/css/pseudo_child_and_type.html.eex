@@ -4,8 +4,8 @@
     <p>Pseudo classes which selects child and type elements.</p>
     <p><strong>:first-child - </strong>Select every given element that is the first child of its parent.</p>
     <p><strong>:last-child - </strong>Select every given element that is the last child of its parent.</p>
-    <p><strong>:nth-child() - </strong>Select every given element that is the (numver) of its parent.</p>
-    <p><strong>:nth-last-child() - </strong>Select every given element that is the (numver) of its parent, countring from the last child.</p>
+    <p><strong>:nth-child() - </strong>Select every given element that is the (number) of its parent.</p>
+    <p><strong>:nth-last-child() - </strong>Select every given element that is the (number) of its parent, countring from the last child.</p>
     <p><strong>:only-child() - </strong>Select every given element that is the only child of its parent.</p>
     <p><strong>:first-of-type - </strong>Select every given element that is the first given element of its parent.</p>
     <p><strong>:last-of-type - </strong>Select every given element that is the last given element of its parent.</p>

@@ -8,6 +8,7 @@ defmodule Course01.Repo.Migrations.CreateProduct do
       add :summary, :string
       add :price, :integer
       add :storage_status, :integer
+      add :supplier, :map
 
       timestamps()
     end

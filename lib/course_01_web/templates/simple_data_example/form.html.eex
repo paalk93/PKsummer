@@ -35,6 +35,14 @@
     <%= error_tag f, :storage_status %>
   </div>
 
+  <%= inputs_for f, :supplier, fn p -> %>
+  <div class="pk-form-container">
+    <%= label p, :company_name %>
+    <%= text_input p, :company_name %>
+    <%= error_tag p, :company_name %>
+  </div>
+<% end %>
+
   <div>
     <%= submit "Submit", class: "btn btn-primary" %>
   </div>

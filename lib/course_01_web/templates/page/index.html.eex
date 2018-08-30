@@ -208,12 +208,13 @@
   <p>Example and info on Changeset</p>
   <p>Example and info on Multi</p>
   <p>Example and info on Association</p>
-  <p>Example and info on Embeded and embeded data</p>
+  <p>Example and info on Embedded</p>
   <hr>
   <h3>Displaying data</h3>
   <p>Example and information on displaying associated data from repo</p>
   <p>Association between two tables</p>
   <p>Example and information on displaying simple data from repo</p>
+  <p>Example on embedded data, added embedded data to products</p>
   <p>Example page with product cards for simple data</p>
   <p>Search function for products</p>
   <p>Login function</p>
